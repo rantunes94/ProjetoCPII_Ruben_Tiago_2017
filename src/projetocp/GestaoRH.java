@@ -3,6 +3,7 @@ package projetocp;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 
 /**
  * classe que permite guardar todos os dados do projecto e declarar métodos auxiliares
@@ -22,7 +23,7 @@ public class GestaoRH {
 
 
 
-    private ArrayList<TotalAno> totaisAno = new ArrayList<>();
+
     private ArrayList<Divisao> divisoes = new ArrayList<>();
     private ArrayList<Funcionario> funcionarios = new ArrayList<>();
     private ArrayList<FuncionarioMedico> funcionariosMedicos = new ArrayList<>();
@@ -30,6 +31,8 @@ public class GestaoRH {
     private ArrayList<TipoEquipamento> tiposEquipamento = new ArrayList<>();
     private ArrayList<Equipamento> equipamentos = new ArrayList<>();
     private ArrayList<Avaria> avarias = new ArrayList<>();
+    private ArrayList<TotalAno> totaisAno = new ArrayList<>();
+    private ArrayList<TotalAvariaAno> totaisAvariaAno = new ArrayList<>();
 
 
     public int getTotalFuncionarios() {
@@ -47,6 +50,8 @@ public class GestaoRH {
         return equipamentos.size();
     }
     public int getTotalAvarias() { return avarias.size(); }
+    public int getTotalAnos() { return totaisAno.size(); }
+    public int getTotalAvariaAnos() { return totaisAvariaAno.size(); }
 
     public Funcionario obterFuncionario (int pos){
         return funcionarios.get(pos);
@@ -71,6 +76,9 @@ public class GestaoRH {
     }
     public TotalAno obtertTotal (int pos){
         return totaisAno.get(pos);
+    }
+    public TotalAvariaAno obtertTotalAvariaAno (int pos){
+        return totaisAvariaAno.get(pos);
     }
 
 
@@ -100,7 +108,13 @@ public class GestaoRH {
         equipamento.setEstadoEquipamento(EstadoEquipamento.DISPONIVEL);
         equipamentos.add(equipamento);
     }
-
+    public void adicionarTotalAno(TotalAno totalAno){ totaisAno.add(totalAno);
+        Collections.sort(totaisAno);
+    }
+    public void adicionarTotalAvariaAno(TotalAvariaAno totalAvariaAno) {
+        totaisAvariaAno.add(totalAvariaAno);
+        //Collections.sort(totalAvariaAno);
+    }
 
     public void adicionarAvaria(Avaria avaria){
         if (!avarias.isEmpty())
@@ -138,9 +152,16 @@ public class GestaoRH {
         return -1;
     }
 
-    public int pesquisarTotais(int totalAno) {
+    public int pesquisarTotais(int ano) {
         for (int i = 0; i < totaisAno.size(); i++)
-            if (totaisAno.get(i).getTotal() == totalAno)
+            if (totaisAno.get(i).getAno() == ano)
+                return i;
+        return -1;
+    }
+
+    public int pesquisarTotaisAvariaAno(int ano) {
+        for (int i = 0; i < totaisAno.size(); i++)
+            if (totaisAno.get(i).getAno() == ano)
                 return i;
         return -1;
     }
@@ -206,6 +227,22 @@ public class GestaoRH {
         StringBuilder str= new StringBuilder("");
         for (int i=0; i<funcionariosOutros.size(); i++) {
             str.append(funcionariosOutros.get(i)).append("\n");
+        }
+        return str.toString();
+    }
+
+    public String mostrarTotaisAno(){
+        StringBuilder str= new StringBuilder("");
+        for (int i=0; i<totaisAno.size(); i++) {
+            str.append(totaisAno.get(i)).append("\n");
+        }
+        return str.toString();
+    }
+
+    public String mostrarTotaisAvariaAno(){
+        StringBuilder str= new StringBuilder("");
+        for (int i=0; i<totaisAno.size(); i++) {
+            str.append(totaisAno.get(i)).append("\n");
         }
         return str.toString();
     }

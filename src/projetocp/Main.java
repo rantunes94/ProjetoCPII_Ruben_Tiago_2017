@@ -238,9 +238,10 @@ public class Main {
                                     System.err.println("Atualmente não existe nenhuma avaria");
                                 break;
                             case 2:
-
+                                System.out.println(grh.mostrarTotaisAno());
                                 break;
                             case 3:
+                                System.out.println(grh.mostrarTotaisAno());
                                 break;
                             case 4:
                                 break;
@@ -364,9 +365,9 @@ public class Main {
 
         System.out.println("1 - Percentagem de equipamentos com avarias");
         System.out.println("2 - Total de avarias registadas por estado");
-        System.out.println("2 - Total gasto por ano em equipamentos");
+        System.out.println("3 - Total gasto por ano em equipamentos");
         System.out.println("0 - Voltar ao Menu Anterior\n");
-        opcao = Consola.lerInt("Opcao: ", 0, 2);
+        opcao = Consola.lerInt("Opcao: ", 0, 3);
         return opcao;
     }
 
@@ -415,6 +416,7 @@ public class Main {
         int numSerie, nif;
         int pos;
         Equipamento e1;
+        TotalAno ta;
 
         do {
             nif = Consola.lerInt("Indique o nif do Funcionário: ", 1, 999999999);
@@ -456,6 +458,17 @@ public class Main {
         grh.adicionarEquipamento(e1);
         tipoEquipamento.setNumEquipamentoPorEquipamento(tipoEquipamento.getNumEquipamentoPorEquipamento()+1); // ESTATISTICA numero de equuipamentos por tipo de equipamentos
         System.out.println("Equipamento inserido com sucesso");
+
+        int ano= e1.getDataInventariacao().get(Calendar.YEAR);
+        pos=grh.pesquisarTotais(ano);
+        if(pos==-1){
+             ta= new TotalAno(ano,custo);
+            grh.adicionarTotalAno(ta);
+        }
+        else{
+           ta=grh.obtertTotal(pos);
+           ta.setTotal(ta.getTotal()+custo);
+        }
     }
 
 
@@ -468,6 +481,7 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
     String descricao;
     Funcionario funcionarioTecnico;
     Avaria av1;
+    TotalAvariaAno ta;
 
         do {
             System.out.println(grh.mostrarEquipamentos());
@@ -509,6 +523,17 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
         // Para ajudar a calcular a estatistica de percentagem de equips avariados no hospital
         System.out.println("Avaria inserida com sucesso");
 
+
+        int ano= av1.getDataRegisto().get(Calendar.YEAR);
+        pos=grh.pesquisarTotaisAvariaAno(ano);
+        if(pos==-1){
+            ta= new TotalAvariaAno(ano,EstadoAvaria.PORREPARAR, 1);
+            grh.adicionarTotalAvariaAno(ta);
+        }
+        else{
+            ta=grh.obtertTotalAvariaAno(pos);
+            ta.setNumAvarias(ta.getNumAvarias()+1);
+        }
     }
 
 
@@ -699,6 +724,7 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
         String descricao,dataR;
         Double custo;
         Funcionario funcionarioTecnico;
+        TotalAvariaAno ta;
 
         do {
             System.out.println(grh.mostrarAvarias());
@@ -756,6 +782,17 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
                     aa.getEquipamento().adicionarReparacao(r);
                     r.getAvaria().setEstadoAvaria(EstadoAvaria.REPARADA);
                     System.out.println("Alteração feita com sucesso!");
+
+                    int ano= dataReparacao.get(Calendar.YEAR);
+                    pos=grh.pesquisarTotaisAvariaAno(ano);
+                    if(pos==-1){
+                        ta= new TotalAvariaAno(ano,EstadoAvaria.REPARADA, 1);
+                        grh.adicionarTotalAvariaAno(ta);
+                    }
+                    else{
+                        ta=grh.obtertTotalAvariaAno(pos);
+                        ta.setNumAvarias(ta.getNumAvarias()+1);
+                    }
                 }
                 if (opcao == 2) {
                     aa.getEquipamento().setEstadoEquipamento(EstadoEquipamento.INDISPONIVEL);
@@ -794,7 +831,20 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
                     Reparacao r = new Reparacao(aa,dataReparacao,descricao,custo,funcionarioTecnico);
                     r.getAvaria().setEstadoAvaria(EstadoAvaria.IRREPARAVEL);
                     aa.getEquipamento().adicionarReparacao(r);
+                    aa.getEquipamento().setEstadoEquipamento(EstadoEquipamento.ABATIDO);
                     System.out.println("Alteração feita com sucesso!");
+
+
+                    int ano= dataReparacao.get(Calendar.YEAR);
+                    pos=grh.pesquisarTotaisAvariaAno(ano);
+                    if(pos==-1){
+                        ta= new TotalAvariaAno(ano,EstadoAvaria.IRREPARAVEL, 1);
+                        grh.adicionarTotalAvariaAno(ta);
+                    }
+                    else{
+                        ta=grh.obtertTotalAvariaAno(pos);
+                        ta.setNumAvarias(ta.getNumAvarias()+1);
+                    }
                 }
             }
         } while (pos == -1);

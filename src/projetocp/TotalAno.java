@@ -3,7 +3,7 @@ package projetocp;
 /**
  * classe que nos permite calcular o total gasto por ano em equipamentos (ordenado por ordem decrescente do total)
  */
-public class TotalAno {
+public class TotalAno implements Comparable<TotalAno> {
     /**
      * ano desse total
      */
@@ -41,9 +41,21 @@ public class TotalAno {
 
     @Override
     public String toString() {
-        return "TotalAno{" +
-                "ano=" + ano +
-                ", total=" + total +
-                '}';
+        StringBuilder str = new StringBuilder();
+        str.append("Totais gasto por ano:");
+        str.append("\n\tAno: ").append(ano);
+        str.append("\n\tTotal: ").append(total);
+        return str.toString();
+    }
+
+    @Override
+    public int compareTo(TotalAno o) {
+        if (this.total < o.getTotal()) {
+            return 1;
+        }
+        if (this.total > o.getTotal()) {
+            return -1;
+        }
+        return 0;
     }
 }

@@ -3,7 +3,7 @@ package projetocp;
 /**
  * Classe que representa o total de avarias por Ano
  */
-public class TotalAvariaAno {
+public class TotalAvariaAno implements Comparable<TotalAvariaAno> {
     /**
      * ano da avaria
      */
@@ -51,5 +51,28 @@ public class TotalAvariaAno {
         this.ano = ano;
         this.estadoAvaria = estadoAvaria;
         this.numAvarias = numAvarias;
+    }
+
+    /**
+     * Está a ordenar primeiro pelo numAvarias e depois pelo ano ( NÃO PELO ESTADO não nos era possivel)
+     * @param o
+     * @return
+     */
+    @Override
+    public int compareTo(TotalAvariaAno o) {
+        if (this.numAvarias < o.getNumAvarias()) {
+            return 1;
+        }
+        if (this.numAvarias > o.getNumAvarias()) {
+            return -1;
+        }
+
+        if (this.numAvarias == o.getNumAvarias() && this.ano > o.getAno()) {
+            return 1;
+        }
+        if (this.numAvarias == o.getNumAvarias() && this.ano < o.getAno()) {
+            return -1;
+        }
+        return 0;
     }
 }
