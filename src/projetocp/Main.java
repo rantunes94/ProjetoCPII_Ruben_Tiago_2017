@@ -238,7 +238,7 @@ public class Main {
                                     System.err.println("Atualmente não existe nenhuma avaria");
                                 break;
                             case 2:
-                                System.out.println(grh.mostrarTotaisAno());
+                                System.out.println(grh.mostrarTotaisAvariaAno());
                                 break;
                             case 3:
                                 System.out.println(grh.mostrarTotaisAno());

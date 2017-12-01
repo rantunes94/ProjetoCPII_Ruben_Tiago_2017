@@ -53,9 +53,21 @@ public class TotalAvariaAno implements Comparable<TotalAvariaAno> {
         this.numAvarias = numAvarias;
     }
 
+
+
+    @Override
+    public String toString() {
+        StringBuilder str = new StringBuilder();
+        str.append("Totais avarias por ano:");
+        str.append("\n\tAno: ").append(ano);
+        str.append("\n\tEstado da avaria: ").append(estadoAvaria);
+        str.append("\n\t Número de avarias: ").append(numAvarias);
+        return str.toString();
+    }
+
     /**
      * Está a ordenar primeiro pelo numAvarias e depois pelo ano ( NÃO PELO ESTADO não nos era possivel)
-     * @param o
+     * @param
      * @return
      */
     @Override
