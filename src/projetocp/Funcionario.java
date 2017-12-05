@@ -3,8 +3,17 @@ package projetocp;
 import java.io.Serializable;
 import java.util.Calendar;
 
+/**
+ * classe que representa o funcionário
+ */
 public class Funcionario implements Serializable {
+    /**
+     * nif do funcionário
+     */
     protected int nif;
+    /**
+     * nome do funcionário
+     */
     protected String nome;
     protected   String morada;
     protected int telefone;
@@ -12,6 +21,16 @@ public class Funcionario implements Serializable {
     protected Calendar dataNascimento;
     protected String habilitacoes;
 
+    /**
+     * Construtor da classe funcionário
+     * @param nif nif do funcionário
+     * @param nome nome do funcionário
+     * @param morada
+     * @param telefone
+     * @param email
+     * @param dataNascimento
+     * @param habilitacoes
+     */
     public Funcionario(int nif, String nome, String morada, int telefone, String email, Calendar dataNascimento, String habilitacoes) {
         this.nif = nif;
         this.nome = nome;

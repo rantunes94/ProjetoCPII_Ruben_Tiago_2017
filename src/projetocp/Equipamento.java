@@ -27,7 +27,9 @@ public class Equipamento implements Serializable {
     //divisao e estado nao entram no construtor
 
 
-    public Equipamento(String descricao,int numSerie, TipoEquipamento tipoEquipamento, double custo, Funcionario funcionarioTecnico) {
+    public Equipamento(int numeroInventario, String descricao, int numSerie, TipoEquipamento tipoEquipamento, double custo, Funcionario funcionarioTecnico) {
+        this.numeroInventario = numeroInventario;
+
         this.descricao = descricao;
         this.numSerie = numSerie;
         this.tipoEquipamento = tipoEquipamento;

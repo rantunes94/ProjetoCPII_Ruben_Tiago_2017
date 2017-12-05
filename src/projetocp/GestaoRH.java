@@ -50,9 +50,7 @@ public class GestaoRH {
     }
 
 
-    public void adicionarFuncionario(Funcionario funcionario){
-        funcionarios.add(funcionario);
-    }
+
     public void adicionarFuncionarioMedico(FuncionarioMedico funcionarioMedico){
         funcionariosMedicos.add(funcionarioMedico);
         funcionarios.add(funcionarioMedico);
@@ -74,16 +72,7 @@ public class GestaoRH {
     }
 
     public void adicionarEquipamento(Equipamento equipamento){
-        if (!equipamentos.isEmpty())
-            equipamento.setNumeroInventario(equipamentos.get(equipamentos.size()-1).getNumeroInventario()+1);
-        else
-            equipamento.setNumeroInventario(1);
-
-        Calendar.getInstance().get(Calendar.DATE);
-        Calendar.getInstance().get(Calendar.MONTH + 1);
-        Calendar.getInstance().get(Calendar.YEAR);
-        equipamento.setDataInventariacao(Calendar.getInstance());  //a dataInv fica com a data atual no momento da adição
-
+        equipamento.setDataInventariacao(Calendar.getInstance());
         equipamentos.add(equipamento);
     }
 
@@ -114,6 +103,15 @@ public class GestaoRH {
                 return i;
         return -1;
     }
+
+    public int pesquisarFuncionariosOutros(int nif) {
+        for (int i = 0; i < funcionariosOutros.size(); i++)
+            if (funcionariosOutros.get(i).getNif() == nif)
+                return i;
+        return -1;
+    }
+
+
 
     public int pesquisarFuncionariosFuncao(String funcao) {
         for (int i = 0; i < funcionariosOutros.size(); i++)
