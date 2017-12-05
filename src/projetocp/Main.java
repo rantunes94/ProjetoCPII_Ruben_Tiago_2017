@@ -123,7 +123,10 @@ public class Main {
                                 criarEquipamento();
                                 break;
                             case 2:
-
+                                associarDivisaoAoEquipamento();
+                                break;
+                            case 3:
+                                consultarEquipamentosPorDivisao();
                                 break;
                             case 0:
                                 System.out.println("Vai voltar ao menu anterior");
@@ -270,7 +273,7 @@ public class Main {
         System.out.println("2 - Associar Divisão");
         System.out.println("3 - Consultar por divisão");
         System.out.println("0 - Voltar ao Menu Anterior\n");
-        opcao = Consola.lerInt("Opcao: ", 0, 2);
+        opcao = Consola.lerInt("Opcao: ", 0, 3);
 
         return opcao;
     }
@@ -304,14 +307,8 @@ public class Main {
     public static void criarDivisao() {
         String designacao, localizacao;
         Divisao d1;
-        int pos;
-        do {  //validação de existencia
-            designacao = Consola.lerString("Indique a designação da Divisão: ");
-            pos = grh.pesquisarDivisao(designacao);
-            if (pos == -1)
-                System.err.println("Divisão não existe!");
-        } while (pos == -1);
 
+        designacao = Consola.lerString("Indique a designação da Divisão: ");
         localizacao = Consola.lerString("Indique a localização da Divisão: ");
 
         d1 = new Divisao(designacao, localizacao);
@@ -387,7 +384,7 @@ public class Main {
     }
 
     public static void consultarEquipamentosPorDivisao() {
-        int pos;
+        /*int pos;
         String designacaoDivisao;
 
         System.out.println("Lista de Divisões: ");
@@ -404,8 +401,22 @@ public class Main {
             while (pos == -1) ;
 
             System.out.println("");
-        } while (pos != -1);
+        } while (pos != -1);*/
 
+        int pos;
+        String designacao;
+        Equipamento e;
+        Divisao d;
+
+        do{
+            System.out.println(grh.mostrarDivisao());
+            designacao = Consola.lerString("Indique a designação da divisão: ");
+            pos = grh.pesquisarDivisao(designacao);
+            if (pos == -1)
+                System.err.println("Divisão não existe");
+        }while (pos == -1);
+        d = grh.obterDivisao(pos);
+        System.out.println(d.mostrarEquipamentos());
     }
 
 
@@ -423,6 +434,34 @@ public class Main {
 
         Equipamento e = grh.obterEquipamento(pos);
         */
+        int pos, numInventario;
+        String designacao;
+        Equipamento e;
+        Divisao d;
+
+        do{
+            System.out.println(grh.mostrarDivisao());
+            designacao = Consola.lerString("Indique a designação da divisão: ");
+            pos = grh.pesquisarDivisao(designacao);
+            if(pos == -1)
+                System.err.println("Divisão não existe!");
+        }while (pos == -1);
+
+        d = grh.obterDivisao(pos);
+
+        do{
+            System.out.println(grh.mostrarEquipamentos());
+            numInventario = Consola.lerInt("Insira o número de inventário do equipamento: ",0, 999999999);
+            pos = grh.pesquisarEquipamento(numInventario);
+            if (pos == -1)
+                System.err.println("Equipamento não existe!");
+        }while (pos == -1);
+
+        e = grh.obterEquipamento(pos);
+        d.adicionarEquipamentos(e);  //d.associarEquipamento(e);
+        e.setDivisao(d);
+
+        System.out.println("Divisão associda com sucesso!");
     }
 
 

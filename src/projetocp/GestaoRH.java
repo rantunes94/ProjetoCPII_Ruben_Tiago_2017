@@ -153,6 +153,14 @@ public class GestaoRH {
         return str.toString();
     }
 
+    public String mostrarEquipamentos(){
+        StringBuilder str= new StringBuilder("");
+        for (int i=0; i<equipamentos.size(); i++) {
+            str.append(equipamentos.get(i)).append("\n");
+        }
+        return str.toString();
+    }
+
     public String mostrarDivisao(){
         StringBuilder str= new StringBuilder("");
         for (int i=0; i<divisoes.size(); i++) {
@@ -183,6 +191,13 @@ public class GestaoRH {
     public int pesquisarDivisao(String designacao){
         for (int i=0; i<divisoes.size(); i++)
             if (divisoes.get(i).getDesignacao().equalsIgnoreCase(designacao))
+                return i;
+        return -1;
+    }
+
+    public int pesquisarEquipamento(int numInventario){
+        for (int i=0; i<equipamentos.size(); i++)
+            if (equipamentos.get(i).getNumeroInventario()==numInventario)
                 return i;
         return -1;
     }
