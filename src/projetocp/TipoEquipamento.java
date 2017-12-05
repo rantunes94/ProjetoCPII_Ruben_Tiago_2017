@@ -12,7 +12,6 @@ public class TipoEquipamento implements Serializable {
 
 
     public TipoEquipamento(String designacao) {
-        //numero=++numeroT; // tirar isto porque já estamos a incrementar no método de uma forma muito melhor(por enquanto deixa tho)
         this.designacao = designacao;
     }
 
