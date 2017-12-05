@@ -16,6 +16,46 @@ public class Main {
         // write your code here
         int opcao, opcaoSubMenu;
 
+
+
+        // hardcode apenas para testes
+        Calendar dataCalendar =new GregorianCalendar();
+        Calendar dataCalendar2 =new GregorianCalendar();
+
+        String dataNascimento = "12-12-1995";
+        String  dataNascimento2= "12-02-1984";
+
+        try {
+            dataCalendar.setTime(formato.parse(dataNascimento));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            dataCalendar2.setTime(formato.parse(dataNascimento2));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+
+        TipoEquipamento tee1;
+        tee1 = new TipoEquipamento("XTPO");
+        grh.adicionarTipoEquipamento(tee1);
+
+        FuncionarioMedico ff1;
+        ff1= new FuncionarioMedico(1,"Rui Almeida","Rua da almeidinha fonseca",91965554,"email@fonseca.pah",dataCalendar,"12º e já vai com sorte","Absolutamente nenhuma","Em casa");
+        grh.adicionarFuncionarioMedico(ff1);
+
+        FuncionarioOutros ff2;
+        ff2= new FuncionarioOutros(2,"Ana Fonseca", "Rua da fonsequinha",919191191,"anocas@dd.com",dataCalendar,"Doutorada em fazer nada","Nenhnuma");
+        grh.adicionarFuncionarioOutros(ff2);
+
+        FuncionarioOutros ff3;
+        ff3= new FuncionarioOutros(2,"Miguel Estrudes", "Rua da estrudes",919191555,"s@dd.com",dataCalendar,"9º ano","Técnico");
+        grh.adicionarFuncionarioOutros(ff3);
+
+
+
         grh.lerFicheiro();
 
         do {
