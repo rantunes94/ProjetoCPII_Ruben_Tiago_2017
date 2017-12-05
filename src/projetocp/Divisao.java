@@ -30,6 +30,8 @@ public class Divisao implements Serializable {
 
 
 
+
+
     public String getDesignacao() {
         return designacao;
     }

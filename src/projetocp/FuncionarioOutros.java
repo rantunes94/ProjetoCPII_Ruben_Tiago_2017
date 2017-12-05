@@ -54,7 +54,8 @@ public class FuncionarioOutros extends Funcionario implements Serializable{
         str.append("Funcionário 'Outros':");
         str.append(super.toString());
         str.append("\n\tFunção: ").append(funcao);
-        str.append("\n\tNome de utilizador: ").append(username);
+        if(funcao.equalsIgnoreCase("Técnico"))
+            str.append("\n\tNome de utilizador: ").append(username);
         return str.toString();
     }
 }

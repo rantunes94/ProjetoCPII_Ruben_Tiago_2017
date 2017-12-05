@@ -27,7 +27,9 @@ public class Equipamento implements Serializable {
     //divisao e estado nao entram no construtor
 
 
-    public Equipamento(String descricao,int numSerie, TipoEquipamento tipoEquipamento, double custo, Funcionario funcionarioTecnico) {
+    public Equipamento(int numeroInventario, String descricao, int numSerie, TipoEquipamento tipoEquipamento, double custo, Funcionario funcionarioTecnico) {
+        this.numeroInventario = numeroInventario;
+
         this.descricao = descricao;
         this.numSerie = numSerie;
         this.tipoEquipamento = tipoEquipamento;
@@ -35,25 +37,25 @@ public class Equipamento implements Serializable {
         this.funcionarioTecnico = funcionarioTecnico;
     }
 
-    public void adicionarAvaria(Avaria avaria){
+    public void adicionarAvaria(Avaria avaria) {
         avarias.add(avaria);
     }
 
-    public String mostrarAvarias(){
-        StringBuilder str= new StringBuilder("");
-        for (int i=0; i<avarias.size(); i++) {
+    public String mostrarAvarias() {
+        StringBuilder str = new StringBuilder("");
+        for (int i = 0; i < avarias.size(); i++) {
             str.append(avarias.get(i)).append("\n");
         }
         return str.toString();
     }
 
-    public void adicionarReparacao(Reparacao reparacao){
+    public void adicionarReparacao(Reparacao reparacao) {
         reparacaos.add(reparacao);
     }
 
-    public String mostrarReparacoes(){
-        StringBuilder str= new StringBuilder("");
-        for (int i=0; i<reparacaos.size(); i++) {
+    public String mostrarReparacoes() {
+        StringBuilder str = new StringBuilder("");
+        for (int i = 0; i < reparacaos.size(); i++) {
             str.append(reparacaos.get(i)).append("\n");
         }
         return str.toString();
@@ -138,5 +140,22 @@ public class Equipamento implements Serializable {
 
     public void setReparacaos(ArrayList<Reparacao> reparacaos) {
         this.reparacaos = reparacaos;
+    }
+
+
+    @Override
+    public String toString() {
+        StringBuilder str = new StringBuilder();
+        str.append("Equipamento:");
+        str.append("\n\tNúmero de Inventário do equipamento: ").append(numeroInventario);
+        str.append("\n\tData de Inventariação: ").
+                append(dataInventariacao.get(Calendar.DATE)).
+                append("-").append((dataInventariacao.get(Calendar.MONTH) + 1)).
+                append("-").append(dataInventariacao.get(Calendar.YEAR));
+        str.append("\n\tDescrição do equipamento: ").append(descricao);
+        str.append("\n\tNúmero de Série do equipamento: ").append(numSerie);
+        str.append("\n\tTipo de equipamento: ").append(tipoEquipamento);
+        str.append("\n\tDivisão associada ao equipamento: ").append(divisao);
+        return str.toString();
     }
 }
