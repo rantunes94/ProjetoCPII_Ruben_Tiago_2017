@@ -163,6 +163,16 @@ public class GestaoRH {
         return str.toString();
     }
 
+    public String mostrarDivisaoDesignacao(){
+        StringBuilder str= new StringBuilder("");
+        for (int i=0; i<divisoes.size(); i++) {
+            str.append(divisoes.get(i).getDesignacao());
+        }
+        return str.toString();
+    }
+
+
+
 
 
     public int pesquisarTipoEquipamento(int numero){ // à partida nao vai ser necessario
@@ -178,6 +188,9 @@ public class GestaoRH {
                 return i;
         return -1;
     }
+
+
+
 
 
 

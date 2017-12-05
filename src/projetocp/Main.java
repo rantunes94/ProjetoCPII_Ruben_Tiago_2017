@@ -386,7 +386,7 @@ public class Main {
         TipoEquipamento tipoEquipamento = grh.obterTiposEquipamento(pos);
 
         do {
-            System.out.println(grh.mostrarDivisao());
+            System.out.println(grh.mostrarDivisaoDesignacao());
             designacaoDivisao = Consola.lerString("Indique a designação da Divisão em que o equipamento se encontra: ");
 
             pos = grh.pesquisarDivisao(designacaoDivisao);
@@ -394,15 +394,35 @@ public class Main {
                 System.err.println("Divisão não existe");
         } while (pos == -1);
 
-        Divisao divisao = grh.obterDivisao(pos);
         Equipamento e = grh.obterEquipamento(pos);
-        e.setDivisao(divisao);
         /*ir a divisao , numero++
         d.setNumEquipamentos(d.getNumEquipamentos()+1);*/
 
         e1 = new Equipamento(descricao, numSerie, tipoEquipamento, custo, funcionarioTecnico);
 
         grh.adicionarEquipamento(e1);
+    }
+
+    public static void consultarEquipamentosPorDivisao(){
+        int pos;
+        String designacaoDivisao;
+
+        System.out.println("Lista de Divisões: ");
+        System.out.println(grh.mostrarDivisaoDesignacao());
+
+        do{
+
+            designacaoDivisao = Consola.lerString("Insira a designação da divisão a consultar: ");
+            pos = grh.pesquisarDivisao(designacaoDivisao);
+
+            if (pos == -1){
+                System.out.println("Divisão não existe!");
+            }
+            while(pos ==-1);
+
+            System.out.println("");
+        }while(pos!=-1);
+
     }
 
 
@@ -508,7 +528,7 @@ public class Main {
 
     public static void alterarFuncionario() {
         int nif, pos,opcao=0;
-        int novoTelefone=0;
+        int novoTelefone;
         String novaMorada;
 
         do {
@@ -519,9 +539,9 @@ public class Main {
             } else
 
                 do {
-                    System.out.println("Escolha o que quer alterar:");
-                    System.out.println("1 - Só o número de Telefone");
-                    System.out.println("2 - Só a morada");
+                    System.out.println("Escolha o campo que quer alterar:");
+                    System.out.println("1 - Número de Telefone");
+                    System.out.println("2 - Morada");
                     System.out.println("3 - Ambos");
                     opcao = Consola.lerInt("Opcao: ", 1, 3);
                 }while(opcao<0 && opcao >3);
