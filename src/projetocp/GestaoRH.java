@@ -13,6 +13,7 @@ public class GestaoRH {
     private ArrayList<FuncionarioOutros> funcionariosOutros = new ArrayList<>();
     private ArrayList<TipoEquipamento> tiposEquipamento = new ArrayList<>();
     private ArrayList<Equipamento> equipamentos = new ArrayList<>();
+    private ArrayList<Avaria> avarias = new ArrayList<>();
 
 
     public int getTotalFuncionarios() {
@@ -29,6 +30,7 @@ public class GestaoRH {
     public int getTotalEquipamentos() {
         return equipamentos.size();
     }
+    public int getTotalAvarias() { return avarias.size(); }
 
     public Funcionario obterFuncionario (int pos){
         return funcionarios.get(pos);
@@ -47,6 +49,9 @@ public class GestaoRH {
     }
     public Equipamento obterEquipamento (int pos){
         return equipamentos.get(pos);
+    }
+    public Avaria obterAvaria (int pos){
+        return avarias.get(pos);
     }
 
 
@@ -77,6 +82,15 @@ public class GestaoRH {
     }
 
 
+    public void adicionarAvaria(Avaria avaria){
+        if (!avarias.isEmpty())
+            avaria.setNumero(avarias.get(avarias.size()-1).getNumero()+1);
+        else
+            avaria.setNumero(1);
+        avaria.setDataRegisto(Calendar.getInstance()); // insere data atual
+        avarias.add(avaria);
+    }
+
     public void eliminarFuncionario(int pos){
 
         funcionarios.remove(pos);
@@ -89,12 +103,15 @@ public class GestaoRH {
 
     public void alterarFuncionarioTelefone(int novoTelefone,int posicao){
         funcionarios.get(posicao).setTelefone(novoTelefone);
-
     }
 
     public void alterarFuncionarioMorada(String novaMorada,int posicao){
 
         funcionarios.get(posicao).setMorada(novaMorada);
+    }
+
+    public void alterarEstado(EstadoAvaria novoEstado,int posicao){
+        avarias.get(posicao).setEstadoAvaria(novoEstado);
     }
 
     public int pesquisarFuncionarios(int nif) {
@@ -107,6 +124,37 @@ public class GestaoRH {
     public int pesquisarFuncionariosOutros(int nif) {
         for (int i = 0; i < funcionariosOutros.size(); i++)
             if (funcionariosOutros.get(i).getNif() == nif)
+                return i;
+        return -1;
+    }
+
+    public int pesquisarTipoEquipamento(int numero){ // à partida nao vai ser necessario
+        for (int i=0; i<tiposEquipamento.size(); i++)
+            if (tiposEquipamento.get(i).getNumero()==numero)
+                return i;
+        return -1;
+    }
+
+    public int pesquisarDivisao(String designacao){
+        for (int i=0; i<divisoes.size(); i++)
+            if (divisoes.get(i).getDesignacao().equalsIgnoreCase(designacao))
+                return i;
+        return -1;
+    }
+
+    public int pesquisarEquipamento(int numInventario){
+        for (int i=0; i<equipamentos.size(); i++)
+            if (equipamentos.get(i).getNumeroInventario()==numInventario)
+                return i;
+        return -1;
+    }
+
+
+
+    // nao sei se este método está bem
+    public int pesquisarAvarias(int numeroEquipamento) {
+        for (int i = 0; i < avarias.size(); i++)
+            if (equipamentos.get(i).getNumSerie() == numeroEquipamento)
                 return i;
         return -1;
     }
@@ -176,33 +224,6 @@ public class GestaoRH {
         }
         return str.toString();
     }
-
-
-
-
-
-    public int pesquisarTipoEquipamento(int numero){ // à partida nao vai ser necessario
-        for (int i=0; i<tiposEquipamento.size(); i++)
-            if (tiposEquipamento.get(i).getNumero()==numero)
-                return i;
-        return -1;
-    }
-
-    public int pesquisarDivisao(String designacao){
-        for (int i=0; i<divisoes.size(); i++)
-            if (divisoes.get(i).getDesignacao().equalsIgnoreCase(designacao))
-                return i;
-        return -1;
-    }
-
-    public int pesquisarEquipamento(int numInventario){
-        for (int i=0; i<equipamentos.size(); i++)
-            if (equipamentos.get(i).getNumeroInventario()==numInventario)
-                return i;
-        return -1;
-    }
-
-
 
 
 

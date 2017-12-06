@@ -51,7 +51,7 @@ public class Main {
         grh.adicionarFuncionarioOutros(ff2);
 
         FuncionarioOutros ff3;
-        ff3= new FuncionarioOutros(2,"Miguel Estrudes", "Rua da estrudes",919191555,"s@dd.com",dataCalendar,"9º ano","Técnico");
+        ff3= new FuncionarioOutros(3,"Miguel Estrudes", "Rua da estrudes",919191555,"s@dd.com",dataCalendar,"9º ano","Técnico");
         grh.adicionarFuncionarioOutros(ff3);
 
 
@@ -187,7 +187,7 @@ public class Main {
                         opcaoSubMenu = menuAvarias();
                         switch (opcaoSubMenu) {
                             case 1:
-
+                                criarAvaria();
                                 break;
                             case 2:
 
@@ -421,6 +421,57 @@ public class Main {
 
         grh.adicionarEquipamento(e1);
         System.out.println("Equipamento inserido com sucesso");
+    }
+
+
+
+
+    public static void criarAvaria() {
+    int pos,nif;
+    int numEquipamento;
+    String descricao;
+    Funcionario funcionarioTecnico;
+    Avaria av1;
+
+        do {
+            System.out.println(grh.mostrarEquipamentos());
+            numEquipamento = Consola.lerInt("Indique o equipamento no qual quer registar a ocorrência de uma avaria: ", 1, 9999999);
+            pos = grh.pesquisarEquipamento(numEquipamento);
+            if (pos == -1)
+                System.err.println("Equipamento não existe");
+        } while (pos == -1);
+        Equipamento equipamento = grh.obterEquipamento(pos);
+
+        descricao = Consola.lerString("Indique a descrição da Avaria: ");
+
+        do {
+            System.out.println(grh.mostrarFuncionarios());
+            nif = Consola.lerInt("Indique o nif do Funcionário que registou a avaria : ", 1, 999999999);
+            pos = grh.pesquisarFuncionarios(nif);
+            if (pos == -1)
+                System.err.println("Funcionario não existe!");
+            else {
+                funcionarioTecnico = grh.obterFuncionario(pos);
+                if (funcionarioTecnico instanceof FuncionarioOutros) {
+                    if (((FuncionarioOutros) funcionarioTecnico).getFuncao().equalsIgnoreCase("técnico")) {
+                        break;
+                    }
+                }
+                pos=-1;
+                System.out.println("Este funcionário não é Técnico!");
+            }
+        } while (pos == -1);
+        funcionarioTecnico = grh.obterFuncionario(pos);
+
+
+
+
+
+        av1 = new Avaria(equipamento,descricao,funcionarioTecnico);
+
+        grh.adicionarAvaria(av1);
+        System.out.println("Avaria inserida com sucesso");
+
     }
 
     public static void consultarEquipamentosPorDivisao() {

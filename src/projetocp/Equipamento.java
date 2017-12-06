@@ -61,6 +61,13 @@ public class Equipamento implements Serializable {
         return str.toString();
     }
 
+    public int getNumSerie() {
+        return numSerie;
+    }
+
+    public void setNumSerie(int numSerie) {
+        this.numSerie = numSerie;
+    }
 
     public int getNumeroInventario() {
         return numeroInventario;
