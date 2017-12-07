@@ -18,21 +18,36 @@ public class Funcionario implements Serializable {
      * nome do funcionário
      */
     protected String nome;
+    /**
+     * morada do funcionário
+     */
     protected   String morada;
+    /**
+     * telefone do funcionário
+     */
     protected int telefone;
+    /**
+     * email do funcionario
+     */
     protected String email;
+    /**
+     * data de nascimento do funcionário
+     */
     protected Calendar dataNascimento;
+    /**
+     * habilitações do funcionário
+     */
     protected String habilitacoes;
 
     /**
      * Construtor da classe funcionário
      * @param nif nif do funcionário
      * @param nome nome do funcionário
-     * @param morada
-     * @param telefone
-     * @param email
-     * @param dataNascimento
-     * @param habilitacoes
+     * @param morada morada do funcionário
+     * @param telefone telefone do funcionário
+     * @param email email do funcionário
+     * @param dataNascimento data de nascimento do funcionário
+     * @param habilitacoes habilitações do funcionário
      */
     public Funcionario(int nif, String nome, String morada, int telefone, String email, Calendar dataNascimento, String habilitacoes) {
         this.nif = nif;

@@ -4,9 +4,21 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Divisao implements Serializable {
+    /**
+     * quantidade de equipamentos instalados
+     */
     public static int quantidadeEquipamentosInstalados; // isto so se faz quando se associa uma divisao....
+    /**
+     * designação da divisão
+     */
     private String designacao;
+    /**
+     * localização da divisão
+     */
     private String localizacao;
+    /**
+     * Array de equipamentos porque ??
+     */
     private ArrayList<Equipamento> equipamentos = new ArrayList<>();// metodo para add e mostrar equipamentos
 
 
