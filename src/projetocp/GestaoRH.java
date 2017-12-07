@@ -78,6 +78,7 @@ public class GestaoRH {
 
     public void adicionarEquipamento(Equipamento equipamento){
         equipamento.setDataInventariacao(Calendar.getInstance());
+        equipamento.setEstado(Estado.DISPONIVEL);
         equipamentos.add(equipamento);
     }
 
