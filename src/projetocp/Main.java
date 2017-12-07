@@ -188,6 +188,11 @@ public class Main {
                         switch (opcaoSubMenu) {
                             case 1:
                                 criarAvaria();
+
+                                if (grh.getTotalEquipamentos() > 0 && grh.getTotalFuncionarios() > 0)
+                                    criarAvaria();
+                                else
+                                    System.err.println("Ainda não foram inseridos equipamentos e/ou funcionários!");
                                 break;
                             case 2:
 
@@ -420,13 +425,15 @@ public class Main {
         e1 = new Equipamento(numInventario, descricao, numSerie, tipoEquipamento, custo, funcionarioTecnico);
 
         grh.adicionarEquipamento(e1);
+
         System.out.println("Equipamento inserido com sucesso");
     }
 
 
 
 
-    public static void criarAvaria() {
+    public static void criarAvaria() {  //qnd adicionamos uma avaria, o estadoAvaria tem que ficar PORREPARAR; e o estado INDISPONIVEL
+
     int pos,nif;
     int numEquipamento;
     String descricao;
@@ -512,19 +519,6 @@ public class Main {
 
 
     public static void associarDivisaoAoEquipamento() {
-//este codigo é para aproveitar!!
-/*
-        do {
-            System.out.println(grh.mostrarDivisaoDesignacao());
-            designacaoDivisao = Consola.lerString("Indique a designação da Divisão em que o equipamento se encontra: ");
-
-            pos = grh.pesquisarDivisao(designacaoDivisao);
-            if (pos == -1)
-                System.err.println("Divisão não existe");
-        } while (pos == -1);
-
-        Equipamento e = grh.obterEquipamento(pos);
-        */
         int pos, numInventario;
         String designacao;
         Equipamento e;

@@ -1,6 +1,6 @@
 package projetocp;
 
-public enum Estado {
+public enum EstadoEquipamento {
 
     DISPONIVEL,
     INDISPONIVEL,

@@ -8,7 +8,7 @@ Menu Principal
 
 2- Menu divisao ('Gerir Divisoes'): //1s a inserir
 	1- Inserir
-	2- Consultar por designaçao
+	2- Consultar por designaï¿½ao
 	0- Voltar ao menu anterior
 
 3- Menu Tipos de Equipamentos(' Gerir Tipos de equipamentos') //1s a i nserir
@@ -21,18 +21,20 @@ Menu Principal
 	2- Consultar por divisao
 	0- Voltar ao menu anterior
 
-5- Menu Avarias ('Gerir avarias/reparações')
+5- Menu Avarias ('Gerir avarias/reparaï¿½ï¿½es')
 	1- Registar
-	2- Alterar Estado (é aqui que inseramos a reparaçao)
+	2- Alterar Estado (ï¿½ aqui que inseramos a reparaï¿½ao)
 	3- Consultar por numero de equipamento
 	0- Voltar ao menu anterior
 
-6- Menu Estatisticas (cuidado que o 'o número total de avarias em cada
-equipamento.', Indicar (no menu principal) o número de equipamentos por tipo de
+6- Menu Estatisticas (cuidado que o 'o nï¿½mero total de avarias em cada
+equipamento.', Indicar (no menu principal) o nï¿½mero de equipamentos por tipo de
 equipamento- tem que tar guardado numa variavel na classeTipoDeEquipamentos e por divisao; e mais tb sao estatisticas, fora as outras consultas/estatisticas')
-
-	1-Percentagem de equipamentos com avarias no hospital.
-	2-Total de avarias registadas por estado num determinado ano --  à medida que vao registando avarias temos que guardar esse svaloresesta estatistica se for bem feita tenho que fazer outra Classe que guardasse estes 3 valores, pq s enao tinha que fazer com fors e e muito complicado
+
+
+	1-Percentagem de equipamentos com avarias no hospital.
+
+	2-Total de avarias registadas por estadoEquipamento num determinado ano --  ï¿½ medida que vao registando avarias temos que guardar esse svaloresesta estatistica se for bem feita tenho que fazer outra Classe que guardasse estes 3 valores, pq s enao tinha que fazer com fors e e muito complicado
 (ordenado de forma crescente pelo total e descresente pelo total).
 	3-Total gasto por ano em equipamentos (ordenado por ordem
 decrescente do total).  na classe gestao tenho que guardar la o ano e total gasto e criar uma lista(array) por isso tenho que criar uma classe com o ano e total gasto
@@ -42,7 +44,7 @@ Nota: quando listar equipamentos temos que dizer o numero de avarias e outras ce
 -----------------------------------------------------------------------------------------------
 Classes:
 - Divisao
-- Funcionario (FuncionariosMedicos,FuncionariosOutros(é necessario fazer funçao <- verificar se funçao = tecnico) posso fazer uma classe para tecnico
+- Funcionario (FuncionariosMedicos,FuncionariosOutros(ï¿½ necessario fazer funï¿½ao <- verificar se funï¿½ao = tecnico) posso fazer uma classe para tecnico
 - TipoDeEquipamento
 - Equipamento
 - Avaria
@@ -63,7 +65,7 @@ Dizer que o nif e unico e percorrer um array e ver se ja la esta como fizemos no
 
 
 ----------------------
-NAO FAZER AS ESTATISTICAS NA MAIN , ELAS TÊM DE SER FEITAS ONDE TIVEREM AS ARRAY LISTS
+NAO FAZER AS ESTATISTICAS NA MAIN , ELAS Tï¿½M DE SER FEITAS ONDE TIVEREM AS ARRAY LISTS
 
 Para cada lista
 - adicionar
@@ -78,7 +80,7 @@ Para cada lista
 -calcularEstatisticas
 ------------------------------
 
-Começar a Implementar :
+Comeï¿½ar a Implementar :
 
 Gestao : pesquisar por designacao 
 
@@ -98,9 +100,9 @@ d.setNumEquipamentos(d.getNumEquipamentos()+1);
 
 Para adicionar um Funcionario
 Qual a sua funcao?
-		é medico? se for medico funcao==Medico dou-lhe a introduzir especialidade e seccao e depois faco newFuncionarioMedico
+		ï¿½ medico? se for medico funcao==Medico dou-lhe a introduzir especialidade e seccao e depois faco newFuncionarioMedico
 
-		é tecnico?
+		ï¿½ tecnico?
 		dou-lhe login e pass 
 		newTecnico 
 else
@@ -108,8 +110,8 @@ outroFunc
 
 ---------------------------------------------
 
-associar aluno ao curso é como associar a um equipamento, um tipo.
-ver isso no inseirAluno a última parte do Aluno a= new blabla.
+associar aluno ao curso ï¿½ como associar a um equipamento, um tipo.
+ver isso no inseirAluno a ï¿½ltima parte do Aluno a= new blabla.
 
 -------------------------------
 ESTATISTICAS numero total de equipamentos com avarias -> numero total de funcionarios com salario >1000
@@ -128,10 +130,10 @@ CLASSE DIVISAO
 
 falta um array para equipamentos, pq quero listar todos os equipamentos que estao dentro d euma divisao
 
-fazer um for de tds os equipamentos e ver qual pertence àquela divisao
+fazer um for de tds os equipamentos e ver qual pertence ï¿½quela divisao
 
 
-pedir a designaçao da divisao
+pedir a designaï¿½ao da divisao
 verificar se ela existe (pos = gestao.pesquisarDivisao(designacao)
 se existir, Divisao d = gestao.obterDivisao(pos)
 sout(d.mostrarEquipamentos())
@@ -147,14 +149,14 @@ CLASSSE TipoEquipamento
 
 numTotaldeEquipamentos desse tipo
 
-fazer um for que percorre tds os tipos e diz a designaçao na gestaoRH
+fazer um for que percorre tds os tipos e diz a designaï¿½ao na gestaoRH
 
 ------------------------------------
 CLASSE EQUIPAMENTO
 TipoEquipamento tipoEquipamento
 Divisao divisao
 FuncionarioTecnico tecnico (que inventariou a cena)
-estado e um campo que nao deve ser pedido ao utilizador.
+estadoEquipamento e um campo que nao deve ser pedido ao utilizador.
 
 int numTotalAvarias(qnd insiro uma avaria, tenho que ir a este campo e dizer que tenho uma vaaria nesse equipamento).
 
@@ -162,7 +164,7 @@ int numTotalAvarias(qnd insiro uma avaria, tenho que ir a este campo e dizer que
 CLASSE AVARIA
 
 o funcionario deve ser do tipo Funcionario
-as reparaçoes sao do tipo Tecnico
+as reparaï¿½oes sao do tipo Tecnico
 
 ------------------------
 

@@ -5,18 +5,44 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 public class Equipamento implements Serializable {
+    /**
+     * número de inventário do equipamento
+     */
     private int numeroInventario; // unico
+    /**
+     * data de inventariação do equipamento
+     */
     private Calendar dataInventariacao;
+    /**
+     * descrição do equipamento
+     */
     private String descricao;
+    /**
+     * número de série do equipamento
+     */
     private int numSerie;
+    /**
+     * tipo do equipamento
+     */
     private TipoEquipamento tipoEquipamento;
+    /**
+     * divisão do equipamento
+     */
     private Divisao divisao;
 
-
-    private Estado estado; // este estado é um ENUM ,  NOTA : este campo não é para ser pedido ao utilizador , no acto da adição deve ficar DISPONIVEL
+    /**
+     * estadoEquipamento do equipamento, onde chama a Enumeração EstadoEquipamento, que nos permite predefinir os valores do estadoEquipamento (DISPONIVEL,INDISPONIVEL,ABATIDO)
+     */
+    private EstadoEquipamento estadoEquipamento; // este estadoEquipamento é um ENUM ,  NOTA : este campo não é para ser pedido ao utilizador , no acto da adição deve ficar DISPONIVEL
 
     // funcionario tecnico que o inventariou e custo do mesmo
+    /**
+     * custo do equipamento
+     */
     private double custo;
+    /**
+     * funcionário técnico que inventaria o equipamento
+     */
     private Funcionario funcionarioTecnico;
     /////////////////////////////////////////////////////////
     private int numTotalAvariasPorEquipamento; // qnd insiro uma avaria, tenho que ir a este campo e dizer que tenho uma avaria nesse equipamento
@@ -24,7 +50,7 @@ public class Equipamento implements Serializable {
     private ArrayList<Reparacao> reparacaos = new ArrayList<>();// metodo para add e mostrar
 
 
-    //divisao e estado nao entram no construtor
+    //divisao e estadoEquipamento nao entram no construtor
 
 
     public Equipamento(int numeroInventario, String descricao, int numSerie, TipoEquipamento tipoEquipamento, double custo, Funcionario funcionarioTecnico) {
@@ -101,12 +127,12 @@ public class Equipamento implements Serializable {
         this.divisao = divisao;
     }
 
-    public Estado getEstado() {
-        return estado;
+    public EstadoEquipamento getEstadoEquipamento() {
+        return estadoEquipamento;
     }
 
-    public void setEstado(Estado estado) {
-        this.estado = estado;
+    public void setEstadoEquipamento(EstadoEquipamento estadoEquipamento) {
+        this.estadoEquipamento = estadoEquipamento;
     }
 
     public double getCusto() {
