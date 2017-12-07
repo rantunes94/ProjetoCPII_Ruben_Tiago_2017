@@ -45,17 +45,33 @@ public class Equipamento implements Serializable {
      */
     private Funcionario funcionarioTecnico;
     /////////////////////////////////////////////////////////
+    /**
+     * número total de avarias por equipamento
+     */
     private int numTotalAvariasPorEquipamento; // qnd insiro uma avaria, tenho que ir a este campo e dizer que tenho uma avaria nesse equipamento
+    /**
+     * Array de avarias
+     */
     private ArrayList<Avaria> avarias = new ArrayList<>();// metodo para add e mostrar
+    /**
+     * Array de reparações
+     */
     private ArrayList<Reparacao> reparacaos = new ArrayList<>();// metodo para add e mostrar
 
 
     //divisao e estadoEquipamento nao entram no construtor
 
-
+    /**
+     * Construtor da classe Equipamento
+     * @param numeroInventario número de inventário do equipamento
+     * @param descricao descrição do equipamento
+     * @param numSerie número de série do equipamento
+     * @param tipoEquipamento tipo de equipamento
+     * @param custo custo do equipamento
+     * @param funcionarioTecnico funcionário técnico que inventaria o equipamento
+     */
     public Equipamento(int numeroInventario, String descricao, int numSerie, TipoEquipamento tipoEquipamento, double custo, Funcionario funcionarioTecnico) {
         this.numeroInventario = numeroInventario;
-
         this.descricao = descricao;
         this.numSerie = numSerie;
         this.tipoEquipamento = tipoEquipamento;
@@ -63,10 +79,18 @@ public class Equipamento implements Serializable {
         this.funcionarioTecnico = funcionarioTecnico;
     }
 
+    /**
+     * método que permite adicionar uma avaria a um equipamento, associando-os
+     * @param avaria avaria a adicionar
+     */
     public void adicionarAvaria(Avaria avaria) {
         avarias.add(avaria);
     }
 
+    /**
+     * método que permite mostrar todas as avarias
+     * @return devolve o método toString do Equipamento, que permite mostrar ao utilizador toda a informação das instâncias da Classe 
+     */
     public String mostrarAvarias() {
         StringBuilder str = new StringBuilder("");
         for (int i = 0; i < avarias.size(); i++) {

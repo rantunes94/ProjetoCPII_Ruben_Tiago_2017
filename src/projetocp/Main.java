@@ -160,13 +160,22 @@ public class Main {
                         opcaoSubMenu = menuEquipamentos();
                         switch (opcaoSubMenu) {
                             case 1:
-                                criarEquipamento();
+                                if (grh.getTotalFuncionarios() > 0 && grh.getTotalTiposEquipamento() > 0 )
+                                    criarEquipamento();
+                                else
+                                    System.err.println("Ainda não foram inseridos funcionários e/ou tipos de equipamentos!");
                                 break;
                             case 2:
-                                associarDivisaoAoEquipamento();
+                                if (grh.getTotalDivisoes() > 0 && grh.getTotalEquipamentos() > 0 )
+                                    associarDivisaoAoEquipamento();
+                                else
+                                    System.err.println("Ainda não foram inseridas divisões e/ou equipamentos!");
                                 break;
                             case 3:
-                                consultarEquipamentosPorDivisao();
+                                if (grh.getTotalDivisoes() > 0)
+                                    consultarEquipamentosPorDivisao();
+                                else
+                                    System.err.println("Ainda não foram inseridas divisões e/ou equipamentos!");
                                 break;
                             case 0:
                                 System.out.println("Vai voltar ao menu anterior");
@@ -187,8 +196,6 @@ public class Main {
                         opcaoSubMenu = menuAvarias();
                         switch (opcaoSubMenu) {
                             case 1:
-                                criarAvaria();
-
                                 if (grh.getTotalEquipamentos() > 0 && grh.getTotalFuncionarios() > 0)
                                     criarAvaria();
                                 else
