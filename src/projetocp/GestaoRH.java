@@ -89,6 +89,7 @@ public class GestaoRH {
         else
             avaria.setNumero(1);
         avaria.setDataRegisto(Calendar.getInstance()); // insere data atual
+        avaria.setEstadoAvaria(EstadoAvaria.PORREPARAR);
         avarias.add(avaria);
     }
 
@@ -111,8 +112,29 @@ public class GestaoRH {
         funcionarios.get(posicao).setMorada(novaMorada);
     }
 
-    public void alterarEstado(EstadoAvaria novoEstado,int posicao){
+    public void alterarEstadoAvaria(EstadoAvaria novoEstado,Equipamento equipamento,int posicao){
+        //int opcao=0;
         avarias.get(posicao).setEstadoAvaria(novoEstado);
+
+        for (int i = 0; i < avarias.size(); i++)
+            if(avarias.get(i).getEstadoAvaria() == EstadoAvaria.PORREPARAR)
+                equipamento.setEstadoEquipamento(EstadoEquipamento.INDISPONIVEL);
+            else
+                if(avarias.get(i).getEstadoAvaria() == EstadoAvaria.REPARADA)
+                     equipamento.setEstadoEquipamento(EstadoEquipamento.DISPONIVEL);
+            else
+                if(avarias.get(i).getEstadoAvaria() == EstadoAvaria.IRREPARAVEL)
+                    equipamento.setEstadoEquipamento(EstadoEquipamento.ABATIDO);
+            /*
+            switch (opcao) {
+                case 1: equipamento.setEstadoEquipamento(EstadoEquipamento.DISPONIVEL);
+                    break;
+                case 2: equipamento.setEstadoEquipamento(EstadoEquipamento.INDISPONIVEL);
+                    break;
+                case 3: equipamento.setEstadoEquipamento(EstadoEquipamento.ABATIDO);
+                    break;
+            }
+            */
     }
 
     public int pesquisarFuncionarios(int nif) {
@@ -226,6 +248,14 @@ public class GestaoRH {
         return str.toString();
     }
 
+    public String mostrarAvarias(){
+        StringBuilder str= new StringBuilder("");
+        for (int i=0; i<avarias.size(); i++) {
+            str.append(avarias.get(i)).append("\n");
+        }
+        return str.toString();
+    }
+
 
 
 
@@ -237,6 +267,9 @@ public class GestaoRH {
             out.writeObject(funcionariosMedicos);
             out.writeObject(funcionariosOutros);
             out.writeObject(tiposEquipamento);
+            out.writeObject(equipamentos);
+            out.writeObject(avarias);
+
 
             out.close();
         } catch (IOException ex) {
@@ -252,6 +285,9 @@ public class GestaoRH {
             funcionariosMedicos = (ArrayList<FuncionarioMedico>) in.readObject();
             funcionariosOutros = (ArrayList<FuncionarioOutros>) in.readObject();
             tiposEquipamento = (ArrayList<TipoEquipamento>) in.readObject();
+            equipamentos = (ArrayList<Equipamento>) in.readObject();
+            avarias = (ArrayList<Avaria>) in.readObject();
+
 
             Divisao.quantidadeEquipamentosInstalados= divisoes.size();
 

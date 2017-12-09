@@ -1,4 +1,6 @@
 package projetocp;
 
-public class Reparacao {
+import java.io.Serializable;
+
+public class Reparacao implements Serializable {
 }

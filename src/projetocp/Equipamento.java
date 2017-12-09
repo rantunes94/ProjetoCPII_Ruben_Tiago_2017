@@ -211,7 +211,7 @@ public class Equipamento implements Serializable {
                 append("-").append(dataInventariacao.get(Calendar.YEAR));
         str.append("\n\tDescrição do equipamento: ").append(descricao);
         str.append("\n\tNúmero de Série do equipamento: ").append(numSerie);
-        str.append("\n\tTipo de equipamento: ").append(tipoEquipamento);
+        str.append("\n").append(tipoEquipamento);
         str.append("\n\tDivisão associada ao equipamento: ").append(divisao);
         return str.toString();
     }

@@ -1,6 +1,8 @@
 package projetocp;
 
-public enum EstadoEquipamento {
+import java.io.Serializable;
+
+public enum EstadoEquipamento implements Serializable{
 
     DISPONIVEL,
     INDISPONIVEL,

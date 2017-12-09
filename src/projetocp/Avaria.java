@@ -1,8 +1,9 @@
 package projetocp;
 
+import java.io.Serializable;
 import java.util.Calendar;
 
-public class Avaria {
+public class Avaria implements Serializable{
     private int numero;
     private Calendar dataRegisto;
     private Equipamento equipamento;
@@ -67,4 +68,25 @@ public class Avaria {
     public void setFuncionarioTecnico(Funcionario funcionarioTecnico) {
         this.funcionarioTecnico = funcionarioTecnico;
     }
+
+
+    @Override
+    public String toString() {
+        StringBuilder str =new StringBuilder();
+        str.append("Avarias:");
+        str.append("\n\tNúmero de avaria: ").append(numero);
+        str.append("\n\tData de registo: ").
+                append(dataRegisto.get(Calendar.DATE)).
+                append("-").append((dataRegisto.get(Calendar.MONTH) + 1)).
+                append("-").append(dataRegisto.get(Calendar.YEAR));
+        str.append("\n\tDescrição: ").append(descricao);
+        str.append("\n\tEstado da Avaria: ").append(estadoAvaria);
+        str.append("\n ").append(equipamento);
+        str.append("\n\nEsta avaria foi resgistada por: \n").append(funcionarioTecnico);
+        return str.toString();
+    }
+
+
+
+
 }
