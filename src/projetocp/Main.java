@@ -208,8 +208,10 @@ public class Main {
                                     System.err.println("Ainda não foram inseridos equipamentos com avarias!");
                                 break;
                             case 3:
-                                break;
-                            case 4:
+                                if (grh.getTotalAvarias() > 0 && grh.getTotalEquipamentos() > 0 )
+                                    consultarAvariasPorEquipamento();
+                                else
+                                    System.err.println("Ainda não foram inseridas avarias e/ou equipamentos!");
                                 break;
                             case 0:
                                 System.out.println("Vai voltar ao menu anterior");
@@ -551,6 +553,21 @@ public class Main {
         System.out.println(divisao);
     }
 
+    public static void consultarAvariasPorEquipamento() {
+        int pos,numero;
+        Avaria avaria;
+        do {
+            numero = Consola.lerInt("Insira o número do equipamento com avaria: ",1, 999999999);
+            pos = grh.pesquisarAvariasPorEquipamento(numero);
+            if (pos == -1)
+                System.err.println("Esse equipamento não possui nenhuma avaria ou não existe!");
+        } while (pos == -1);
+
+        avaria = grh.obterAvaria(pos);
+
+        System.out.println(avaria);
+    }
+
 
     public static void criarFuncionario() {
         int nif, telefone, tipo, pos;
@@ -637,15 +654,13 @@ public class Main {
         EstadoAvaria novoEstado;
         Equipamento equipamento;
 
-
-
         do {
             System.out.println(grh.mostrarAvarias());
             numAvaria = Consola.lerInt("Indique o número da Avaria: ", 1, 9999999);
             pos = grh.pesquisarAvarias(numAvaria);
 
             //** erro nesta linha , não estou a conseguir ir buscar o Equipamento para depois alterar o estadoEquipamento
-            equipamento =grh.obterEquipamento(pos);
+            //equipamento =grh.obterEquipamento(pos);
 
             if (pos == -1){
                 System.err.println("De momento não existem avarias!");
@@ -660,17 +675,17 @@ public class Main {
 
             if (opcao == 1) {
                 novoEstado = EstadoAvaria.PORREPARAR;
-                grh.alterarEstadoAvaria(novoEstado,equipamento, pos);
+                grh.alterarEstadoAvaria(novoEstado, pos);
                 System.out.println("Alteração feita com sucesso!");
             }
             if (opcao == 2) {
                 novoEstado = EstadoAvaria.REPARADA;
-                grh.alterarEstadoAvaria(novoEstado,equipamento, pos);
+                grh.alterarEstadoAvaria(novoEstado, pos);
                 System.out.println("Alteração feita com sucesso!");
             }
             if (opcao == 3) {
                 novoEstado = EstadoAvaria.IRREPARAVEL;
-                grh.alterarEstadoAvaria(novoEstado,equipamento, pos);
+                grh.alterarEstadoAvaria(novoEstado, pos);
                 System.out.println("Alteração feita com sucesso!");
             }
         } while (pos == -1);

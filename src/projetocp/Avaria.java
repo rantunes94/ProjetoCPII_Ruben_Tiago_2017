@@ -82,7 +82,7 @@ public class Avaria implements Serializable{
         str.append("\n\tDescrição: ").append(descricao);
         str.append("\n\tEstado da Avaria: ").append(estadoAvaria);
         str.append("\n ").append(equipamento);
-        str.append("\n\nEsta avaria foi resgistada por: \n").append(funcionarioTecnico);
+        str.append("\nEsta avaria foi resgistada por: \n").append(funcionarioTecnico);
         return str.toString();
     }
 

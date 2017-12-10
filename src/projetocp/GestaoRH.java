@@ -112,19 +112,22 @@ public class GestaoRH {
         funcionarios.get(posicao).setMorada(novaMorada);
     }
 
-    public void alterarEstadoAvaria(EstadoAvaria novoEstado,Equipamento equipamento,int posicao){
+    public void alterarEstadoAvaria(EstadoAvaria novoEstado,int posicao){
         //int opcao=0;
         avarias.get(posicao).setEstadoAvaria(novoEstado);
 
         for (int i = 0; i < avarias.size(); i++)
             if(avarias.get(i).getEstadoAvaria() == EstadoAvaria.PORREPARAR)
-                equipamento.setEstadoEquipamento(EstadoEquipamento.INDISPONIVEL);
+                equipamentos.get(posicao).setEstadoEquipamento(EstadoEquipamento.INDISPONIVEL);
+                //equipamento.setEstadoEquipamento(EstadoEquipamento.INDISPONIVEL);
             else
                 if(avarias.get(i).getEstadoAvaria() == EstadoAvaria.REPARADA)
-                     equipamento.setEstadoEquipamento(EstadoEquipamento.DISPONIVEL);
+                     //equipamento.setEstadoEquipamento(EstadoEquipamento.DISPONIVEL);
+                    equipamentos.get(posicao).setEstadoEquipamento(EstadoEquipamento.DISPONIVEL);
             else
                 if(avarias.get(i).getEstadoAvaria() == EstadoAvaria.IRREPARAVEL)
-                    equipamento.setEstadoEquipamento(EstadoEquipamento.ABATIDO);
+                    equipamentos.get(posicao).setEstadoEquipamento(EstadoEquipamento.ABATIDO);
+                   // equipamento.setEstadoEquipamento(EstadoEquipamento.ABATIDO);
             /*
             switch (opcao) {
                 case 1: equipamento.setEstadoEquipamento(EstadoEquipamento.DISPONIVEL);
@@ -173,11 +176,16 @@ public class GestaoRH {
     }
 
 
-
-    // nao sei se este método está bem
-    public int pesquisarAvarias(int numeroEquipamento) {
+    public int pesquisarAvarias(int numeroAvaria) {
         for (int i = 0; i < avarias.size(); i++)
-            if (equipamentos.get(i).getNumSerie() == numeroEquipamento)
+            if (avarias.get(i).getNumero() == numeroAvaria)
+                return i;
+        return -1;
+    }
+
+    public int pesquisarAvariasPorEquipamento(int numeroInventario) {
+        for (int i = 0; i < equipamentos.size(); i++)
+            if (equipamentos.get(i).getNumSerie() == numeroInventario)
                 return i;
         return -1;
     }
@@ -190,6 +198,8 @@ public class GestaoRH {
                 return i;
         return -1;
     }
+
+
 
 
     public String mostrarFuncionarios(){

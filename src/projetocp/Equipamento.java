@@ -213,6 +213,7 @@ public class Equipamento implements Serializable {
         str.append("\n\tNúmero de Série do equipamento: ").append(numSerie);
         str.append("\n").append(tipoEquipamento);
         str.append("\n\tDivisão associada ao equipamento: ").append(divisao);
+        str.append("\n\tEstado de Equipamento: ").append(estadoEquipamento);
         return str.toString();
     }
 }
