@@ -648,19 +648,15 @@ public class Main {
 
 
     public static void alterarEstadoAvaria() {
-        int pos,pos1;
+        int pos;
         int opcao=0;
         int numAvaria;
         EstadoAvaria novoEstado;
-        Equipamento equipamento;
 
         do {
             System.out.println(grh.mostrarAvarias());
             numAvaria = Consola.lerInt("Indique o número da Avaria: ", 1, 9999999);
             pos = grh.pesquisarAvarias(numAvaria);
-
-            //** erro nesta linha , não estou a conseguir ir buscar o Equipamento para depois alterar o estadoEquipamento
-            //equipamento =grh.obterEquipamento(pos);
 
             if (pos == -1){
                 System.err.println("De momento não existem avarias!");
