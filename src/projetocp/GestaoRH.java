@@ -253,7 +253,7 @@ public class GestaoRH {
     public String mostrarDivisaoDesignacao(){
         StringBuilder str= new StringBuilder("");
         for (int i=0; i<divisoes.size(); i++) {
-            str.append(divisoes.get(i).getDesignacao());
+            str.append(divisoes.get(i).getDesignacao()).append("\n");
         }
         return str.toString();
     }

@@ -442,7 +442,8 @@ public class Main {
     }
 
 
-
+/*número (único e atribuído sequencialmente), data de registo, equipamento associado,
+descrição, estado (por reparar, reparada, irreparável) e funcionário que a registou. */
 
     public static void criarAvaria() {  //qnd adicionamos uma avaria, o estadoAvaria tem que ficar PORREPARAR; e o estado INDISPONIVEL
     int pos,nif;
@@ -541,6 +542,11 @@ public class Main {
         int pos;
         String designacao;
         Divisao divisao;
+
+        System.out.println("--------------------------------------------------------");
+        System.out.println("------------Lista de designações de Divisões------------");
+        System.out.println("--------------------------------------------------------");
+        System.out.println(grh.mostrarDivisaoDesignacao());
         do {
             designacao = Consola.lerString("Indique a designação da Divisão: ");
             pos = grh.pesquisarDivisao(designacao);
@@ -695,7 +701,7 @@ public class Main {
         String novaMorada;
 
         do {
-            nif = Consola.lerInt("Indique o nif do funcionário a alterar: ", 100000000, 999999999);
+            nif = Consola.lerInt("Indique o nif do funcionário a alterar: ", 1, 999999999);
             pos = grh.pesquisarFuncionarios(nif);
             if (pos == -1) {
                 System.err.println("Funcionário não existe!");
@@ -711,7 +717,7 @@ public class Main {
 
             if (opcao == 1) {
 
-                novoTelefone = Consola.lerInt("Indique o novo telefone do Funcionário: ", 100000000, 999999999);
+                novoTelefone = Consola.lerInt("Indique o novo telefone do Funcionário: ", 1, 999999999);
                 grh.alterarFuncionarioTelefone(novoTelefone, pos);
                 System.out.println("Alteração feita com sucesso!");
             }
@@ -724,7 +730,7 @@ public class Main {
 
             if (opcao == 3) {
 
-                novoTelefone = Consola.lerInt("Indique o novo telefone do Funcionário: ", 100000000, 999999999);
+                novoTelefone = Consola.lerInt("Indique o novo telefone do Funcionário: ", 1, 999999999);
                 novaMorada = Consola.lerString("Indique a nova morada do Funcionário: ");
                 grh.alterarFuncionario(novoTelefone, novaMorada, pos);
                 System.out.println("Alteração feita com sucesso!");
@@ -738,7 +744,7 @@ public class Main {
     public static void eliminarFuncionario() {
         int nif, pos;
         do {
-            nif = Consola.lerInt("Indique o nif do funcionário: ", 100000000, 999999999);
+            nif = Consola.lerInt("Indique o nif do funcionário: ", 1, 999999999);
             pos = grh.pesquisarFuncionarios(nif);
             if (pos == -1)
                 System.err.println("Funcionário não existe!");

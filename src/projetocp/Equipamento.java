@@ -99,10 +99,18 @@ public class Equipamento implements Serializable {
         return str.toString();
     }
 
+    /**
+     * método que permite adicionar uma reparação a um equipamento, associando-os
+     * @param reparacao reparação a adicionar
+     */
     public void adicionarReparacao(Reparacao reparacao) {
         reparacaos.add(reparacao);
     }
 
+    /**
+     * método que permite mostrar todas as reparações
+     * @return devolve o método toString
+     */
     public String mostrarReparacoes() {
         StringBuilder str = new StringBuilder("");
         for (int i = 0; i < reparacaos.size(); i++) {
