@@ -364,8 +364,15 @@ public class Main {
     public static void criarDivisao() {
         String designacao, localizacao;
         Divisao d1;
+        int pos;
 
-        designacao = Consola.lerString("Indique a designação da Divisão: ");
+        do {
+            designacao = Consola.lerString("Indique a designação da Divisão: ");
+            pos = grh.pesquisarDivisao(designacao);
+            if (pos != -1)
+                System.err.println("Divisão já existe");
+        } while (pos != -1);
+
         localizacao = Consola.lerString("Indique a localização da Divisão: ");
 
         d1 = new Divisao(designacao, localizacao);
