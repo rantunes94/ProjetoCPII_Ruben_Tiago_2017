@@ -56,7 +56,7 @@ public class Equipamento implements Serializable {
     /**
      * Array de reparações
      */
-    private ArrayList<Reparacao> reparacaos = new ArrayList<>();// metodo para add e mostrar
+    private ArrayList<Reparacao> reparacoes = new ArrayList<>();// metodo para add e mostrar
 
 
     //divisao e estadoEquipamento nao entram no construtor
@@ -93,6 +93,10 @@ public class Equipamento implements Serializable {
      */
     public String mostrarAvarias() {
         StringBuilder str = new StringBuilder("");
+
+        if(avarias.size()==0){
+            System.out.println("Não existem avarias");
+        }
         for (int i = 0; i < avarias.size(); i++) {
             str.append(avarias.get(i)).append("\n");
         }
@@ -104,7 +108,7 @@ public class Equipamento implements Serializable {
      * @param reparacao reparação a adicionar
      */
     public void adicionarReparacao(Reparacao reparacao) {
-        reparacaos.add(reparacao);
+        reparacoes.add(reparacao);
     }
 
     /**
@@ -113,8 +117,11 @@ public class Equipamento implements Serializable {
      */
     public String mostrarReparacoes() {
         StringBuilder str = new StringBuilder("");
-        for (int i = 0; i < reparacaos.size(); i++) {
-            str.append(reparacaos.get(i)).append("\n");
+        if(reparacoes.size()==0){
+            System.out.println("Não existem reparações");
+        }
+        for (int i = 0; i < reparacoes.size(); i++) {
+            str.append(reparacoes.get(i)).append("\n");
         }
         return str.toString();
     }
@@ -199,12 +206,12 @@ public class Equipamento implements Serializable {
         this.avarias = avarias;
     }
 
-    public ArrayList<Reparacao> getReparacaos() {
-        return reparacaos;
+    public ArrayList<Reparacao> getReparacoes() {
+        return reparacoes;
     }
 
-    public void setReparacaos(ArrayList<Reparacao> reparacaos) {
-        this.reparacaos = reparacaos;
+    public void setReparacoes(ArrayList<Reparacao> reparacoes) {
+        this.reparacoes = reparacoes;
     }
 
 

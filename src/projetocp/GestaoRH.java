@@ -112,33 +112,22 @@ public class GestaoRH {
         funcionarios.get(posicao).setMorada(novaMorada);
     }
 
+
+    /**
     public void alterarEstadoAvaria(EstadoAvaria novoEstado,int posicao){
-        //int opcao=0;
         avarias.get(posicao).setEstadoAvaria(novoEstado);
 
         for (int i = 0; i < avarias.size(); i++)
             if(avarias.get(i).getEstadoAvaria() == EstadoAvaria.PORREPARAR)
                 equipamentos.get(posicao).setEstadoEquipamento(EstadoEquipamento.INDISPONIVEL);
-                //equipamento.setEstadoEquipamento(EstadoEquipamento.INDISPONIVEL);
             else
                 if(avarias.get(i).getEstadoAvaria() == EstadoAvaria.REPARADA)
-                     //equipamento.setEstadoEquipamento(EstadoEquipamento.DISPONIVEL);
                     equipamentos.get(posicao).setEstadoEquipamento(EstadoEquipamento.DISPONIVEL);
             else
                 if(avarias.get(i).getEstadoAvaria() == EstadoAvaria.IRREPARAVEL)
                     equipamentos.get(posicao).setEstadoEquipamento(EstadoEquipamento.ABATIDO);
-                   // equipamento.setEstadoEquipamento(EstadoEquipamento.ABATIDO);
-            /*
-            switch (opcao) {
-                case 1: equipamento.setEstadoEquipamento(EstadoEquipamento.DISPONIVEL);
-                    break;
-                case 2: equipamento.setEstadoEquipamento(EstadoEquipamento.INDISPONIVEL);
-                    break;
-                case 3: equipamento.setEstadoEquipamento(EstadoEquipamento.ABATIDO);
-                    break;
-            }
-            */
     }
+*/
 
     public int pesquisarFuncionarios(int nif) {
         for (int i = 0; i < funcionarios.size(); i++)
@@ -183,21 +172,7 @@ public class GestaoRH {
         return -1;
     }
 
-    public int pesquisarAvariasPorEquipamento(int numeroInventario) {
-        for (int i = 0; i < equipamentos.size(); i++)
-            if (equipamentos.get(i).getNumSerie() == numeroInventario)
-                return i;
-        return -1;
-    }
 
-
-
-    public int pesquisarFuncionariosFuncao(String funcao) {
-        for (int i = 0; i < funcionariosOutros.size(); i++)
-            if (funcionariosOutros.get(i).getFuncao() == funcao)
-                return i;
-        return -1;
-    }
 
 
 

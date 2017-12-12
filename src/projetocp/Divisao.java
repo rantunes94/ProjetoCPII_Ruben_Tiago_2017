@@ -33,6 +33,10 @@ public class Divisao implements Serializable {
 
     }
 
+    public void removerEquipamento(Equipamento e){
+        equipamentos.remove(e);
+    }
+
     /**
      * método que permite adicionar equipamentos associados à divisão
      * @param equipamento equipamento a adicionar

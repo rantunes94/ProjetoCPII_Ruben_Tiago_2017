@@ -489,6 +489,7 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
         } while (pos == -1);
         funcionarioTecnico = grh.obterFuncionario(pos);
         av1 = new Avaria(equipamento,descricao,funcionarioTecnico);
+        equipamento.adicionarAvaria(av1);
         grh.adicionarAvaria(av1);
         System.out.println("Avaria inserida com sucesso");
 
@@ -526,7 +527,6 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
             if(pos == -1)
                 System.err.println("Divisão não existe!");
         }while (pos == -1);
-
         d = grh.obterDivisao(pos);
 
         do{
@@ -568,17 +568,19 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
 
     public static void consultarAvariasPorEquipamento() {
         int pos,numero;
-        Avaria avaria;
+        Equipamento e;
         do {
-            numero = Consola.lerInt("Insira o número do equipamento com avaria: ",1, 999999999);
-            pos = grh.pesquisarAvariasPorEquipamento(numero);
+            numero = Consola.lerInt("Insira o número do equipamento: ",1, 999999999);
+            pos = grh.pesquisarEquipamento(numero);
             if (pos == -1)
                 System.err.println("Esse equipamento não possui nenhuma avaria ou não existe!");
         } while (pos == -1);
 
-        avaria = grh.obterAvaria(pos);
+        e=grh.obterEquipamento(pos);
 
-        System.out.println(avaria);
+
+        System.out.println(e.mostrarAvarias());
+        System.out.println(e.mostrarReparacoes());
     }
 
 
@@ -661,10 +663,13 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
 
 
     public static void alterarEstadoAvaria() {
-        int pos;
+        int pos,nif,errodn;
         int opcao=0;
         int numAvaria;
-        EstadoAvaria novoEstado;
+        Calendar dataReparacao = new GregorianCalendar();
+        String descricao,dataR;
+        Double custo;
+        Funcionario funcionarioTecnico;
 
         do {
             System.out.println(grh.mostrarAvarias());
@@ -673,29 +678,93 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
 
             if (pos == -1){
                 System.err.println("De momento não existem avarias!");
-            }else
+            }else {
+                Avaria aa = grh.obterAvaria(pos);
+
+
                 do {
                     System.out.println("Defina o estado atual da avaria:");
-                    System.out.println("1 - Por reparar");
+
                     System.out.println("2 - Reparada");
                     System.out.println("3 - Irreparável");
                     opcao = Consola.lerInt("Opcao: ", 1, 3);
                 } while (opcao < 0 && opcao > 3);
 
-            if (opcao == 1) {
-                novoEstado = EstadoAvaria.PORREPARAR;
-                grh.alterarEstadoAvaria(novoEstado, pos);
-                System.out.println("Alteração feita com sucesso!");
-            }
-            if (opcao == 2) {
-                novoEstado = EstadoAvaria.REPARADA;
-                grh.alterarEstadoAvaria(novoEstado, pos);
-                System.out.println("Alteração feita com sucesso!");
-            }
-            if (opcao == 3) {
-                novoEstado = EstadoAvaria.IRREPARAVEL;
-                grh.alterarEstadoAvaria(novoEstado, pos);
-                System.out.println("Alteração feita com sucesso!");
+
+                if (opcao == 2) {
+                    aa.getEquipamento().setEstadoEquipamento(EstadoEquipamento.DISPONIVEL);
+                    do {
+                        errodn = 0;
+                        try {
+                            dataR = Consola.lerString("Indique a data de rerapação (dd-mm-yyyy): ");
+                            dataReparacao.setTime(formato.parse(dataR));
+                        } catch (ParseException e) {
+                            errodn = 1;
+                            System.err.println("Data de reparação com formato inválido!");
+                        }
+                    } while (errodn == 1);
+                    descricao = Consola.lerString("Indique a descrição da reparação: ");
+                    custo = Consola.lerDouble("Indique o custo da reparação: ", 0, 999999999);
+                    do {
+                        System.out.println(grh.mostrarFuncionarios());
+                        nif = Consola.lerInt("Indique o nif do Funcionário que registou a reparação : ", 1, 999999999);
+                        pos = grh.pesquisarFuncionarios(nif);
+                        if (pos == -1)
+                            System.err.println("Funcionario não existe!");
+                        else {
+                            funcionarioTecnico = grh.obterFuncionario(pos);
+                            if (funcionarioTecnico instanceof FuncionarioOutros) {
+                                if (((FuncionarioOutros) funcionarioTecnico).getFuncao().equalsIgnoreCase("técnico")) {
+                                    break;
+                                }
+                            }
+                            pos=-1;
+                            System.out.println("Este funcionário não é Técnico!");
+                        }
+                    } while (pos == -1);
+                    funcionarioTecnico =grh.obterFuncionario(pos);
+                    Reparacao r = new Reparacao(aa,dataReparacao,descricao,custo,funcionarioTecnico);
+                    aa.getEquipamento().adicionarReparacao(r);
+                    System.out.println("Alteração feita com sucesso!");
+                }
+                if (opcao == 3) {
+                    aa.getEquipamento().setEstadoEquipamento(EstadoEquipamento.INDISPONIVEL);
+                    aa.getEquipamento().getDivisao().removerEquipamento(aa.getEquipamento());
+                    aa.getEquipamento().setDivisao(null);
+                    do {
+                        errodn = 0;
+                        try {
+                            dataR = Consola.lerString("Indique a data de rerapação (dd-mm-yyyy): ");
+                            dataReparacao.setTime(formato.parse(dataR));
+                        } catch (ParseException e) {
+                            errodn = 1;
+                            System.err.println("Data de reparação com formato inválido!");
+                        }
+                    } while (errodn == 1);
+                    descricao = Consola.lerString("Indique a descrição da reparação: ");
+                    custo = Consola.lerDouble("Indique o custo da reparação: ", 0, 999999999);
+                    do {
+                        System.out.println(grh.mostrarFuncionarios());
+                        nif = Consola.lerInt("Indique o nif do Funcionário que registou a reparação : ", 1, 999999999);
+                        pos = grh.pesquisarFuncionarios(nif);
+                        if (pos == -1)
+                            System.err.println("Funcionario não existe!");
+                        else {
+                            funcionarioTecnico = grh.obterFuncionario(pos);
+                            if (funcionarioTecnico instanceof FuncionarioOutros) {
+                                if (((FuncionarioOutros) funcionarioTecnico).getFuncao().equalsIgnoreCase("técnico")) {
+                                    break;
+                                }
+                            }
+                            pos=-1;
+                            System.out.println("Este funcionário não é Técnico!");
+                        }
+                    } while (pos == -1);
+                    funcionarioTecnico =grh.obterFuncionario(pos);
+                    Reparacao r = new Reparacao(aa,dataReparacao,descricao,custo,funcionarioTecnico);
+                    aa.getEquipamento().adicionarReparacao(r);
+                    System.out.println("Alteração feita com sucesso!");
+                }
             }
         } while (pos == -1);
     }

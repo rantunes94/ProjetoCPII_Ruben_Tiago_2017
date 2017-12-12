@@ -9,10 +9,10 @@ public class Reparacao implements Serializable {
     Calendar dataReparacao;
     String descricao;
     Double custo;
-    FuncionarioOutros funcionarioTecnico;
+    Funcionario funcionarioTecnico;
 
 
-    public Reparacao(Avaria avaria, Calendar dataReparacao, String descricao, Double custo, FuncionarioOutros funcionarioTecnico) {
+    public Reparacao(Avaria avaria, Calendar dataReparacao, String descricao, Double custo, Funcionario funcionarioTecnico) {
         this.avaria = avaria;
         this.dataReparacao = dataReparacao;
         this.descricao = descricao;
@@ -60,11 +60,11 @@ public class Reparacao implements Serializable {
         this.custo = custo;
     }
 
-    public FuncionarioOutros getFuncionarioTecnico() {
+    public Funcionario getFuncionarioTecnico() {
         return funcionarioTecnico;
     }
 
-    public void setFuncionarioTecnico(FuncionarioOutros funcionarioTecnico) {
+    public void setFuncionarioTecnico(Funcionario funcionarioTecnico) {
         this.funcionarioTecnico = funcionarioTecnico;
     }
 
