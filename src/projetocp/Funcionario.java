@@ -39,6 +39,8 @@ public class Funcionario implements Serializable {
      */
     protected String habilitacoes;
 
+    protected int idade;
+
     /**
      * Construtor da classe funcionário
      * @param nif nif do funcionário
@@ -57,6 +59,7 @@ public class Funcionario implements Serializable {
         this.email = email;
         this.dataNascimento = dataNascimento;
         this.habilitacoes = habilitacoes;
+        idade = calcularIdadeFunc();
     }
 
 
@@ -114,6 +117,24 @@ public class Funcionario implements Serializable {
 
     public void setHabilitacoes(String habilitacoes) {
         this.habilitacoes = habilitacoes;
+    }
+
+    private int calcularIdadeFunc(){
+        int anos;
+        Calendar dataAtual = Calendar.getInstance();
+        anos = dataAtual.get(Calendar.YEAR)- dataNascimento.get(Calendar.YEAR);
+        if(dataAtual.get(Calendar.DAY_OF_YEAR) < dataNascimento.get(Calendar.DAY_OF_YEAR)){
+            anos--;
+        }
+        return anos;
+    }
+
+
+    public boolean validarIdadeFunc(){
+        if (idade <18){
+            return false;
+        }
+        return true;
     }
 
     @Override

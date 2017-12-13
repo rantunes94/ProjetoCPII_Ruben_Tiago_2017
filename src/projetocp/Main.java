@@ -570,6 +570,7 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
         int pos,numero;
         Equipamento e;
         do {
+            System.out.println(grh.mostrarEquipamentos());
             numero = Consola.lerInt("Insira o número do equipamento: ",1, 999999999);
             pos = grh.pesquisarEquipamento(numero);
             if (pos == -1)
@@ -637,8 +638,12 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
 
             f1 = new FuncionarioMedico(nif, nome, morada, telefone, email, dataNascimento, habilitacoes, especialidade, seccaoTrabalho);
 
-            grh.adicionarFuncionarioMedico(f1);
-            System.out.println("Funcionário inserido com sucesso!");
+            if(f1.validarIdadeFunc()) {
+                grh.adicionarFuncionarioMedico(f1);
+                System.out.println("Funcionário inserido com sucesso!");
+            }else {
+                System.out.println("Idade do funcionário inválida!");
+            }
         }
         if (tipo == 2) {
             username = Consola.lerString("Indique o username do técnico: ");
@@ -647,16 +652,24 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
             funcao = ("Técnico");
             f2 = new FuncionarioOutros(nif, nome, morada, telefone, email, dataNascimento, habilitacoes, funcao, username, password);
 
-            grh.adicionarFuncionarioOutros(f2);
-            System.out.println("Funcionário inserido com sucesso!");
+            if(f2.validarIdadeFunc()) {
+                grh.adicionarFuncionarioOutros(f2);
+                System.out.println("Funcionário inserido com sucesso!");
+            }else {
+                System.out.println("Idade do funcionário inválida!");
+            }
         }
         if (tipo == 3) {
             funcao = Consola.lerString("Indique a função do Funcionário: ");
 
             f2 = new FuncionarioOutros(nif, nome, morada, telefone, email, dataNascimento, habilitacoes, funcao);
 
-            grh.adicionarFuncionarioOutros(f2);
-            System.out.println("Funcionário inserido com sucesso!");
+            if(f2.validarIdadeFunc()) {
+                grh.adicionarFuncionarioOutros(f2);
+                System.out.println("Funcionário inserido com sucesso!");
+            }else {
+                System.out.println("Idade do funcionário inválida!");
+            }
         }
 
     }
@@ -685,18 +698,18 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
                 do {
                     System.out.println("Defina o estado atual da avaria:");
 
-                    System.out.println("2 - Reparada");
-                    System.out.println("3 - Irreparável");
-                    opcao = Consola.lerInt("Opcao: ", 1, 3);
-                } while (opcao < 0 && opcao > 3);
+                    System.out.println("1 - Reparada");
+                    System.out.println("2 - Irreparável");
+                    opcao = Consola.lerInt("Opcao: ", 1, 2);
+                } while (opcao < 0 && opcao > 2);
 
 
-                if (opcao == 2) {
+                if (opcao == 1) {
                     aa.getEquipamento().setEstadoEquipamento(EstadoEquipamento.DISPONIVEL);
                     do {
                         errodn = 0;
                         try {
-                            dataR = Consola.lerString("Indique a data de rerapação (dd-mm-yyyy): ");
+                            dataR = Consola.lerString("Indique a data de reparação (dd-mm-yyyy): ");
                             dataReparacao.setTime(formato.parse(dataR));
                         } catch (ParseException e) {
                             errodn = 1;
@@ -725,16 +738,17 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
                     funcionarioTecnico =grh.obterFuncionario(pos);
                     Reparacao r = new Reparacao(aa,dataReparacao,descricao,custo,funcionarioTecnico);
                     aa.getEquipamento().adicionarReparacao(r);
+                    r.getAvaria().setEstadoAvaria(EstadoAvaria.REPARADA);
                     System.out.println("Alteração feita com sucesso!");
                 }
-                if (opcao == 3) {
+                if (opcao == 2) {
                     aa.getEquipamento().setEstadoEquipamento(EstadoEquipamento.INDISPONIVEL);
                     aa.getEquipamento().getDivisao().removerEquipamento(aa.getEquipamento());
                     aa.getEquipamento().setDivisao(null);
                     do {
                         errodn = 0;
                         try {
-                            dataR = Consola.lerString("Indique a data de rerapação (dd-mm-yyyy): ");
+                            dataR = Consola.lerString("Indique a data de reparação (dd-mm-yyyy): ");
                             dataReparacao.setTime(formato.parse(dataR));
                         } catch (ParseException e) {
                             errodn = 1;
@@ -762,6 +776,7 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
                     } while (pos == -1);
                     funcionarioTecnico =grh.obterFuncionario(pos);
                     Reparacao r = new Reparacao(aa,dataReparacao,descricao,custo,funcionarioTecnico);
+                    r.getAvaria().setEstadoAvaria(EstadoAvaria.IRREPARAVEL);
                     aa.getEquipamento().adicionarReparacao(r);
                     System.out.println("Alteração feita com sucesso!");
                 }

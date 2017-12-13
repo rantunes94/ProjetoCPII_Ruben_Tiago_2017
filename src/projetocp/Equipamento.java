@@ -117,9 +117,7 @@ public class Equipamento implements Serializable {
      */
     public String mostrarReparacoes() {
         StringBuilder str = new StringBuilder("");
-        if(reparacoes.size()==0){
-            System.out.println("Não existem reparações");
-        }
+
         for (int i = 0; i < reparacoes.size(); i++) {
             str.append(reparacoes.get(i)).append("\n");
         }

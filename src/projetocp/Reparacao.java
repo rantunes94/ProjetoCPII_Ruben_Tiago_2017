@@ -79,9 +79,11 @@ public class Reparacao implements Serializable {
                 append(dataReparacao.get(Calendar.DATE)).
                 append("-").append((dataReparacao.get(Calendar.MONTH) + 1)).
                 append("-").append(dataReparacao.get(Calendar.YEAR));
+        str.append("\n\tAvaria associada: ").append(avaria.getNumero());
         str.append("\n\tDescrição: ").append(descricao);
         str.append("\n\tCusto: ").append(custo);
         str.append("\nEsta reparação foi efetuada por: \n").append(funcionarioTecnico);
+        str.append("\n\tEstado da reparação: ").append(avaria.getEstadoAvaria());
         return str.toString();
     }
 }

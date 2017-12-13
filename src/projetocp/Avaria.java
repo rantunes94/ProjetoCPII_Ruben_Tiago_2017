@@ -5,10 +5,10 @@ import java.util.Calendar;
 
 public class Avaria implements Serializable{
     private int numero;
-    private Calendar dataRegisto;
+    private Calendar dataRegisto = Calendar.getInstance();
     private Equipamento equipamento;
     private String descricao;
-    private EstadoAvaria estadoAvaria;
+    private EstadoAvaria estadoAvaria=EstadoAvaria.PORREPARAR;
     private Funcionario funcionarioTecnico;
 
 
@@ -79,10 +79,11 @@ public class Avaria implements Serializable{
                 append(dataRegisto.get(Calendar.DATE)).
                 append("-").append((dataRegisto.get(Calendar.MONTH) + 1)).
                 append("-").append(dataRegisto.get(Calendar.YEAR));
+        str.append("\n\tNúmero de inventário do equipamento: ").append(equipamento.getNumeroInventario());
         str.append("\n\tDescrição: ").append(descricao);
         str.append("\n\tEstado da Avaria: ").append(estadoAvaria);
         str.append("\n ").append(equipamento);
-        str.append("\nEsta avaria foi resgistada por: \n").append(funcionarioTecnico);
+        str.append("\nEsta avaria foi registada por: \n").append(funcionarioTecnico);
         return str.toString();
     }
 
