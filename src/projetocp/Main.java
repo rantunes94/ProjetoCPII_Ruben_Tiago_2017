@@ -352,12 +352,11 @@ public class Main {
     private static int menuEstatisticas() {
         int opcao;
 
-        System.out.println("1 - Perrcentagem de equipamentos com avarias");
+        System.out.println("1 - Percentagem de equipamentos com avarias");
         System.out.println("2 - Total de avarias registadas por estado");
         System.out.println("2 - Total gasto por ano em equipamentos");
         System.out.println("0 - Voltar ao Menu Anterior\n");
         opcao = Consola.lerInt("Opcao: ", 0, 2);
-
         return opcao;
     }
 
@@ -468,7 +467,6 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
                 System.err.println("Equipamento não existe");
         } while (pos == -1);
         Equipamento equipamento = grh.obterEquipamento(pos);
-
         descricao = Consola.lerString("Indique a descrição da Avaria: ");
 
         do {
@@ -492,6 +490,8 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
         av1 = new Avaria(equipamento,descricao,funcionarioTecnico);
         equipamento.adicionarAvaria(av1);
         grh.adicionarAvaria(av1);
+        grh.addNumAvariasPorEquipamento(equipamento); // ESTATISTICA
+       // grh.setNumTotalEquipsAvariados(grh.getNumTotalEquipsAvariados()+1); // ESTATISTICA num total equipamentos avariados
         System.out.println("Avaria inserida com sucesso");
 
     }
@@ -844,6 +844,10 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
         grh.eliminarFuncionario(pos);
         System.out.println("Funcionário removido com sucesso!");
     }
+
+
+
+
 
 
 }

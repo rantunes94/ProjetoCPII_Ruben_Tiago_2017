@@ -58,8 +58,15 @@ public class Equipamento implements Serializable {
      */
     private ArrayList<Reparacao> reparacoes = new ArrayList<>();// metodo para add e mostrar
 
+    public int getNumTotalAvariasPorEquipamento() {
+        return numTotalAvariasPorEquipamento;
+    }
 
-    //divisao e estadoEquipamento nao entram no construtor
+    public void setNumTotalAvariasPorEquipamento(int numTotalAvariasPorEquipamento) {
+        this.numTotalAvariasPorEquipamento = numTotalAvariasPorEquipamento;
+    }
+
+//divisao e estadoEquipamento nao entram no construtor
 
     /**
      * Construtor da classe Equipamento
@@ -217,6 +224,7 @@ public class Equipamento implements Serializable {
     public String toString() {
         StringBuilder str = new StringBuilder();
         str.append("Equipamento:");
+        str.append("\n\tNúmero total de avarias neste equipamento : ").append(numTotalAvariasPorEquipamento);
         str.append("\n\tNúmero de Inventário do equipamento: ").append(numeroInventario);
         str.append("\n\tData de Inventariação: ").
                 append(dataInventariacao.get(Calendar.DATE)).
@@ -225,7 +233,7 @@ public class Equipamento implements Serializable {
         str.append("\n\tDescrição do equipamento: ").append(descricao);
         str.append("\n\tNúmero de Série do equipamento: ").append(numSerie);
         str.append("\n").append(tipoEquipamento);
-        str.append("\n\tDivisão associada ao equipamento: ").append(divisao);
+        str.append("\n\tDivisão associada ao equipamento: \n").append(divisao);
         str.append("\n\tEstado de Equipamento: ").append(estadoEquipamento);
         return str.toString();
     }
