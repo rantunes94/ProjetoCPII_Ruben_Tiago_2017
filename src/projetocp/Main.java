@@ -270,6 +270,7 @@ public class Main {
         int opcao;
 
         System.out.println();
+        System.out.println("Número de equipamentos por tipo de equipamento: " );// chamar o método aqui que mostre o nr
         System.out.println("1 - Gerir Funcionários");
         System.out.println("2 - Gerir Divisão");
         System.out.println("3 - Gerir Tipos de Equipamento");
@@ -351,9 +352,9 @@ public class Main {
     private static int menuEstatisticas() {
         int opcao;
 
-        System.out.println();
-        //System.out.println("1 - Inserir Divisão");
-        //System.out.println("2 - Consultar por Designação");
+        System.out.println("1 - Perrcentagem de equipamentos com avarias");
+        System.out.println("2 - Total de avarias registadas por estado");
+        System.out.println("2 - Total gasto por ano em equipamentos");
         System.out.println("0 - Voltar ao Menu Anterior\n");
         opcao = Consola.lerInt("Opcao: ", 0, 2);
 

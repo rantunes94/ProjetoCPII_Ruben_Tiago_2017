@@ -7,6 +7,8 @@ import java.util.Calendar;
 
 public class GestaoRH {
 
+
+    private ArrayList<TotalAno> totaisAno = new ArrayList<>();
     private ArrayList<Divisao> divisoes = new ArrayList<>();
     private ArrayList<Funcionario> funcionarios = new ArrayList<>();
     private ArrayList<FuncionarioMedico> funcionariosMedicos = new ArrayList<>();
