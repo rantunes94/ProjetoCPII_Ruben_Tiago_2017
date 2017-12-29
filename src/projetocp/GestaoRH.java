@@ -272,6 +272,7 @@ public class GestaoRH {
 
        FEITAS:
        Equipamento -- número total de avarias em cada equipamento
+        Número de equipamentos por tipo de equipamento  a ser apresentado no menu inicial
 
 
        POR FAZER:
@@ -279,7 +280,6 @@ public class GestaoRH {
         Percentagem de equipamentos com avarias
         Total de avarias registadas por estado;
         Total gasto por ano em equipamentos
-        Número de equipamentos por tipo de equipamento  a ser apresentado no menu inicial
 
 
 
