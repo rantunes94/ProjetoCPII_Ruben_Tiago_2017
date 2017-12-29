@@ -266,24 +266,24 @@ public class GestaoRH {
 
 
         /*
+
+        ESTATISTICAS
+
+
+       FEITAS:
+       Equipamento -- número total de avarias em cada equipamento
+
+
+       POR FAZER:
         Divisao -- quantidade de equipamentos instalados em cada divisao
-        Equipamento -- número total de avarias em cada equipamento
         Percentagem de equipamentos com avarias
         Total de avarias registadas por estado;
         Total gasto por ano em equipamentos
         Número de equipamentos por tipo de equipamento  a ser apresentado no menu inicial
+
+
+
          */
-
-
-
-        /*
-        str.append("\nNúmero de cursos: ").append(cursos.size());
-        str.append("\nNúmero de alunos: ").append(alunos.size());
-        str.append("\nNúmero de docentes: ").append(docentes.size());
-        str.append("\nNúmero de não docentes: ").append(naoDocentes.size());
-        str.append("\nNúmero de funcionários com salários superiors a 1000: ").append(numFuncSalSuperior1000);
-        */
-
         return str.toString();
     }
 

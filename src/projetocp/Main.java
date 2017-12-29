@@ -251,9 +251,15 @@ public class Main {
                     while (opcaoSubMenu != 0);
 
                 }
-
-
                 break;
+
+                case 7:
+                    if (grh.getTotalEquipamentos() > 0  && grh.getTotalTiposEquipamento()>0)
+                        System.out.println(grh.mostrarTipoEquipamentos());
+                    else
+                        System.err.println("Não existem tipos de equipamento e/ou equipamentos ");
+                    break;
+
 
                 case 0:
                     System.out.println("Programa terminou...");
@@ -270,15 +276,16 @@ public class Main {
         int opcao;
 
         System.out.println();
-        System.out.println("Número de equipamentos por tipo de equipamento: " );// chamar o método aqui que mostre o nr
+
         System.out.println("1 - Gerir Funcionários");
         System.out.println("2 - Gerir Divisão");
         System.out.println("3 - Gerir Tipos de Equipamento");
         System.out.println("4 - Gerir Equipamento");
         System.out.println("5 - Gerir Avarias/Reparações");
         System.out.println("6 - Estatisticas");
+        System.out.println("7 - Número de equipamentos por tipo de equipamento");// chamar o método aqui que mostre o nr
         System.out.println("0 - Sair\n");
-        opcao = Consola.lerInt("Opcao: ", 0, 6);
+        opcao = Consola.lerInt("Opcao: ", 0, 7);
 
         return opcao;
     }
@@ -444,7 +451,7 @@ public class Main {
         e1 = new Equipamento(numInventario, descricao, numSerie, tipoEquipamento, custo, funcionarioTecnico);
 
         grh.adicionarEquipamento(e1);
-
+        tipoEquipamento.setNumEquipamentoPorEquipamento(tipoEquipamento.getNumEquipamentoPorEquipamento()+1); // ESTATISTICA numero de equuipamentos por tipo de equipamentos
         System.out.println("Equipamento inserido com sucesso");
     }
 

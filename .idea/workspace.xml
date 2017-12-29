@@ -24,22 +24,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/projetocp/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3259">
-              <caret line="492" column="68" lean-forward="false" selection-start-line="492" selection-start-column="68" selection-end-line="492" selection-end-column="68" />
+            <state relative-caret-position="398">
+              <caret line="257" column="74" lean-forward="false" selection-start-line="257" selection-start-column="74" selection-end-line="257" selection-end-column="74" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GestaoRH.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GestaoRH.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/projetocp/GestaoRH.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="258" column="43" lean-forward="false" selection-start-line="258" selection-start-column="16" selection-end-line="258" selection-end-column="43" />
+            <state relative-caret-position="979">
+              <caret line="267" column="10" lean-forward="true" selection-start-line="267" selection-start-column="10" selection-end-line="267" selection-end-column="10" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TipoEquipamento.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/projetocp/TipoEquipamento.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="50" column="1" lean-forward="true" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+              <folding>
+                <element signature="e#427#428#0" expanded="true" />
+                <element signature="e#478#479#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,7 +60,7 @@
       <file leaf-file-name="Equipamento.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/projetocp/Equipamento.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
+            <state relative-caret-position="2992">
               <caret line="226" column="66" lean-forward="false" selection-start-line="226" selection-start-column="66" selection-end-line="226" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -71,18 +84,8 @@
       <file leaf-file-name="Avaria.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/projetocp/Avaria.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="892">
+            <state relative-caret-position="918">
               <caret line="79" column="1" lean-forward="false" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Reparacao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/projetocp/Reparacao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="81" column="70" lean-forward="false" selection-start-line="81" selection-start-column="70" selection-end-line="81" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -91,7 +94,7 @@
       <file leaf-file-name="Divisao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/projetocp/Divisao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
+            <state relative-caret-position="561">
               <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
               <folding>
                 <element signature="e#974#975#0" expanded="true" />
@@ -167,7 +170,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/projetocp/Estado.java" />
         <option value="$PROJECT_DIR$/src/projetocp/FuncionarioOutros.java" />
-        <option value="$PROJECT_DIR$/src/projetocp/TipoEquipamento.java" />
         <option value="$PROJECT_DIR$/src/projetocp/EstadoEquipamento.java" />
         <option value="$PROJECT_DIR$/src/projetocp/EstadoAvaria.java" />
         <option value="$PROJECT_DIR$/src/projetocp/Divisao.java" />
@@ -176,13 +178,14 @@
         <option value="$PROJECT_DIR$/src/projetocp/FuncionarioMedico.java" />
         <option value="$PROJECT_DIR$/src/projetocp/Avaria.java" />
         <option value="$PROJECT_DIR$/src/projetocp/TotalAno.java" />
-        <option value="$PROJECT_DIR$/src/projetocp/Main.java" />
         <option value="$PROJECT_DIR$/src/projetocp/Equipamento.java" />
         <option value="$PROJECT_DIR$/src/projetocp/GestaoRH.java" />
+        <option value="$PROJECT_DIR$/src/projetocp/TipoEquipamento.java" />
+        <option value="$PROJECT_DIR$/src/projetocp/Main.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -226,14 +229,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CP2_2018/PHeranca" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CP2_2018/ProjetoAnoPassado" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -303,8 +306,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -312,14 +314,14 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2293869" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3139535" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2484375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1765625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -384,7 +386,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -505,7 +510,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -590,7 +598,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -675,19 +686,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/StringBuilder.java" />
-    <entry file="file://$PROJECT_DIR$/src/projetocp/TipoEquipamento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/projetocp/EstadoEquipamento.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -737,7 +743,7 @@
     <entry file="file://$PROJECT_DIR$/src/projetocp/util/TotalAno.java" />
     <entry file="file://$PROJECT_DIR$/src/projetocp/Avaria.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="892">
+        <state relative-caret-position="918">
           <caret line="79" column="1" lean-forward="false" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
           <folding />
         </state>
@@ -745,7 +751,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/projetocp/Divisao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
+        <state relative-caret-position="561">
           <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
           <folding>
             <element signature="e#974#975#0" expanded="true" />
@@ -764,7 +770,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/projetocp/Equipamento.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
+        <state relative-caret-position="2992">
           <caret line="226" column="66" lean-forward="false" selection-start-line="226" selection-start-column="66" selection-end-line="226" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -774,18 +780,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/projetocp/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/projetocp/TipoEquipamento.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3259">
-          <caret line="492" column="68" lean-forward="false" selection-start-line="492" selection-start-column="68" selection-end-line="492" selection-end-column="68" />
-          <folding />
+        <state relative-caret-position="680">
+          <caret line="50" column="1" lean-forward="true" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+          <folding>
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/projetocp/GestaoRH.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="258" column="43" lean-forward="false" selection-start-line="258" selection-start-column="16" selection-end-line="258" selection-end-column="43" />
+        <state relative-caret-position="979">
+          <caret line="267" column="10" lean-forward="true" selection-start-line="267" selection-start-column="10" selection-end-line="267" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/projetocp/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="257" column="74" lean-forward="false" selection-start-line="257" selection-start-column="74" selection-end-line="257" selection-end-column="74" />
           <folding />
         </state>
       </provider>

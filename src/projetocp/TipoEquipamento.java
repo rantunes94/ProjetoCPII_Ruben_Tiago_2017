@@ -9,7 +9,13 @@ public class TipoEquipamento implements Serializable {
     private int numEquipamentoPorEquipamento; // variavel para estatisticas , for na main/gestao para calcular o numero por designacao??
 
 
+    public int getNumEquipamentoPorEquipamento() {
+        return numEquipamentoPorEquipamento;
+    }
 
+    public void setNumEquipamentoPorEquipamento(int numEquipamentoPorEquipamento) {
+        this.numEquipamentoPorEquipamento = numEquipamentoPorEquipamento;
+    }
 
     public TipoEquipamento(String designacao) {
         this.designacao = designacao;
@@ -38,7 +44,7 @@ public class TipoEquipamento implements Serializable {
         str.append("Tipo de Equipamento:");
         str.append("\n\tNúmero do Tipo de Equipamento: ").append(numero);
         str.append("\n\tDesignação do Tipo de Equipamento: ").append(designacao);
-        str.append("\n\tNúmero de equipamento por equipamento: ").append(numEquipamentoPorEquipamento);
+        str.append("\n\tNúmero de equipamentos neste tipo de equipamento: ").append(numEquipamentoPorEquipamento);
         return str.toString();
     }
 
