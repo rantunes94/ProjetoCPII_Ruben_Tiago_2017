@@ -12,6 +12,8 @@ public class Divisao implements Serializable {
     /**
      * designação da divisão
      */
+    private int qntdEquipamentosInstaladosPorDivisao;
+
     private String designacao;
     /**
      * localização da divisão
@@ -59,9 +61,22 @@ public class Divisao implements Serializable {
         return str.toString();
     }
 
+    public ArrayList<Equipamento> getEquipamentos() {
+        return equipamentos;
+    }
 
 
+    public int getQntdEquipamentosInstaladosPorDivisao() {
+        return qntdEquipamentosInstaladosPorDivisao;
+    }
 
+    public void setQntdEquipamentosInstaladosPorDivisao(int qntdEquipamentosInstaladosPorDivisao) {
+        this.qntdEquipamentosInstaladosPorDivisao = qntdEquipamentosInstaladosPorDivisao;
+    }
+
+    public void setEquipamentos(ArrayList<Equipamento> equipamentos) {
+        this.equipamentos = equipamentos;
+    }
 
     public String getDesignacao() {
         return designacao;
@@ -79,9 +94,6 @@ public class Divisao implements Serializable {
         this.localizacao = localizacao;
     }
 
-    public int getQuantidadeEquipamentosInstalados() {
-        return quantidadeEquipamentosInstalados;
-    }
 
     /**
      * método que permite mostrar ao utilizador toda a informação das instâncias da Classe Equipamento e das suas superclasses
@@ -93,6 +105,7 @@ public class Divisao implements Serializable {
         str.append("Divisão:");
         str.append("\n\tDesignação da divisão: ").append(designacao);
         str.append("\n\tLocalização da divisão: ").append(localizacao);
+        str.append("\n\tQuantidade de equipamentos instalados nesta divisão: ").append(qntdEquipamentosInstaladosPorDivisao);
         return str.toString();
     }
 

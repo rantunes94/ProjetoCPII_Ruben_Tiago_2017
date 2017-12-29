@@ -498,7 +498,6 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
         equipamento.adicionarAvaria(av1);
         grh.adicionarAvaria(av1);
         grh.addNumAvariasPorEquipamento(equipamento); // ESTATISTICA
-       // grh.setNumTotalEquipsAvariados(grh.getNumTotalEquipsAvariados()+1); // ESTATISTICA num total equipamentos avariados
         System.out.println("Avaria inserida com sucesso");
 
     }
@@ -537,6 +536,8 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
         }while (pos == -1);
         d = grh.obterDivisao(pos);
 
+        //Divisao divisao = grh.obterDivisao(pos);
+
         do{
             System.out.println(grh.mostrarEquipamentos());
             numInventario = Consola.lerInt("Insira o número de inventário do equipamento: ",0, 999999999);
@@ -548,7 +549,7 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
         e = grh.obterEquipamento(pos);
         d.adicionarEquipamentos(e);  //d.associarEquipamento(e);
         e.setDivisao(d);
-
+        d.setQntdEquipamentosInstaladosPorDivisao(d.getQntdEquipamentosInstaladosPorDivisao()+1); // ESTATISTICA quantidade de equipamentos em cada divisão
         System.out.println("Divisão associda com sucesso!");
     }
 
