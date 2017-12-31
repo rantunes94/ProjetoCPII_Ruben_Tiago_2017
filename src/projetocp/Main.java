@@ -232,7 +232,10 @@ public class Main {
                         opcaoSubMenu = menuEstatisticas();
                         switch (opcaoSubMenu) {
                             case 1:
-
+                                if (grh.getTotalEquipamentos() > 0  && grh.getNumTotalEquipsAvariados()>0)
+                                    mostrarPercentagemAvarias();
+                                else
+                                    System.err.println("Atualmente não existe nenhuma avaria");
                                 break;
                             case 2:
 
@@ -497,7 +500,8 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
         av1 = new Avaria(equipamento,descricao,funcionarioTecnico);
         equipamento.adicionarAvaria(av1);
         grh.adicionarAvaria(av1);
-        grh.addNumAvariasPorEquipamento(equipamento); // ESTATISTICA
+        grh.addNumAvariasPorEquipamento(equipamento); // ESTATISTICA num avarias por equipamentos
+        grh.setNumTotalEquipsAvariados(grh.getNumTotalEquipsAvariados()+1); // Para ajudar a calcular a estatistica de percentagem de equips avariados no hospital
         System.out.println("Avaria inserida com sucesso");
 
     }
@@ -748,6 +752,7 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
                     Reparacao r = new Reparacao(aa,dataReparacao,descricao,custo,funcionarioTecnico);
                     aa.getEquipamento().adicionarReparacao(r);
                     r.getAvaria().setEstadoAvaria(EstadoAvaria.REPARADA);
+                    grh.setNumTotalEquipsAvariados(grh.getNumTotalEquipsAvariados()-1); // PARA AJUDAR A CALCULAR % DE EQUIPS COM AVARIAS , se está reparada deixa de ser contabilizada como avaria
                     System.out.println("Alteração feita com sucesso!");
                 }
                 if (opcao == 2) {
@@ -853,6 +858,13 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
         System.out.println("Funcionário removido com sucesso!");
     }
 
+
+    public static void mostrarPercentagemAvarias() {
+
+        System.out.println("A percentagem atual de equipamentos avariados no hospital é:");
+        System.out.println(grh.calcularPercentagemAvariasNoHospital());
+
+    }
 
 
 

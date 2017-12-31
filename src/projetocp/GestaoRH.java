@@ -7,7 +7,7 @@ import java.util.Calendar;
 
 public class GestaoRH {
 
-    /*
+
     private int numTotalEquipsAvariados;
 
     public int getNumTotalEquipsAvariados() {
@@ -17,7 +17,7 @@ public class GestaoRH {
     public void setNumTotalEquipsAvariados(int numTotalEquipsAvariados) {
         this.numTotalEquipsAvariados = numTotalEquipsAvariados;
     }
-    */
+
 
 
     private ArrayList<TotalAno> totaisAno = new ArrayList<>();
@@ -108,7 +108,6 @@ public class GestaoRH {
     }
 
     public void eliminarFuncionario(int pos){
-
         funcionarios.remove(pos);
     }
 
@@ -126,22 +125,6 @@ public class GestaoRH {
         funcionarios.get(posicao).setMorada(novaMorada);
     }
 
-
-    /**
-    public void alterarEstadoAvaria(EstadoAvaria novoEstado,int posicao){
-        avarias.get(posicao).setEstadoAvaria(novoEstado);
-
-        for (int i = 0; i < avarias.size(); i++)
-            if(avarias.get(i).getEstadoAvaria() == EstadoAvaria.PORREPARAR)
-                equipamentos.get(posicao).setEstadoEquipamento(EstadoEquipamento.INDISPONIVEL);
-            else
-                if(avarias.get(i).getEstadoAvaria() == EstadoAvaria.REPARADA)
-                    equipamentos.get(posicao).setEstadoEquipamento(EstadoEquipamento.DISPONIVEL);
-            else
-                if(avarias.get(i).getEstadoAvaria() == EstadoAvaria.IRREPARAVEL)
-                    equipamentos.get(posicao).setEstadoEquipamento(EstadoEquipamento.ABATIDO);
-    }
-*/
 
     public int pesquisarFuncionarios(int nif) {
         for (int i = 0; i < funcionarios.size(); i++)
@@ -288,9 +271,18 @@ public class GestaoRH {
     }
 
 
+    public int calcularPercentagemAvariasNoHospital(){
+        int percentagem;
+        /*
+            e - 100
+            n - x
+        x= (n*100) / e
+        */
+           int e= equipamentos.size();
+           percentagem = (numTotalEquipsAvariados*100)/e;
 
-
-
+     return percentagem;
+    }
 
 
     public void gravarFicheiro() {
@@ -303,6 +295,7 @@ public class GestaoRH {
             out.writeObject(tiposEquipamento);
             out.writeObject(equipamentos);
             out.writeObject(avarias);
+            out.writeObject(numTotalEquipsAvariados);
 
 
             out.close();
@@ -321,9 +314,9 @@ public class GestaoRH {
             tiposEquipamento = (ArrayList<TipoEquipamento>) in.readObject();
             equipamentos = (ArrayList<Equipamento>) in.readObject();
             avarias = (ArrayList<Avaria>) in.readObject();
+            numTotalEquipsAvariados=(int)in.readObject();
 
-
-            Divisao.quantidadeEquipamentosInstalados= divisoes.size();
+           // Divisao.quantidadeEquipamentosInstalados= divisoes.size();
 
 
             in.close();
