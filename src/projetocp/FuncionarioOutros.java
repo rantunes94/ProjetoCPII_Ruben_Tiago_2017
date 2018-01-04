@@ -3,18 +3,52 @@ package projetocp;
 import java.io.Serializable;
 import java.util.Calendar;
 
+/**
+ * Classe Funcionario Outros que extende de Funcionario
+ */
 public class FuncionarioOutros extends Funcionario implements Serializable{
+    /**
+     * Função do Funcionário Outros
+     */
     protected String funcao;
+    /**
+     * Username do Funcionário Outros
+     */
     private String username;
+    /**
+     * Password do Funcionário Outros
+     */
     private String password;
 
-    //Caso seja um Funcionário  não Técnico
+    /**
+     * Construtor em caso de ser  um Funcionário  não Técnico
+     * @param nif
+     * @param nome
+     * @param morada
+     * @param telefone
+     * @param email
+     * @param dataNascimento
+     * @param habilitacoes
+     * @param funcao
+     */
     public FuncionarioOutros(int nif, String nome, String morada, int telefone, String email, Calendar dataNascimento, String habilitacoes, String funcao) {
         super(nif, nome, morada, telefone, email, dataNascimento, habilitacoes);
         this.funcao = funcao;
     }
 
-    // Caso seja um Técnico
+    /**
+     * Construtor em caso de ser  um Funcionário  Técnico
+     * @param nif
+     * @param nome
+     * @param morada
+     * @param telefone
+     * @param email
+     * @param dataNascimento
+     * @param habilitacoes
+     * @param funcao
+     * @param username
+     * @param password
+     */
     public FuncionarioOutros(int nif, String nome, String morada, int telefone, String email, Calendar dataNascimento, String habilitacoes, String funcao, String username, String password) {
         super(nif, nome, morada, telefone, email, dataNascimento, habilitacoes);
         this.funcao = funcao;
@@ -48,6 +82,10 @@ public class FuncionarioOutros extends Funcionario implements Serializable{
         this.funcao = funcao;
     }
 
+    /**
+     * Método que permite mostar os dados de um Funcionário Outros
+     * @return
+     */
     @Override
     public String toString() {
         StringBuilder str =new StringBuilder();

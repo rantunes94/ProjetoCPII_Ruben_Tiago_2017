@@ -119,6 +119,10 @@ public class Funcionario implements Serializable {
         this.habilitacoes = habilitacoes;
     }
 
+    /**
+     * Método que permite calcular a idade de um Funcionário
+     * @return
+     */
     private int calcularIdadeFunc(){
         int anos;
         Calendar dataAtual = Calendar.getInstance();
@@ -129,7 +133,10 @@ public class Funcionario implements Serializable {
         return anos;
     }
 
-
+    /**
+     * Método que valida se a idade do Funcionário é maior que 18
+     * @return
+     */
     public boolean validarIdadeFunc(){
         if (idade <18){
             return false;
@@ -137,6 +144,10 @@ public class Funcionario implements Serializable {
         return true;
     }
 
+    /**
+     * Método que permite mostrar os dados do Funcionário
+     * @return
+     */
     @Override
     public String toString() {
         StringBuilder str =new StringBuilder();

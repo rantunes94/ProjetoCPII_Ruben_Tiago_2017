@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+/**
+ * classe que representa uma Divisão
+ */
 public class Divisao implements Serializable {
     /**
      * quantidade de equipamentos instalados

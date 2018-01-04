@@ -3,11 +3,31 @@ package projetocp;
 import java.io.Serializable;
 import java.util.Calendar;
 
+/**
+ * classe que representa um  Médico que extende de Funcionário
+ */
 public class FuncionarioMedico extends Funcionario  implements Serializable{
+    /**
+     * Especialidade do Funcionário Médico
+     */
     private String especialidade;
+    /**
+     * Secção de trabalho do Funcionário Médico
+     */
     private String seccaoTrabalho;
 
-
+    /**
+     * Construtor do Funcionário Médico
+     * @param nif
+     * @param nome
+     * @param morada
+     * @param telefone
+     * @param email
+     * @param dataNascimento
+     * @param habilitacoes
+     * @param especialidade
+     * @param seccaoTrabalho
+     */
     public FuncionarioMedico(int nif, String nome, String morada, int telefone, String email, Calendar dataNascimento, String habilitacoes, String especialidade, String seccaoTrabalho) {
         super(nif, nome, morada, telefone, email, dataNascimento, habilitacoes);
         this.especialidade = especialidade;
@@ -32,6 +52,10 @@ public class FuncionarioMedico extends Funcionario  implements Serializable{
         this.seccaoTrabalho = seccaoTabalho;
     }
 
+    /**
+     * Método que permite mostrar os dados do Funcionário Médico
+     * @return
+     */
     @Override
     public String toString() {
         StringBuilder str =new StringBuilder();
