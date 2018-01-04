@@ -1,0 +1,100 @@
+validações:
+
+
+
+
+-- alterar Estado no menu
+perguntar se a avaria esta por reparar ou irreparavel, e pedir os dados tds das reparaçoes
+
+por reparar -> criar reparaçao
+nao posso associar uma divisao a um equip irreparavel
+
+
+no mostraravarias
+if avarias.size == 0
+	nao existem avarias
+
+igual para o mostrarReparacoes
+
+
+
+--associarDivisaoAoEquipamento
+ver se equipamento esta nao se pode adicionar um equipamento por reparar,ou irreparavel na divisao 
+
+
+--Total gasto por ano
+classe gestao
+
+int pesquisarTotais(int ano) == pesqisar por nif do funcionario
+void adicionarTotalAo(TotalAno ta);
+TotalAno obterTotalAno(int pos);
+
+No inserirEquipamento
+
+ver se o ano existe
+
+se o ano não existe:  pos==-1
+fazer TotalAno ta = new TotalAno(ano,custo);
+grh.adicionarTotaisAno(ta); para adicionar na lista
+
+int ano = data.get(Calendar.year); 
+
+quando o ano existe:  pos==x
+
+TotalAno ta = grh.obterTotalAno(pos);
+ta.setTotal(ta.getTotal() + custo);
+
+
+
+
+
+--TotalAvariaAno
+
+	inserirAvaria
+	alterarEstado para reparado
+	alterar Estado para Irreparavel
+
+inserirAvaria  (fazer este codigo para as cenas aqui em cima)
+	4-1-2018
+	estado = 1
+	pos = grh.pesquisarTotais (ano,estado);
+	if(pos==-1)
+		TotalAvariasAno ta = new TotalAvariaAno (ano,estado,1);
+		grh.adicionaTotais(ta);
+	else
+		Atualizar o total de avarias em +1 (buscar o ano da posiçao e fazer .set)
+
+
+--
+arry avarias na classe equipamento nao é usado(mostraravaria)
+
+-- 
+associar reparação 
+
+
+ 
+
+--metodo associarDivisaoaoEquipamento
+fazer validaçao que n permite adicionar a mesma divisao ao mesmo equipamento sempre
+incrementar estatistica de quantidadeEquipamentosInstalados
+
+
+-- javaDoc
+('/** + Enter; sempre antes dos campos)
+// comentar atributos da classe,metodos,
+se um metodo tiver return temos que dizer o que devolve
+
+Tools->generate javaDoc -> wholeProject -> pasta criada no projeto 
+
+gets e sets nao e preciso
+
+o que justificar nos arrays?????
+
+
+-- metodo consultarDivisao
+verificação , array vazio?
+qnd pomos uma designaçao errada, diz 'String vazia'
+
+--registarEquipamento
+
+o numInventario é pedido? ou tem que ser dado automaticamente?
