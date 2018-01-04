@@ -2,11 +2,20 @@ package projetocp;
 
 import java.io.Serializable;
 
+/**
+ * classe que representa um Tipo de Equipamento
+ */
 public class TipoEquipamento implements Serializable {
     //public static int numeroT;// variável auxiliar para incrementar o numero
     private int numero;
+    /**
+     * descrição do tipo de equipamento
+     */
     private String designacao;
-    private int numEquipamentoPorEquipamento; // variavel para estatisticas , for na main/gestao para calcular o numero por designacao??
+    /**
+     * variavel que permite guardar o numero de equipamentos por tipo de equipamento
+     */
+    private int numEquipamentoPorEquipamento; // variavel para estatisticas
 
 
     public int getNumEquipamentoPorEquipamento() {
@@ -17,6 +26,10 @@ public class TipoEquipamento implements Serializable {
         this.numEquipamentoPorEquipamento = numEquipamentoPorEquipamento;
     }
 
+    /**
+     * Construtor do ipo de equipamento
+     * @param designacao
+     */
     public TipoEquipamento(String designacao) {
         this.designacao = designacao;
     }
@@ -38,6 +51,10 @@ public class TipoEquipamento implements Serializable {
     }
 
 
+    /**
+     * método que permite mostarr os dados de um Tipo de Equipamento
+     * @return
+     */
     @Override
     public String toString() {
         StringBuilder str =new StringBuilder();

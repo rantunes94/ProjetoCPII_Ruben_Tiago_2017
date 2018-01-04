@@ -3,15 +3,43 @@ package projetocp;
 import java.io.Serializable;
 import java.util.Calendar;
 
+/**
+ * classe que representa um Reparação
+ */
 public class Reparacao implements Serializable {
+    /**
+     * Atributo atribuir um numero à reparação
+     */
     int numero;
+    /**
+     * Permite associar uma avaria à reparação
+     */
     Avaria avaria;
+    /**
+     * Atributo que permite introduzir guardar uma data
+     */
     Calendar dataReparacao;
+    /**
+     * Descrição da reparação
+     */
     String descricao;
+    /**
+     * Custo da reparação
+     */
     Double custo;
+    /**
+     * Funcionário que introduziu a reparação
+     */
     Funcionario funcionarioTecnico;
 
-
+    /**
+     * Construtor da Reparação
+     * @param avaria
+     * @param dataReparacao
+     * @param descricao
+     * @param custo
+     * @param funcionarioTecnico
+     */
     public Reparacao(Avaria avaria, Calendar dataReparacao, String descricao, Double custo, Funcionario funcionarioTecnico) {
         this.avaria = avaria;
         this.dataReparacao = dataReparacao;
@@ -69,6 +97,10 @@ public class Reparacao implements Serializable {
     }
 
 
+    /**
+     * Atributo que permite mostrar os dados todos das intancias de Reparação
+     * @return
+     */
     @Override
     public String toString() {
         StringBuilder str =new StringBuilder();

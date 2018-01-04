@@ -3,18 +3,41 @@ package projetocp;
 import java.io.Serializable;
 import java.util.Calendar;
 
+/**
+ * classe que representa uma Avaria
+ */
 public class Avaria implements Serializable{
+    /**
+     * numero da Avaria
+     */
     private int numero;
+    /**
+     * Data de registo da avaria
+     */
     private Calendar dataRegisto = Calendar.getInstance();
+    /**
+     * Equipamento associado à avaria
+     */
     private Equipamento equipamento;
+    /**
+     * descrição da Avaria
+     */
     private String descricao;
+    /**
+     * Estado da avaria , iniciada a PORREPARAR
+     */
     private EstadoAvaria estadoAvaria=EstadoAvaria.PORREPARAR;
+    /**
+     * Funcionário assoaciado a esta Avaria
+     */
     private Funcionario funcionarioTecnico;
 
-
-    //numero nao entra no construtor e estado
-
-
+    /**
+     * Construtor da Avaria
+     * @param equipamento
+     * @param descricao
+     * @param funcionarioTecnico
+     */
     public Avaria(Equipamento equipamento, String descricao, Funcionario funcionarioTecnico) {
         this.equipamento = equipamento;
         this.descricao = descricao;
@@ -70,6 +93,10 @@ public class Avaria implements Serializable{
     }
 
 
+    /**
+     * Método que permite mostrar os dados das Avarias
+     * @return
+     */
     @Override
     public String toString() {
         StringBuilder str =new StringBuilder();

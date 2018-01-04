@@ -173,7 +173,7 @@ variavel para numero total de equips com avarias
 
 -----------------------
 ESTATISTICA total gasto por ano
-criar classe do tipo TotalAno (ano,total), a classe gestao vai ter que te uma lista do tipo totalAno
+criar classe do tipo TotalAno (ano,total), a classe gestao vai ter que te uma lista do tipo total
 
 ---------------------------
 

@@ -4,7 +4,9 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-
+/**
+ * classe que permite guardar todos os dados do projecto e declarar métodos auxiliares
+ */
 public class GestaoRH {
 
 
@@ -66,6 +68,9 @@ public class GestaoRH {
     }
     public Avaria obterAvaria (int pos){
         return avarias.get(pos);
+    }
+    public TotalAno obtertTotal (int pos){
+        return totaisAno.get(pos);
     }
 
 
@@ -129,6 +134,13 @@ public class GestaoRH {
     public int pesquisarFuncionarios(int nif) {
         for (int i = 0; i < funcionarios.size(); i++)
             if (funcionarios.get(i).getNif() == nif)
+                return i;
+        return -1;
+    }
+
+    public int pesquisarTotais(int totalAno) {
+        for (int i = 0; i < totaisAno.size(); i++)
+            if (totaisAno.get(i).getTotal() == totalAno)
                 return i;
         return -1;
     }

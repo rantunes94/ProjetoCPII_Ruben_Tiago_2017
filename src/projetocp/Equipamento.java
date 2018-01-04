@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+/**
+ * classe que representa um Equipamento e implementa Serialização
+ */
 public class Equipamento implements Serializable {
     /**
      * número de inventário do equipamento
@@ -54,8 +57,14 @@ public class Equipamento implements Serializable {
      */
     private ArrayList<Avaria> avarias = new ArrayList<>();// metodo para add e mostrar
 
+    /**
+     * permite verificar mais tarde se este equipamento já avariou ou não
+     */
     private boolean jaAvariou;
 
+    /**
+     * array de reparações
+     */
     private ArrayList<Reparacao> reparacoes = new ArrayList<>();// metodo para add e mostrar
 
     public int getNumTotalAvariasPorEquipamento() {
@@ -65,8 +74,6 @@ public class Equipamento implements Serializable {
     public void setNumTotalAvariasPorEquipamento(int numTotalAvariasPorEquipamento) {
         this.numTotalAvariasPorEquipamento = numTotalAvariasPorEquipamento;
     }
-
-//divisao e estadoEquipamento nao entram no construtor
 
     /**
      * Construtor da classe Equipamento
