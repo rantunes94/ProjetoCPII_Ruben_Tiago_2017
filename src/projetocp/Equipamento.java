@@ -53,9 +53,9 @@ public class Equipamento implements Serializable {
      * Array de avarias
      */
     private ArrayList<Avaria> avarias = new ArrayList<>();// metodo para add e mostrar
-    /**
-     * Array de reparações
-     */
+
+    private boolean jaAvariou;
+
     private ArrayList<Reparacao> reparacoes = new ArrayList<>();// metodo para add e mostrar
 
     public int getNumTotalAvariasPorEquipamento() {
@@ -236,5 +236,16 @@ public class Equipamento implements Serializable {
         str.append("\n\tDivisão associada ao equipamento: \n").append(divisao);
         str.append("\n\tEstado de Equipamento: ").append(estadoEquipamento);
         return str.toString();
+    }
+
+    /**
+     * Array de reparações
+     */
+    public boolean isJaAvariou() {
+        return jaAvariou;
+    }
+
+    public void setJaAvariou(boolean jaAvariou) {
+        this.jaAvariou = jaAvariou;
     }
 }

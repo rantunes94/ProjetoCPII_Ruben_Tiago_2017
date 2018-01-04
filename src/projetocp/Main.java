@@ -501,7 +501,12 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
         equipamento.adicionarAvaria(av1);
         grh.adicionarAvaria(av1);
         grh.addNumAvariasPorEquipamento(equipamento); // ESTATISTICA num avarias por equipamentos
-        grh.setNumTotalEquipsAvariados(grh.getNumTotalEquipsAvariados()+1); // Para ajudar a calcular a estatistica de percentagem de equips avariados no hospital
+        if(equipamento.isJaAvariou()==false)
+        {
+            equipamento.setJaAvariou(true);
+            grh.setNumTotalEquipsAvariados(grh.getNumTotalEquipsAvariados()+1);
+        }
+        // Para ajudar a calcular a estatistica de percentagem de equips avariados no hospital
         System.out.println("Avaria inserida com sucesso");
 
     }
@@ -539,8 +544,6 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
                 System.err.println("Divisão não existe!");
         }while (pos == -1);
         d = grh.obterDivisao(pos);
-
-        //Divisao divisao = grh.obterDivisao(pos);
 
         do{
             System.out.println(grh.mostrarEquipamentos());
@@ -752,7 +755,6 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
                     Reparacao r = new Reparacao(aa,dataReparacao,descricao,custo,funcionarioTecnico);
                     aa.getEquipamento().adicionarReparacao(r);
                     r.getAvaria().setEstadoAvaria(EstadoAvaria.REPARADA);
-                    grh.setNumTotalEquipsAvariados(grh.getNumTotalEquipsAvariados()-1); // PARA AJUDAR A CALCULAR % DE EQUIPS COM AVARIAS , se está reparada deixa de ser contabilizada como avaria
                     System.out.println("Alteração feita com sucesso!");
                 }
                 if (opcao == 2) {
