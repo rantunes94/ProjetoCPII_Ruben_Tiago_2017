@@ -436,7 +436,6 @@ public class Main {
         } while (pos == -1);
 
         funcionarioTecnico = grh.obterFuncionario(pos);
-        //numInv e dataInventariacao estao na grh no metodo adicionarEquipamentos
         numInventario = Consola.lerInt("Indique o número de inventário do equipamento: ", 1, 999999999);
         descricao = Consola.lerString("Indique a descrição do Equipamento: ");
         numSerie = Consola.lerInt("Indique o número de série do equipamento: ", 0, 999999999);
@@ -456,8 +455,11 @@ public class Main {
         e1 = new Equipamento(numInventario, descricao, numSerie, tipoEquipamento, custo, funcionarioTecnico);
 
         grh.adicionarEquipamento(e1);
+
+        funcionarioTecnico.setVerificaAssociacao(true); // Se este funcionário já inventariou um equipamento então não pode ser apagado
         tipoEquipamento.setNumEquipamentoPorEquipamento(tipoEquipamento.getNumEquipamentoPorEquipamento()+1); // ESTATISTICA numero de equuipamentos por tipo de equipamentos
         System.out.println("Equipamento inserido com sucesso");
+
 
         int ano= e1.getDataInventariacao().get(Calendar.YEAR);
         pos=grh.pesquisarTotais(ano);
@@ -472,10 +474,8 @@ public class Main {
     }
 
 
-/*número (único e atribuído sequencialmente), data de registo, equipamento associado,
-descrição, estado (por reparar, reparada, irreparável) e funcionário que a registou. */
 
-    public static void criarAvaria() {  //qnd adicionamos uma avaria, o estadoAvaria tem que ficar PORREPARAR; e o estado INDISPONIVEL
+    public static void criarAvaria() {
     int pos,nif;
     int numEquipamento;
     String descricao;
@@ -579,10 +579,14 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
         }while (pos == -1);
 
         e = grh.obterEquipamento(pos);
-        d.adicionarEquipamentos(e);  //d.associarEquipamento(e);
-        e.setDivisao(d);
-        d.setQntdEquipamentosInstaladosPorDivisao(d.getQntdEquipamentosInstaladosPorDivisao()+1); // ESTATISTICA quantidade de equipamentos em cada divisão
-        System.out.println("Divisão associda com sucesso!");
+        if(e.getDivisao() == d){
+            System.err.println("Não pode associar este equipamento a esta divisão porque este já se encontra associado a esta divisão!");
+        }else {
+            d.adicionarEquipamentos(e);
+            e.setDivisao(d);
+            d.setQntdEquipamentosInstaladosPorDivisao(d.getQntdEquipamentosInstaladosPorDivisao() + 1); // ESTATISTICA quantidade de equipamentos em cada divisão
+            System.out.println("Divisão associda com sucesso!");
+        }
     }
 
 
@@ -633,7 +637,7 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
         FuncionarioMedico f1;
         FuncionarioOutros f2;
         int errodn = 0;
-        //validação a ver se o funcionario que criamos ja existe ou nao
+
         do {
             nif = Consola.lerInt("Indique o nif do Funcionário: ", 1, 999999999);
             pos = grh.pesquisarFuncionarios(nif);
@@ -647,13 +651,6 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
         email = Consola.lerString("Indique o email do Funcionário: ");
         habilitacoes = Consola.lerString("Indique as habilitações do Funcionário: ");
 
-        //validar idade dos funionarios? metodo validarIdade na classe Funcionario mais interfaceFuncionario
-        /*if (f1.validarIdade()) {
-            grh.adicionarFuncionario(f1);
-            System.out.println("Funcionário introduzido com sucesso!");
-        } else {
-            System.err.println("Funcionário com idade inválida!");
-        }*/
         do {
             errodn = 0;
             try {
@@ -906,8 +903,17 @@ descrição, estado (por reparar, reparada, irreparável) e funcionário que a r
             if (pos == -1)
                 System.err.println("Funcionário não existe!");
         } while (pos == -1);
-        grh.eliminarFuncionario(pos);
-        System.out.println("Funcionário removido com sucesso!");
+        Funcionario funcionario = grh.obterFuncionario(pos);
+
+
+        if(funcionario.isVerificaAssociacao()==false){
+            grh.eliminarFuncionario(pos);
+            System.out.println("Funcionário removido com sucesso!");
+        }else{
+            System.out.println("Este Funcionário já inventariou um equipamento logo não pode ser apagado!");
+        }
+
+
     }
 
 

@@ -293,40 +293,8 @@ public class GestaoRH {
     }
 
 
-    public String mostrarEstatisticas() {
-        StringBuilder str = new StringBuilder();
-
-
-        /*
-
-        ESTATISTICAS
-
-
-       FEITAS:
-       Equipamento -- número total de avarias em cada equipamento
-        Número de equipamentos por tipo de equipamento  a ser apresentado no menu inicial
-
-
-       POR FAZER:
-        Divisao -- quantidade de equipamentos instalados em cada divisao
-        Percentagem de equipamentos com avarias
-        Total de avarias registadas por estado;
-        Total gasto por ano em equipamentos
-
-
-
-         */
-        return str.toString();
-    }
-
-
     public int calcularPercentagemAvariasNoHospital(){
         int percentagem;
-        /*
-            e - 100
-            n - x
-        x= (n*100) / e
-        */
            int e= equipamentos.size();
            percentagem = (numTotalEquipsAvariados*100)/e;
 
@@ -345,6 +313,8 @@ public class GestaoRH {
             out.writeObject(equipamentos);
             out.writeObject(avarias);
             out.writeObject(numTotalEquipsAvariados);
+            out.writeObject(totaisAno);
+            out.writeObject(totaisAvariaAno);
 
 
             out.close();
@@ -364,9 +334,8 @@ public class GestaoRH {
             equipamentos = (ArrayList<Equipamento>) in.readObject();
             avarias = (ArrayList<Avaria>) in.readObject();
             numTotalEquipsAvariados=(int)in.readObject();
-
-           // Divisao.quantidadeEquipamentosInstalados= divisoes.size();
-
+            totaisAno = (ArrayList<TotalAno>) in.readObject();
+            totaisAvariaAno = (ArrayList<TotalAvariaAno>) in.readObject();
 
             in.close();
         } catch (IOException | ClassNotFoundException ex) {

@@ -10,6 +10,11 @@ import java.util.Calendar;
  * classe que representa o funcionário
  */
 public class Funcionario implements Serializable {
+
+    /**
+     * atributo que permite verificar se um Funcionário já inventariou algo ou não de forma a não se apagar esse Funcionário se já inventariou algo
+     */
+    private boolean verificaAssociacao;
     /**
      * nif do funcionário
      */
@@ -62,6 +67,14 @@ public class Funcionario implements Serializable {
         idade = calcularIdadeFunc();
     }
 
+
+    public boolean isVerificaAssociacao() {
+        return verificaAssociacao;
+    }
+
+    public void setVerificaAssociacao(boolean verificaAssociacao) {
+        this.verificaAssociacao = verificaAssociacao;
+    }
 
     public int getNif() {
         return nif;

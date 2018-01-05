@@ -9,14 +9,13 @@ import java.util.Calendar;
  */
 public class Divisao implements Serializable {
     /**
-     * quantidade de equipamentos instalados
-     */
-    public static int quantidadeEquipamentosInstalados; // isto so se faz quando se associa uma divisao....
-    /**
-     * designação da divisão
+     * quantidade de equipamentos instalados por divisão
      */
     private int qntdEquipamentosInstaladosPorDivisao;
 
+    /**
+     * designação da divisão
+     */
     private String designacao;
     /**
      * localização da divisão
@@ -38,6 +37,10 @@ public class Divisao implements Serializable {
 
     }
 
+    /**
+     * método que permite remover um equipamento da lista de equipamentos da classe Divisão
+     * @param e
+     */
     public void removerEquipamento(Equipamento e){
         equipamentos.remove(e);
     }
@@ -64,6 +67,10 @@ public class Divisao implements Serializable {
         return str.toString();
     }
 
+    /**
+     * Array de Equipamentos
+     * @return
+     */
     public ArrayList<Equipamento> getEquipamentos() {
         return equipamentos;
     }
