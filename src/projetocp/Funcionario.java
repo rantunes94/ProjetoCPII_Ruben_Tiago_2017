@@ -43,7 +43,9 @@ public class Funcionario implements Serializable {
      * habilitações do funcionário
      */
     protected String habilitacoes;
-
+    /**
+     * idade do funcionário
+     */
     protected int idade;
 
     /**
@@ -67,7 +69,10 @@ public class Funcionario implements Serializable {
         idade = calcularIdadeFunc();
     }
 
-
+    /**
+     * método que verifica se o funcionário inventariou um equipamento
+     * @return devolve a verificação
+     */
     public boolean isVerificaAssociacao() {
         return verificaAssociacao;
     }
@@ -80,61 +85,18 @@ public class Funcionario implements Serializable {
         return nif;
     }
 
-    public void setNif(int nif) {
-        this.nif = nif;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getMorada() {
-        return morada;
-    }
-
     public void setMorada(String morada) {
         this.morada = morada;
     }
 
-    public int getTelefone() {
-        return telefone;
-    }
 
     public void setTelefone(int telefone) {
         this.telefone = telefone;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Calendar getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(Calendar dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
-    public String getHabilitacoes() {
-        return habilitacoes;
-    }
-
-    public void setHabilitacoes(String habilitacoes) {
-        this.habilitacoes = habilitacoes;
-    }
-
     /**
      * Método que permite calcular a idade de um Funcionário
-     * @return
+     * @return a idade
      */
     private int calcularIdadeFunc(){
         int anos;
@@ -148,7 +110,7 @@ public class Funcionario implements Serializable {
 
     /**
      * Método que valida se a idade do Funcionário é maior que 18
-     * @return
+     * @return devolve a validação
      */
     public boolean validarIdadeFunc(){
         if (idade <18){
@@ -159,7 +121,7 @@ public class Funcionario implements Serializable {
 
     /**
      * Método que permite mostrar os dados do Funcionário
-     * @return
+     * @return devolve os dados do funcionário
      */
     @Override
     public String toString() {

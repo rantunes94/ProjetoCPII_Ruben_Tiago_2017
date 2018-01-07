@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Calendar;
 
 /**
- * classe que representa um Reparação
+ * classe que representa uma Reparação
  */
 public class Reparacao implements Serializable {
     /**
@@ -34,11 +34,11 @@ public class Reparacao implements Serializable {
 
     /**
      * Construtor da Reparação
-     * @param avaria
-     * @param dataReparacao
-     * @param descricao
-     * @param custo
-     * @param funcionarioTecnico
+     * @param avaria avaria da reparação
+     * @param dataReparacao data da reparação
+     * @param descricao descrição da reparação
+     * @param custo custo da reparação
+     * @param funcionarioTecnico funionário técnico que introduziu a reparação
      */
     public Reparacao(Avaria avaria, Calendar dataReparacao, String descricao, Double custo, Funcionario funcionarioTecnico) {
         this.avaria = avaria;
@@ -48,58 +48,12 @@ public class Reparacao implements Serializable {
         this.funcionarioTecnico = funcionarioTecnico;
     }
 
-    public int getNumero() {
-        return numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-
     public Avaria getAvaria() {
         return avaria;
     }
-
-    public void setAvaria(Avaria avaria) {
-        this.avaria = avaria;
-    }
-
-    public Calendar getDataReparacao() {
-        return dataReparacao;
-    }
-
-    public void setDataReparacao(Calendar dataReparacao) {
-        this.dataReparacao = dataReparacao;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public Double getCusto() {
-        return custo;
-    }
-
-    public void setCusto(Double custo) {
-        this.custo = custo;
-    }
-
-    public Funcionario getFuncionarioTecnico() {
-        return funcionarioTecnico;
-    }
-
-    public void setFuncionarioTecnico(Funcionario funcionarioTecnico) {
-        this.funcionarioTecnico = funcionarioTecnico;
-    }
-
-
     /**
-     * Atributo que permite mostrar os dados todos das intancias de Reparação
-     * @return
+     * Método que permite mostrar os dados da Reparação
+     * @return devolve os dados da Reparação
      */
     @Override
     public String toString() {

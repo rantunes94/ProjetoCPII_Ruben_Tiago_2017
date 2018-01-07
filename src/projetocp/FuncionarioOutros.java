@@ -22,14 +22,14 @@ public class FuncionarioOutros extends Funcionario implements Serializable{
 
     /**
      * Construtor em caso de ser  um Funcionário  não Técnico
-     * @param nif
-     * @param nome
-     * @param morada
-     * @param telefone
-     * @param email
-     * @param dataNascimento
-     * @param habilitacoes
-     * @param funcao
+     * @param nif nif  do funcionário não técnico
+     * @param nome nome do funcionário não técnico
+     * @param morada morada do funcionário não técnico
+     * @param telefone telefone do funcionário não técnico
+     * @param email e-mail do funcionário não técnico
+     * @param dataNascimento data de nascimento do funcionário não técnico
+     * @param habilitacoes habilitações do funcionário não técnico
+     * @param funcao função do funcionário não técnico
      */
     public FuncionarioOutros(int nif, String nome, String morada, int telefone, String email, Calendar dataNascimento, String habilitacoes, String funcao) {
         super(nif, nome, morada, telefone, email, dataNascimento, habilitacoes);
@@ -38,16 +38,16 @@ public class FuncionarioOutros extends Funcionario implements Serializable{
 
     /**
      * Construtor em caso de ser  um Funcionário  Técnico
-     * @param nif
-     * @param nome
-     * @param morada
-     * @param telefone
-     * @param email
-     * @param dataNascimento
-     * @param habilitacoes
-     * @param funcao
-     * @param username
-     * @param password
+     * @param nif nif do funcionário técnico
+     * @param nome nome do funcionário técnico
+     * @param morada morada do funcionário técnico
+     * @param telefone telefone do funcionário técnico
+     * @param email e-mail do funcionário técnico
+     * @param dataNascimento data de nascimento do funcionário técnico
+     * @param habilitacoes habilitações do funcionário técnico
+     * @param funcao função do funcionário técnico
+     * @param username username do funcionário técnico
+     * @param password password do funcionário técnico
      */
     public FuncionarioOutros(int nif, String nome, String morada, int telefone, String email, Calendar dataNascimento, String habilitacoes, String funcao, String username, String password) {
         super(nif, nome, morada, telefone, email, dataNascimento, habilitacoes);
@@ -57,34 +57,13 @@ public class FuncionarioOutros extends Funcionario implements Serializable{
     }
 
 
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public String getFuncao() {
         return funcao;
     }
 
-    public void setFuncao(String funcao) {
-        this.funcao = funcao;
-    }
-
     /**
      * Método que permite mostar os dados de um Funcionário Outros
-     * @return
+     * @return devolve os dados de um Funcionário Outros
      */
     @Override
     public String toString() {

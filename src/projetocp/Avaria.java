@@ -34,9 +34,9 @@ public class Avaria implements Serializable{
 
     /**
      * Construtor da Avaria
-     * @param equipamento
-     * @param descricao
-     * @param funcionarioTecnico
+     * @param equipamento equipamento com avaria
+     * @param descricao descrição da avaria
+     * @param funcionarioTecnico funcionário tecnico que regista a avaria
      */
     public Avaria(Equipamento equipamento, String descricao, Funcionario funcionarioTecnico) {
         this.equipamento = equipamento;
@@ -64,18 +64,6 @@ public class Avaria implements Serializable{
         return equipamento;
     }
 
-    public void setEquipamento(Equipamento equipamento) {
-        this.equipamento = equipamento;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
     public EstadoAvaria getEstadoAvaria() {
         return estadoAvaria;
     }
@@ -84,18 +72,9 @@ public class Avaria implements Serializable{
         this.estadoAvaria = estadoAvaria;
     }
 
-    public Funcionario getFuncionarioTecnico() {
-        return funcionarioTecnico;
-    }
-
-    public void setFuncionarioTecnico(Funcionario funcionarioTecnico) {
-        this.funcionarioTecnico = funcionarioTecnico;
-    }
-
-
     /**
      * Método que permite mostrar os dados das Avarias
-     * @return
+     * @return devolve os dados da Avaria
      */
     @Override
     public String toString() {

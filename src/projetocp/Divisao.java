@@ -39,7 +39,7 @@ public class Divisao implements Serializable {
 
     /**
      * método que permite remover um equipamento da lista de equipamentos da classe Divisão
-     * @param e
+     * @param e equipamento a remover
      */
     public void removerEquipamento(Equipamento e){
         equipamentos.remove(e);
@@ -67,15 +67,6 @@ public class Divisao implements Serializable {
         return str.toString();
     }
 
-    /**
-     * Array de Equipamentos
-     * @return
-     */
-    public ArrayList<Equipamento> getEquipamentos() {
-        return equipamentos;
-    }
-
-
     public int getQntdEquipamentosInstaladosPorDivisao() {
         return qntdEquipamentosInstaladosPorDivisao;
     }
@@ -84,30 +75,13 @@ public class Divisao implements Serializable {
         this.qntdEquipamentosInstaladosPorDivisao = qntdEquipamentosInstaladosPorDivisao;
     }
 
-    public void setEquipamentos(ArrayList<Equipamento> equipamentos) {
-        this.equipamentos = equipamentos;
-    }
-
     public String getDesignacao() {
         return designacao;
     }
 
-    public void setDesignacao(String designacao) {
-        this.designacao = designacao;
-    }
-
-    public String getLocalizacao() {
-        return localizacao;
-    }
-
-    public void setLocalizacao(String localizacao) {
-        this.localizacao = localizacao;
-    }
-
-
     /**
-     * método que permite mostrar ao utilizador toda a informação das instâncias da Classe Equipamento e das suas superclasses
-     * @return devolve a informação da instância
+     * método que permite mostrar os dados da Divisão
+     * @return devolve os dados da Divisão
      */
     @Override
     public String toString() {

@@ -7,18 +7,28 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+/**
+ * classe que representa a Main
+ */
 public class Main {
 
     private static GestaoRH grh = new GestaoRH();
     public static SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
 
+    /**
+     * método principal da main
+     * @param args argumentos
+     */
     public static void main(String[] args) {
-        // write your code here
+        /**
+         * atributos opção e opção do sub-menu
+         */
         int opcao, opcaoSubMenu;
 
 
-
-        // hardcode apenas para testes
+        /**
+         * hardcode apenas para testar
+         */
         Calendar dataCalendar =new GregorianCalendar();
         Calendar dataCalendar2 =new GregorianCalendar();
 
@@ -243,8 +253,6 @@ public class Main {
                             case 3:
                                 System.out.println(grh.mostrarTotaisAno());
                                 break;
-                            case 4:
-                                break;
                             case 0:
                                 System.out.println("Vai voltar ao menu anterior");
                         }
@@ -371,7 +379,9 @@ public class Main {
         return opcao;
     }
 
-
+    /**
+     * método que permite criar uma divisão
+     */
     public static void criarDivisao() {
         String designacao, localizacao;
         Divisao d1;
@@ -394,6 +404,9 @@ public class Main {
         System.out.println("Divisão inserida com sucesso!");
     }
 
+    /**
+     * método que permite criar um tipo de equipamento
+     */
     public static void criarTiposEquipamento() {
         String designacao;
         TipoEquipamento te1;
@@ -408,6 +421,9 @@ public class Main {
         System.out.println("Tipo de equipamento inserido com sucesso!");
     }
 
+    /**
+     * método que permite criar um equipamento
+     */
     public static void criarEquipamento() {
         String descricao;
         int numtipoEquipamento, numInventario;
@@ -474,7 +490,9 @@ public class Main {
     }
 
 
-
+    /**
+     * método que permite criar uma Avaria
+     */
     public static void criarAvaria() {
     int pos,nif;
     int numEquipamento;
@@ -536,7 +554,9 @@ public class Main {
         }
     }
 
-
+    /**
+     * método que permite pesquisar um equipamento por divisão
+     */
     public static void consultarEquipamentosPorDivisao() {
         int pos;
         String designacao;
@@ -554,7 +574,9 @@ public class Main {
         System.out.println(d.mostrarEquipamentos());
     }
 
-
+    /**
+     * método que permite associar uma divisão a um equipamento
+     */
     public static void associarDivisaoAoEquipamento() {
         int pos, numInventario;
         String designacao;
@@ -589,7 +611,9 @@ public class Main {
         }
     }
 
-
+    /**
+     * método que permite pesquisar divisões
+     */
     public static void consultarDivisao() {
         int pos;
         String designacao;
@@ -611,6 +635,9 @@ public class Main {
         System.out.println(divisao);
     }
 
+    /**
+     * método que permite consultar avarias por equipamento
+     */
     public static void consultarAvariasPorEquipamento() {
         int pos,numero;
         Equipamento e;
@@ -629,7 +656,9 @@ public class Main {
         System.out.println(e.mostrarReparacoes());
     }
 
-
+    /**
+     * método que permite criar um funcionário
+     */
     public static void criarFuncionario() {
         int nif, telefone, tipo, pos;
         String nome, morada, email, habilitacoes, dataN, especialidade, seccaoTrabalho, username, password, funcao;
@@ -712,7 +741,9 @@ public class Main {
 
     }
 
-
+    /**
+     * método que permite alterar o estado de uma avaria
+     */
     public static void alterarEstadoAvaria() {
         int pos,nif,errodn;
         int opcao=0;
@@ -848,7 +879,9 @@ public class Main {
     }
 
 
-
+    /**
+     * método que permite alterar as informações de um funcionário
+     */
     public static void alterarFuncionario() {
         int nif, pos, opcao = 0;
         int novoTelefone;
@@ -894,7 +927,9 @@ public class Main {
 
     }
 
-
+    /**
+     * método que permite eliminar um funcionário e suas associações
+     */
     public static void eliminarFuncionario() {
         int nif, pos;
         do {

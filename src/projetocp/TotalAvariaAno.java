@@ -21,18 +21,6 @@ public class TotalAvariaAno implements Comparable<TotalAvariaAno> {
         return ano;
     }
 
-    public void setAno(int ano) {
-        this.ano = ano;
-    }
-
-    public EstadoAvaria getEstadoAvaria() {
-        return estadoAvaria;
-    }
-
-    public void setEstadoAvaria(EstadoAvaria estadoAvaria) {
-        this.estadoAvaria = estadoAvaria;
-    }
-
     public int getNumAvarias() {
         return numAvarias;
     }
@@ -43,9 +31,9 @@ public class TotalAvariaAno implements Comparable<TotalAvariaAno> {
 
     /**
      * Construtor de Total Avaria por Ano
-     * @param ano
-     * @param estadoAvaria
-     * @param numAvarias
+     * @param ano ano do TotalAvariaAno
+     * @param estadoAvaria estado da avaria do TotalAvariaAno
+     * @param numAvarias número de avarias do TotalAvariaAno
      */
     public TotalAvariaAno(int ano, EstadoAvaria estadoAvaria, int numAvarias) {
         this.ano = ano;
@@ -54,7 +42,10 @@ public class TotalAvariaAno implements Comparable<TotalAvariaAno> {
     }
 
 
-
+    /**
+     * método que permite mostrar os dados do TotalAvariaAno
+     * @return devolve os dados do TotalAvariaAno
+     */
     @Override
     public String toString() {
         StringBuilder str = new StringBuilder();
@@ -66,7 +57,7 @@ public class TotalAvariaAno implements Comparable<TotalAvariaAno> {
     }
 
     /**
-     * Está a ordenar primeiro pelo numAvarias e depois pelo ano ( NÃO PELO ESTADO não nos era possivel)
+     * Método que permite ordenar primeiro pelo numAvarias e depois pelo ano ( NÃO PELO ESTADO, porque não nos era possivel)
      * @param
      * @return
      */

@@ -17,9 +17,6 @@ public class TotalAno implements Comparable<TotalAno> {
         return ano;
     }
 
-    public void setAno(int ano) {
-        this.ano = ano;
-    }
 
     public double getTotal() {
         return total;
@@ -31,14 +28,18 @@ public class TotalAno implements Comparable<TotalAno> {
 
     /**
      * Construtor do TotalAno
-     * @param ano
-     * @param total
+     * @param ano ano correspondente
+     * @param total total em equipamentos
      */
     public TotalAno(int ano, double total) {
         this.ano = ano;
         this.total = total;
     }
 
+    /**
+     * método que permite mostrar os dados do TotalAno
+     * @return devolves os dados do TotalAno
+     */
     @Override
     public String toString() {
         StringBuilder str = new StringBuilder();
@@ -48,6 +49,11 @@ public class TotalAno implements Comparable<TotalAno> {
         return str.toString();
     }
 
+    /**
+     * método que permite ordenar o TotalAno por ano
+     * @param o novo TotalAno a inserir
+     * @return
+     */
     @Override
     public int compareTo(TotalAno o) {
         if (this.total < o.getTotal()) {

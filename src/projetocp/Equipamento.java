@@ -36,9 +36,8 @@ public class Equipamento implements Serializable {
     /**
      * estadoEquipamento do equipamento, onde chama a Enumeração EstadoEquipamento, que nos permite predefinir os valores do estadoEquipamento (DISPONIVEL,INDISPONIVEL,ABATIDO)
      */
-    private EstadoEquipamento estadoEquipamento; // este estadoEquipamento é um ENUM ,  NOTA : este campo não é para ser pedido ao utilizador , no acto da adição deve ficar DISPONIVEL
+    private EstadoEquipamento estadoEquipamento;
 
-    // funcionario tecnico que o inventariou e custo do mesmo
     /**
      * custo do equipamento
      */
@@ -47,15 +46,14 @@ public class Equipamento implements Serializable {
      * funcionário técnico que inventaria o equipamento
      */
     private Funcionario funcionarioTecnico;
-    /////////////////////////////////////////////////////////
     /**
      * número total de avarias por equipamento
      */
-    private int numTotalAvariasPorEquipamento; // qnd insiro uma avaria, tenho que ir a este campo e dizer que tenho uma avaria nesse equipamento
+    private int numTotalAvariasPorEquipamento;
     /**
      * Array de avarias
      */
-    private ArrayList<Avaria> avarias = new ArrayList<>();// metodo para add e mostrar
+    private ArrayList<Avaria> avarias = new ArrayList<>();
 
     /**
      * permite verificar mais tarde se este equipamento já avariou ou não
@@ -65,7 +63,7 @@ public class Equipamento implements Serializable {
     /**
      * array de reparações
      */
-    private ArrayList<Reparacao> reparacoes = new ArrayList<>();// metodo para add e mostrar
+    private ArrayList<Reparacao> reparacoes = new ArrayList<>();
 
     public int getNumTotalAvariasPorEquipamento() {
         return numTotalAvariasPorEquipamento;
@@ -138,20 +136,9 @@ public class Equipamento implements Serializable {
         return str.toString();
     }
 
-    public int getNumSerie() {
-        return numSerie;
-    }
-
-    public void setNumSerie(int numSerie) {
-        this.numSerie = numSerie;
-    }
 
     public int getNumeroInventario() {
         return numeroInventario;
-    }
-
-    public void setNumeroInventario(int numeroInventario) {
-        this.numeroInventario = numeroInventario;
     }
 
     public Calendar getDataInventariacao() {
@@ -162,14 +149,6 @@ public class Equipamento implements Serializable {
         this.dataInventariacao = dataInventariacao;
     }
 
-    public TipoEquipamento getTipoEquipamento() {
-        return tipoEquipamento;
-    }
-
-    public void setTipoEquipamento(TipoEquipamento tipoEquipamento) {
-        this.tipoEquipamento = tipoEquipamento;
-    }
-
     public Divisao getDivisao() {
         return divisao;
     }
@@ -178,54 +157,10 @@ public class Equipamento implements Serializable {
         this.divisao = divisao;
     }
 
-    public EstadoEquipamento getEstadoEquipamento() {
-        return estadoEquipamento;
-    }
 
     public void setEstadoEquipamento(EstadoEquipamento estadoEquipamento) {
         this.estadoEquipamento = estadoEquipamento;
     }
-
-    public double getCusto() {
-        return custo;
-    }
-
-    public void setCusto(double custo) {
-        this.custo = custo;
-    }
-
-    public Funcionario getFuncionarioTecnico() {
-        return funcionarioTecnico;
-    }
-
-    public void setFuncionarioTecnico(Funcionario funcionarioTecnico) {
-        this.funcionarioTecnico = funcionarioTecnico;
-    }
-
-    public int getNumTotalAvarias() {
-        return numTotalAvariasPorEquipamento;
-    }
-
-    public void setNumTotalAvarias(int numTotalAvarias) {
-        this.numTotalAvariasPorEquipamento = numTotalAvarias;
-    }
-
-    public ArrayList<Avaria> getAvarias() {
-        return avarias;
-    }
-
-    public void setAvarias(ArrayList<Avaria> avarias) {
-        this.avarias = avarias;
-    }
-
-    public ArrayList<Reparacao> getReparacoes() {
-        return reparacoes;
-    }
-
-    public void setReparacoes(ArrayList<Reparacao> reparacoes) {
-        this.reparacoes = reparacoes;
-    }
-
 
     @Override
     public String toString() {
@@ -246,12 +181,17 @@ public class Equipamento implements Serializable {
     }
 
     /**
-     * Array de reparações
+     * método que permite verificar se um equipamento já avariou ou não
+     * @return devolve a validação
      */
     public boolean isJaAvariou() {
         return jaAvariou;
     }
 
+    /**
+     * método que permite dizer que o equipamento já avariou
+     * @param jaAvariou
+     */
     public void setJaAvariou(boolean jaAvariou) {
         this.jaAvariou = jaAvariou;
     }

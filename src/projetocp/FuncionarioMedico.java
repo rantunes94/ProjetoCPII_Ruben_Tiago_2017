@@ -18,15 +18,15 @@ public class FuncionarioMedico extends Funcionario  implements Serializable{
 
     /**
      * Construtor do Funcionário Médico
-     * @param nif
-     * @param nome
-     * @param morada
-     * @param telefone
-     * @param email
-     * @param dataNascimento
-     * @param habilitacoes
-     * @param especialidade
-     * @param seccaoTrabalho
+     * @param nif nif do funcionário médico
+     * @param nome nome do funcionário médico
+     * @param morada morada do funcionário médico
+     * @param telefone telefone do funcinário médico
+     * @param email e-mail do funcionário médico
+     * @param dataNascimento data de nascimento do funcionário médico
+     * @param habilitacoes habilitações do funcionário médico
+     * @param especialidade especialidade do funcionário médico
+     * @param seccaoTrabalho secção de trabalho do funcionário médico
      */
     public FuncionarioMedico(int nif, String nome, String morada, int telefone, String email, Calendar dataNascimento, String habilitacoes, String especialidade, String seccaoTrabalho) {
         super(nif, nome, morada, telefone, email, dataNascimento, habilitacoes);
@@ -34,27 +34,9 @@ public class FuncionarioMedico extends Funcionario  implements Serializable{
         this.seccaoTrabalho = seccaoTrabalho;
     }
 
-
-
-    public String getEspecialidade() {
-        return especialidade;
-    }
-
-    public void setEspecialidade(String especialidade) {
-        this.especialidade = especialidade;
-    }
-
-    public String getSeccaoTabalho() {
-        return seccaoTrabalho;
-    }
-
-    public void setSeccaoTabalho(String seccaoTabalho) {
-        this.seccaoTrabalho = seccaoTabalho;
-    }
-
     /**
      * Método que permite mostrar os dados do Funcionário Médico
-     * @return
+     * @return devolve os dados do funcionário médico
      */
     @Override
     public String toString() {

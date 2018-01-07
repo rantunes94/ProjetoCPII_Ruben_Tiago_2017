@@ -6,7 +6,9 @@ import java.io.Serializable;
  * classe que representa um Tipo de Equipamento
  */
 public class TipoEquipamento implements Serializable {
-    //public static int numeroT;// variável auxiliar para incrementar o numero
+    /**
+     * número do tipo de equipamento
+     */
     private int numero;
     /**
      * descrição do tipo de equipamento
@@ -27,8 +29,8 @@ public class TipoEquipamento implements Serializable {
     }
 
     /**
-     * Construtor do ipo de equipamento
-     * @param designacao
+     * Construtor do Tipo de equipamento
+     * @param designacao designação do tipo de equipamento
      */
     public TipoEquipamento(String designacao) {
         this.designacao = designacao;
@@ -42,18 +44,9 @@ public class TipoEquipamento implements Serializable {
         this.numero = numero;
     }
 
-    public String getDesignacao() {
-        return designacao;
-    }
-
-    public void setDesignacao(String designacao) {
-        this.designacao = designacao;
-    }
-
-
     /**
-     * método que permite mostarr os dados de um Tipo de Equipamento
-     * @return
+     * método que permite mostrar os dados de um Tipo de Equipamento
+     * @return devolve os dados do Tipo de quipamento
      */
     @Override
     public String toString() {
