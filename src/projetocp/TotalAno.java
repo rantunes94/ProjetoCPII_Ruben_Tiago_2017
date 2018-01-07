@@ -1,9 +1,11 @@
 package projetocp;
 
+import java.io.Serializable;
+
 /**
  * classe que nos permite calcular o total gasto por ano em equipamentos (ordenado por ordem decrescente do total)
  */
-public class TotalAno implements Comparable<TotalAno> {
+public class TotalAno implements Comparable<TotalAno>,Serializable {
     /**
      * ano desse total
      */

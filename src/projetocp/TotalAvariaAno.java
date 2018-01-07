@@ -1,9 +1,11 @@
 package projetocp;
 
+import java.io.Serializable;
+
 /**
  * Classe que representa o total de avarias por Ano
  */
-public class TotalAvariaAno implements Comparable<TotalAvariaAno> {
+public class TotalAvariaAno implements Comparable<TotalAvariaAno>,Serializable {
     /**
      * ano da avaria
      */
@@ -59,7 +61,7 @@ public class TotalAvariaAno implements Comparable<TotalAvariaAno> {
     /**
      * Método que permite ordenar primeiro pelo numAvarias e depois pelo ano ( NÃO PELO ESTADO, porque não nos era possivel)
      * @param
-     * @return
+     * @return devolve ordenado primeiro por num de avarias e depois por ano
      */
     @Override
     public int compareTo(TotalAvariaAno o) {

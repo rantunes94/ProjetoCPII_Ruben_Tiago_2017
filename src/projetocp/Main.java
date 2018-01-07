@@ -12,6 +12,9 @@ import java.util.GregorianCalendar;
  */
 public class Main {
 
+    /**
+     * Instancia da classe GestãoRH para nos permitir utilizar métodos que estão na GestãoRH
+     */
     private static GestaoRH grh = new GestaoRH();
     public static SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
 
@@ -24,47 +27,6 @@ public class Main {
          * atributos opção e opção do sub-menu
          */
         int opcao, opcaoSubMenu;
-
-
-        /**
-         * hardcode apenas para testar
-         */
-        Calendar dataCalendar =new GregorianCalendar();
-        Calendar dataCalendar2 =new GregorianCalendar();
-
-        String dataNascimento = "12-12-1995";
-        String  dataNascimento2= "12-02-1984";
-
-        try {
-            dataCalendar.setTime(formato.parse(dataNascimento));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
-        try {
-            dataCalendar2.setTime(formato.parse(dataNascimento2));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
-
-        TipoEquipamento tee1;
-        tee1 = new TipoEquipamento("XTPO");
-        grh.adicionarTipoEquipamento(tee1);
-
-        FuncionarioMedico ff1;
-        ff1= new FuncionarioMedico(1,"Rui Almeida","Rua da almeidinha fonseca",91965554,"email@fonseca.pah",dataCalendar,"12º e já vai com sorte","Absolutamente nenhuma","Em casa");
-        grh.adicionarFuncionarioMedico(ff1);
-
-        FuncionarioOutros ff2;
-        ff2= new FuncionarioOutros(2,"Ana Fonseca", "Rua da fonsequinha",919191191,"anocas@dd.com",dataCalendar,"Doutorada em fazer nada","Nenhnuma");
-        grh.adicionarFuncionarioOutros(ff2);
-
-        FuncionarioOutros ff3;
-        ff3= new FuncionarioOutros(3,"Miguel Estrudes", "Rua da estrudes",919191555,"s@dd.com",dataCalendar,"9º ano","Técnico");
-        grh.adicionarFuncionarioOutros(ff3);
-
-
 
         grh.lerFicheiro();
 
@@ -435,7 +397,7 @@ public class Main {
         TotalAno ta;
 
         do {
-            nif = Consola.lerInt("Indique o nif do Funcionário: ", 1, 999999999);
+            nif = Consola.lerInt("Indique o nif do Funcionário: ", 10000000, 999999999);
             pos = grh.pesquisarFuncionarios(nif);
             if (pos == -1)
                 System.err.println("Funcionario não existe!");
@@ -513,7 +475,7 @@ public class Main {
 
         do {
             System.out.println(grh.mostrarFuncionarios());
-            nif = Consola.lerInt("Indique o nif do Funcionário que registou a avaria : ", 1, 999999999);
+            nif = Consola.lerInt("Indique o nif do Funcionário que registou a avaria : ", 10000000, 999999999);
             pos = grh.pesquisarFuncionarios(nif);
             if (pos == -1)
                 System.err.println("Funcionario não existe!");
@@ -540,9 +502,9 @@ public class Main {
         }
         // Para ajudar a calcular a estatistica de percentagem de equips avariados no hospital
         System.out.println("Avaria inserida com sucesso");
-
-
         int ano= av1.getDataRegisto().get(Calendar.YEAR);
+
+
         pos=grh.pesquisarTotaisAvariaAno(ano);
         if(pos==-1){
             ta= new TotalAvariaAno(ano,EstadoAvaria.PORREPARAR, 1);
@@ -553,6 +515,9 @@ public class Main {
             ta.setNumAvarias(ta.getNumAvarias()+1);
         }
     }
+
+
+
 
     /**
      * método que permite pesquisar um equipamento por divisão
@@ -668,14 +633,14 @@ public class Main {
         int errodn = 0;
 
         do {
-            nif = Consola.lerInt("Indique o nif do Funcionário: ", 1, 999999999);
+            nif = Consola.lerInt("Indique o nif do Funcionário: ", 10000000, 999999999);
             pos = grh.pesquisarFuncionarios(nif);
             if (pos != -1)
                 System.err.println("Funcionário já existe!");
         } while (pos != -1);
 
         nome = Consola.lerString("Indique o nome do Funcionário: ");
-        telefone = Consola.lerInt("Indique o telefone do Funcionário: ", 1, 999999999);
+        telefone = Consola.lerInt("Indique o telefone do Funcionário: ", 10000000, 999999999);
         morada = Consola.lerString("Indique a morada do Funcionário: ");
         email = Consola.lerString("Indique o email do Funcionário: ");
         habilitacoes = Consola.lerString("Indique as habilitações do Funcionário: ");
@@ -790,7 +755,7 @@ public class Main {
                     custo = Consola.lerDouble("Indique o custo da reparação: ", 0, 999999999);
                     do {
                         System.out.println(grh.mostrarFuncionarios());
-                        nif = Consola.lerInt("Indique o nif do Funcionário que registou a reparação : ", 1, 999999999);
+                        nif = Consola.lerInt("Indique o nif do Funcionário que registou a reparação : ", 10000000, 999999999);
                         pos = grh.pesquisarFuncionarios(nif);
                         if (pos == -1)
                             System.err.println("Funcionario não existe!");
@@ -840,7 +805,7 @@ public class Main {
                     custo = Consola.lerDouble("Indique o custo da reparação: ", 0, 999999999);
                     do {
                         System.out.println(grh.mostrarFuncionarios());
-                        nif = Consola.lerInt("Indique o nif do Funcionário que registou a reparação : ", 1, 999999999);
+                        nif = Consola.lerInt("Indique o nif do Funcionário que registou a reparação : ", 10000000, 999999999);
                         pos = grh.pesquisarFuncionarios(nif);
                         if (pos == -1)
                             System.err.println("Funcionario não existe!");
@@ -888,7 +853,7 @@ public class Main {
         String novaMorada;
 
         do {
-            nif = Consola.lerInt("Indique o nif do funcionário a alterar: ", 1, 999999999);
+            nif = Consola.lerInt("Indique o nif do funcionário a alterar: ", 10000000, 999999999);
             pos = grh.pesquisarFuncionarios(nif);
             if (pos == -1) {
                 System.err.println("Funcionário não existe!");
@@ -904,7 +869,7 @@ public class Main {
 
             if (opcao == 1) {
 
-                novoTelefone = Consola.lerInt("Indique o novo telefone do Funcionário: ", 1, 999999999);
+                novoTelefone = Consola.lerInt("Indique o novo telefone do Funcionário: ", 10000000, 999999999);
                 grh.alterarFuncionarioTelefone(novoTelefone, pos);
                 System.out.println("Alteração feita com sucesso!");
             }
@@ -917,7 +882,7 @@ public class Main {
 
             if (opcao == 3) {
 
-                novoTelefone = Consola.lerInt("Indique o novo telefone do Funcionário: ", 1, 999999999);
+                novoTelefone = Consola.lerInt("Indique o novo telefone do Funcionário: ", 10000000, 999999999);
                 novaMorada = Consola.lerString("Indique a nova morada do Funcionário: ");
                 grh.alterarFuncionario(novoTelefone, novaMorada, pos);
                 System.out.println("Alteração feita com sucesso!");
@@ -933,7 +898,7 @@ public class Main {
     public static void eliminarFuncionario() {
         int nif, pos;
         do {
-            nif = Consola.lerInt("Indique o nif do funcionário: ", 1, 999999999);
+            nif = Consola.lerInt("Indique o nif do funcionário: ", 10000000, 999999999);
             pos = grh.pesquisarFuncionarios(nif);
             if (pos == -1)
                 System.err.println("Funcionário não existe!");
@@ -951,7 +916,9 @@ public class Main {
 
     }
 
-
+    /**
+     * Método que permite mostrar a percentagem de avarias nos equipamentos, no hospital inteiro
+     */
     public static void mostrarPercentagemAvarias() {
 
         System.out.println("A percentagem atual de equipamentos avariados no hospital é:");

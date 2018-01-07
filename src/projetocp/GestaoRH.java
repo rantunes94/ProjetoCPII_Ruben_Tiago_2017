@@ -83,12 +83,6 @@ public class GestaoRH {
     public Funcionario obterFuncionario (int pos){
         return funcionarios.get(pos);
     }
-    public Funcionario obterFuncionarioMedico (int pos){
-        return funcionariosMedicos.get(pos);
-    }
-    public FuncionarioOutros obterFuncionarioOutros (int pos){
-        return funcionariosOutros.get(pos);
-    }
     public Divisao obterDivisao (int pos){
         return divisoes.get(pos);
     }
@@ -101,13 +95,12 @@ public class GestaoRH {
     public Avaria obterAvaria (int pos){
         return avarias.get(pos);
     }
+
+
     public TotalAno obtertTotal (int pos){
         return totaisAno.get(pos);
     }
-    public TotalAvariaAno obtertTotalAvariaAno (int pos){
-        return totaisAvariaAno.get(pos);
-    }
-
+    public TotalAvariaAno obtertTotalAvariaAno (int pos){ return totaisAvariaAno.get(pos); }
 
     /**
      * método que permite adicionar um funcionário médico
@@ -160,7 +153,8 @@ public class GestaoRH {
      * método que permite adicionar um custo do total do ano
      * @param totalAno custo
      */
-    public void adicionarTotalAno(TotalAno totalAno){ totaisAno.add(totalAno);
+    public void adicionarTotalAno(TotalAno totalAno){
+        totaisAno.add(totalAno);
         Collections.sort(totaisAno);
     }
 
@@ -170,7 +164,7 @@ public class GestaoRH {
      */
     public void adicionarTotalAvariaAno(TotalAvariaAno totalAvariaAno) {
         totaisAvariaAno.add(totalAvariaAno);
-        //Collections.sort(totalAvariaAno);
+        Collections.sort(totaisAvariaAno);
     }
 
     /**
@@ -254,8 +248,8 @@ public class GestaoRH {
      * @return devolve se esse ano existe ou não
      */
     public int pesquisarTotaisAvariaAno(int ano) {
-        for (int i = 0; i < totaisAno.size(); i++)
-            if (totaisAno.get(i).getAno() == ano)
+        for (int i = 0; i < totaisAvariaAno.size(); i++)
+            if (totaisAvariaAno.get(i).getAno() == ano)
                 return i;
         return -1;
     }
@@ -362,8 +356,8 @@ public class GestaoRH {
      */
     public String mostrarTotaisAvariaAno(){
         StringBuilder str= new StringBuilder("");
-        for (int i=0; i<totaisAno.size(); i++) {
-            str.append(totaisAno.get(i)).append("\n");
+        for (int i=0; i<totaisAvariaAno.size(); i++) {
+            str.append(totaisAvariaAno.get(i)).append("\n");
         }
         return str.toString();
     }
