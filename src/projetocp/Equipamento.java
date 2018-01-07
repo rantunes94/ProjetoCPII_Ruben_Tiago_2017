@@ -190,7 +190,7 @@ public class Equipamento implements Serializable {
 
     /**
      * método que permite dizer que o equipamento já avariou
-     * @param jaAvariou
+     * @param jaAvariou parametro que indica que o equipamento ja avariou
      */
     public void setJaAvariou(boolean jaAvariou) {
         this.jaAvariou = jaAvariou;

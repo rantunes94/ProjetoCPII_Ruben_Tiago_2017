@@ -58,8 +58,8 @@ public class TotalAvariaAno implements Comparable<TotalAvariaAno> {
 
     /**
      * Método que permite ordenar primeiro pelo numAvarias e depois pelo ano ( NÃO PELO ESTADO, porque não nos era possivel)
-     * @param
-     * @return
+     * @param o é um parametro criado automaticamente
+     * @return devolve a ordenação
      */
     @Override
     public int compareTo(TotalAvariaAno o) {
