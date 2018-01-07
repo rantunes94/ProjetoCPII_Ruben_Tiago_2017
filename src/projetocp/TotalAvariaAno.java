@@ -60,8 +60,13 @@ public class TotalAvariaAno implements Comparable<TotalAvariaAno>,Serializable {
 
     /**
      * Método que permite ordenar primeiro pelo numAvarias e depois pelo ano ( NÃO PELO ESTADO, porque não nos era possivel)
+<<<<<<< HEAD
      * @param
      * @return devolve ordenado primeiro por num de avarias e depois por ano
+=======
+     * @param o é um parametro criado automaticamente
+     * @return devolve a ordenação
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
      */
     @Override
     public int compareTo(TotalAvariaAno o) {

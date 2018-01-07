@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavadocGenerationManager">
+<<<<<<< HEAD
     <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../../ProjetoCPII_Ruben_Tiago_2017/javadoc" />
+=======
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/javadoc" />
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
     <option name="OPTION_SCOPE" value="protected" />
     <option name="OPTION_HIERARCHY" value="true" />
     <option name="OPTION_NAVIGATOR" value="true" />

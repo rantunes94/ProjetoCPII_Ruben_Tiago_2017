@@ -342,6 +342,90 @@ public class Main {
     }
 
     /**
+     * método que permite criar um funcionário
+     */
+    public static void criarFuncionario() {
+        int nif, telefone, tipo, pos;
+        String nome, morada, email, habilitacoes, dataN, especialidade, seccaoTrabalho, username, password, funcao;
+        Calendar dataNascimento = new GregorianCalendar();
+        FuncionarioMedico f1;
+        FuncionarioOutros f2;
+        int errodn = 0;
+
+        do {
+            nif = Consola.lerInt("Indique o nif do Funcionário: ", 1, 999999999);
+            pos = grh.pesquisarFuncionarios(nif);
+            if (pos != -1)
+                System.err.println("Funcionário já existe!");
+        } while (pos != -1);
+
+        nome = Consola.lerString("Indique o nome do Funcionário: ");
+        telefone = Consola.lerInt("Indique o telefone do Funcionário: ", 1, 999999999);
+        morada = Consola.lerString("Indique a morada do Funcionário: ");
+        email = Consola.lerString("Indique o email do Funcionário: ");
+        habilitacoes = Consola.lerString("Indique as habilitações do Funcionário: ");
+
+        do {
+            errodn = 0;
+            try {
+                dataN = Consola.lerString("Indique a data de nascimento do funcionário (dd-mm-yyyy): ");
+                dataNascimento.setTime(formato.parse(dataN));
+            } catch (ParseException e) {
+                errodn = 1;
+                System.err.println("Data de nascimento com formato inválido!");
+            }
+        } while (errodn == 1);
+
+        do {
+            System.out.println("Escolha o tipo de Funcionário a inserir:");
+            System.out.println("1 - Médico");
+            System.out.println("2 - Técnico");
+            System.out.println("3 - Outros");
+            tipo = Consola.lerInt("Opcao: ", 1, 3);
+        } while (tipo < 0 && tipo > 3);
+
+        if (tipo == 1) {
+            especialidade = Consola.lerString("Indique a especialidade do médico: ");
+            seccaoTrabalho = Consola.lerString("Indique a seccção de trabalho do médico: ");
+
+            f1 = new FuncionarioMedico(nif, nome, morada, telefone, email, dataNascimento, habilitacoes, especialidade, seccaoTrabalho);
+
+            if(f1.validarIdadeFunc()) {
+                grh.adicionarFuncionarioMedico(f1);
+                System.out.println("Funcionário inserido com sucesso!");
+            }else {
+                System.out.println("Idade do funcionário inválida!");
+            }
+        }
+        if (tipo == 2) {
+            username = Consola.lerString("Indique o username do técnico: ");
+            password = Consola.lerString("Indique a password do técnico: ");
+
+            funcao = ("Técnico");
+            f2 = new FuncionarioOutros(nif, nome, morada, telefone, email, dataNascimento, habilitacoes, funcao, username, password);
+
+            if(f2.validarIdadeFunc()) {
+                grh.adicionarFuncionarioOutros(f2);
+                System.out.println("Funcionário inserido com sucesso!");
+            }else {
+                System.out.println("Idade do funcionário inválida!");
+            }
+        }
+        if (tipo == 3) {
+            funcao = Consola.lerString("Indique a função do Funcionário: ");
+
+            f2 = new FuncionarioOutros(nif, nome, morada, telefone, email, dataNascimento, habilitacoes, funcao);
+
+            if(f2.validarIdadeFunc()) {
+                grh.adicionarFuncionarioOutros(f2);
+                System.out.println("Funcionário inserido com sucesso!");
+            }else {
+                System.out.println("Idade do funcionário inválida!");
+            }
+        }
+
+    }
+    /**
      * método que permite criar uma divisão
      */
     public static void criarDivisao() {
@@ -520,119 +604,15 @@ public class Main {
 
 
     /**
-     * método que permite pesquisar um equipamento por divisão
+     * método que permite alterar as informações de um funcionário
      */
-    public static void consultarEquipamentosPorDivisao() {
-        int pos;
-        String designacao;
-        Equipamento e;
-        Divisao d;
-
-        do{
-            System.out.println(grh.mostrarDivisao());
-            designacao = Consola.lerString("Indique a designação da divisão: ");
-            pos = grh.pesquisarDivisao(designacao);
-            if (pos == -1)
-                System.err.println("Divisão não existe");
-        }while (pos == -1);
-        d = grh.obterDivisao(pos);
-        System.out.println(d.mostrarEquipamentos());
-    }
-
-    /**
-     * método que permite associar uma divisão a um equipamento
-     */
-    public static void associarDivisaoAoEquipamento() {
-        int pos, numInventario;
-        String designacao;
-        Equipamento e;
-        Divisao d;
-
-        do{
-            System.out.println(grh.mostrarDivisao());
-            designacao = Consola.lerString("Indique a designação da divisão: ");
-            pos = grh.pesquisarDivisao(designacao);
-            if(pos == -1)
-                System.err.println("Divisão não existe!");
-        }while (pos == -1);
-        d = grh.obterDivisao(pos);
-
-        do{
-            System.out.println(grh.mostrarEquipamentos());
-            numInventario = Consola.lerInt("Insira o número de inventário do equipamento: ",0, 999999999);
-            pos = grh.pesquisarEquipamento(numInventario);
-            if (pos == -1)
-                System.err.println("Equipamento não existe!");
-        }while (pos == -1);
-
-        e = grh.obterEquipamento(pos);
-        if(e.getDivisao() == d){
-            System.err.println("Não pode associar este equipamento a esta divisão porque este já se encontra associado a esta divisão!");
-        }else {
-            d.adicionarEquipamentos(e);
-            e.setDivisao(d);
-            d.setQntdEquipamentosInstaladosPorDivisao(d.getQntdEquipamentosInstaladosPorDivisao() + 1); // ESTATISTICA quantidade de equipamentos em cada divisão
-            System.out.println("Divisão associda com sucesso!");
-        }
-    }
-
-    /**
-     * método que permite pesquisar divisões
-     */
-    public static void consultarDivisao() {
-        int pos;
-        String designacao;
-        Divisao divisao;
-
-        System.out.println("--------------------------------------------------------");
-        System.out.println("------------Lista de designações de Divisões------------");
-        System.out.println("--------------------------------------------------------");
-        System.out.println(grh.mostrarDivisaoDesignacao());
-        do {
-            designacao = Consola.lerString("Indique a designação da Divisão: ");
-            pos = grh.pesquisarDivisao(designacao);
-            if (pos == -1)
-                System.err.println("Divisão não existe!");
-        } while (pos == -1);
-
-        divisao = grh.obterDivisao(pos);
-
-        System.out.println(divisao);
-    }
-
-    /**
-     * método que permite consultar avarias por equipamento
-     */
-    public static void consultarAvariasPorEquipamento() {
-        int pos,numero;
-        Equipamento e;
-        do {
-            System.out.println(grh.mostrarEquipamentos());
-            numero = Consola.lerInt("Insira o número do equipamento: ",1, 999999999);
-            pos = grh.pesquisarEquipamento(numero);
-            if (pos == -1)
-                System.err.println("Esse equipamento não possui nenhuma avaria ou não existe!");
-        } while (pos == -1);
-
-        e=grh.obterEquipamento(pos);
-
-
-        System.out.println(e.mostrarAvarias());
-        System.out.println(e.mostrarReparacoes());
-    }
-
-    /**
-     * método que permite criar um funcionário
-     */
-    public static void criarFuncionario() {
-        int nif, telefone, tipo, pos;
-        String nome, morada, email, habilitacoes, dataN, especialidade, seccaoTrabalho, username, password, funcao;
-        Calendar dataNascimento = new GregorianCalendar();
-        FuncionarioMedico f1;
-        FuncionarioOutros f2;
-        int errodn = 0;
+    public static void alterarFuncionario() {
+        int nif, pos, opcao = 0;
+        int novoTelefone;
+        String novaMorada;
 
         do {
+<<<<<<< HEAD
             nif = Consola.lerInt("Indique o nif do Funcionário: ", 10000000, 999999999);
             pos = grh.pesquisarFuncionarios(nif);
             if (pos != -1)
@@ -663,46 +643,44 @@ public class Main {
             System.out.println("3 - Outros");
             tipo = Consola.lerInt("Opcao: ", 1, 3);
         } while (tipo < 0 && tipo > 3);
+=======
+            nif = Consola.lerInt("Indique o nif do funcionário a alterar: ", 1, 999999999);
+            pos = grh.pesquisarFuncionarios(nif);
+            if (pos == -1) {
+                System.err.println("Funcionário não existe!");
+            } else
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
 
-        if (tipo == 1) {
-            especialidade = Consola.lerString("Indique a especialidade do médico: ");
-            seccaoTrabalho = Consola.lerString("Indique a seccção de trabalho do médico: ");
+                do {
+                    System.out.println("Escolha o campo que quer alterar:");
+                    System.out.println("1 - Número de Telefone");
+                    System.out.println("2 - Morada");
+                    System.out.println("3 - Ambos");
+                    opcao = Consola.lerInt("Opcao: ", 1, 3);
+                } while (opcao < 0 && opcao > 3);
 
-            f1 = new FuncionarioMedico(nif, nome, morada, telefone, email, dataNascimento, habilitacoes, especialidade, seccaoTrabalho);
+            if (opcao == 1) {
 
-            if(f1.validarIdadeFunc()) {
-                grh.adicionarFuncionarioMedico(f1);
-                System.out.println("Funcionário inserido com sucesso!");
-            }else {
-                System.out.println("Idade do funcionário inválida!");
+                novoTelefone = Consola.lerInt("Indique o novo telefone do Funcionário: ", 1, 999999999);
+                grh.alterarFuncionarioTelefone(novoTelefone, pos);
+                System.out.println("Alteração feita com sucesso!");
             }
-        }
-        if (tipo == 2) {
-            username = Consola.lerString("Indique o username do técnico: ");
-            password = Consola.lerString("Indique a password do técnico: ");
+            if (opcao == 2) {
 
-            funcao = ("Técnico");
-            f2 = new FuncionarioOutros(nif, nome, morada, telefone, email, dataNascimento, habilitacoes, funcao, username, password);
-
-            if(f2.validarIdadeFunc()) {
-                grh.adicionarFuncionarioOutros(f2);
-                System.out.println("Funcionário inserido com sucesso!");
-            }else {
-                System.out.println("Idade do funcionário inválida!");
+                novaMorada = Consola.lerString("Indique a nova morada do Funcionário: ");
+                grh.alterarFuncionarioMorada(novaMorada, pos);
+                System.out.println("Alteração feita com sucesso!");
             }
-        }
-        if (tipo == 3) {
-            funcao = Consola.lerString("Indique a função do Funcionário: ");
 
-            f2 = new FuncionarioOutros(nif, nome, morada, telefone, email, dataNascimento, habilitacoes, funcao);
+            if (opcao == 3) {
 
-            if(f2.validarIdadeFunc()) {
-                grh.adicionarFuncionarioOutros(f2);
-                System.out.println("Funcionário inserido com sucesso!");
-            }else {
-                System.out.println("Idade do funcionário inválida!");
+                novoTelefone = Consola.lerInt("Indique o novo telefone do Funcionário: ", 1, 999999999);
+                novaMorada = Consola.lerString("Indique a nova morada do Funcionário: ");
+                grh.alterarFuncionario(novoTelefone, novaMorada, pos);
+                System.out.println("Alteração feita com sucesso!");
             }
-        }
+
+        } while (pos == -1);
 
     }
 
@@ -843,53 +821,130 @@ public class Main {
         } while (pos == -1);
     }
 
-
     /**
-     * método que permite alterar as informações de um funcionário
+     * método que permite pesquisar divisões
      */
-    public static void alterarFuncionario() {
-        int nif, pos, opcao = 0;
-        int novoTelefone;
-        String novaMorada;
+    public static void consultarDivisao() {
+        int pos;
+        String designacao;
+        Divisao divisao;
 
+        System.out.println("--------------------------------------------------------");
+        System.out.println("------------Lista de designações de Divisões------------");
+        System.out.println("--------------------------------------------------------");
+        System.out.println(grh.mostrarDivisaoDesignacao());
         do {
+<<<<<<< HEAD
             nif = Consola.lerInt("Indique o nif do funcionário a alterar: ", 10000000, 999999999);
             pos = grh.pesquisarFuncionarios(nif);
             if (pos == -1) {
                 System.err.println("Funcionário não existe!");
             } else
+=======
+            designacao = Consola.lerString("Indique a designação da Divisão: ");
+            pos = grh.pesquisarDivisao(designacao);
+            if (pos == -1)
+                System.err.println("Divisão não existe!");
+        } while (pos == -1);
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
 
-                do {
-                    System.out.println("Escolha o campo que quer alterar:");
-                    System.out.println("1 - Número de Telefone");
-                    System.out.println("2 - Morada");
-                    System.out.println("3 - Ambos");
-                    opcao = Consola.lerInt("Opcao: ", 1, 3);
-                } while (opcao < 0 && opcao > 3);
+        divisao = grh.obterDivisao(pos);
 
-            if (opcao == 1) {
+        System.out.println(divisao);
+    }
 
+<<<<<<< HEAD
                 novoTelefone = Consola.lerInt("Indique o novo telefone do Funcionário: ", 10000000, 999999999);
                 grh.alterarFuncionarioTelefone(novoTelefone, pos);
                 System.out.println("Alteração feita com sucesso!");
             }
             if (opcao == 2) {
+=======
+    /**
+     * método que permite pesquisar um equipamento por divisão
+     */
+    public static void consultarEquipamentosPorDivisao() {
+        int pos;
+        String designacao;
+        Equipamento e;
+        Divisao d;
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
 
-                novaMorada = Consola.lerString("Indique a nova morada do Funcionário: ");
-                grh.alterarFuncionarioMorada(novaMorada, pos);
-                System.out.println("Alteração feita com sucesso!");
-            }
+        do{
+            System.out.println(grh.mostrarDivisao());
+            designacao = Consola.lerString("Indique a designação da divisão: ");
+            pos = grh.pesquisarDivisao(designacao);
+            if (pos == -1)
+                System.err.println("Divisão não existe");
+        }while (pos == -1);
+        d = grh.obterDivisao(pos);
+        System.out.println(d.mostrarEquipamentos());
+    }
 
-            if (opcao == 3) {
+    /**
+     * método que permite consultar avarias por equipamento
+     */
+    public static void consultarAvariasPorEquipamento() {
+        int pos,numero;
+        Equipamento e;
+        do {
+            System.out.println(grh.mostrarEquipamentos());
+            numero = Consola.lerInt("Insira o número do equipamento: ",1, 999999999);
+            pos = grh.pesquisarEquipamento(numero);
+            if (pos == -1)
+                System.err.println("Esse equipamento não possui nenhuma avaria ou não existe!");
+        } while (pos == -1);
 
+<<<<<<< HEAD
                 novoTelefone = Consola.lerInt("Indique o novo telefone do Funcionário: ", 10000000, 999999999);
                 novaMorada = Consola.lerString("Indique a nova morada do Funcionário: ");
                 grh.alterarFuncionario(novoTelefone, novaMorada, pos);
                 System.out.println("Alteração feita com sucesso!");
             }
+=======
+        e=grh.obterEquipamento(pos);
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
 
-        } while (pos == -1);
 
+        System.out.println(e.mostrarAvarias());
+        System.out.println(e.mostrarReparacoes());
+    }
+
+    /**
+     * método que permite associar uma divisão a um equipamento
+     */
+    public static void associarDivisaoAoEquipamento() {
+        int pos, numInventario;
+        String designacao;
+        Equipamento e;
+        Divisao d;
+
+        do{
+            System.out.println(grh.mostrarDivisao());
+            designacao = Consola.lerString("Indique a designação da divisão: ");
+            pos = grh.pesquisarDivisao(designacao);
+            if(pos == -1)
+                System.err.println("Divisão não existe!");
+        }while (pos == -1);
+        d = grh.obterDivisao(pos);
+
+        do{
+            System.out.println(grh.mostrarEquipamentos());
+            numInventario = Consola.lerInt("Insira o número de inventário do equipamento: ",0, 999999999);
+            pos = grh.pesquisarEquipamento(numInventario);
+            if (pos == -1)
+                System.err.println("Equipamento não existe!");
+        }while (pos == -1);
+
+        e = grh.obterEquipamento(pos);
+        if(e.getDivisao() == d){
+            System.err.println("Não pode associar este equipamento a esta divisão porque este já se encontra associado a esta divisão!");
+        }else {
+            d.adicionarEquipamentos(e);
+            e.setDivisao(d);
+            d.setQntdEquipamentosInstaladosPorDivisao(d.getQntdEquipamentosInstaladosPorDivisao() + 1); // ESTATISTICA quantidade de equipamentos em cada divisão
+            System.out.println("Divisão associda com sucesso!");
+        }
     }
 
     /**
@@ -917,7 +972,11 @@ public class Main {
     }
 
     /**
+<<<<<<< HEAD
      * Método que permite mostrar a percentagem de avarias nos equipamentos, no hospital inteiro
+=======
+     * método que permite mostrar a percentagem de avarias
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
      */
     public static void mostrarPercentagemAvarias() {
 

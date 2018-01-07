@@ -27,6 +27,7 @@
       <file leaf-file-name="GestaoRH.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/projetocp/GestaoRH.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="134">
               <caret line="162" column="28" lean-forward="true" selection-start-line="162" selection-start-column="28" selection-end-line="162" selection-end-column="28" />
               <folding>
@@ -36,39 +37,29 @@
                 <element signature="e#1955#1956#0" expanded="true" />
                 <element signature="e#2874#2875#0" expanded="true" />
                 <element signature="e#2915#2916#0" expanded="true" />
+=======
+            <state relative-caret-position="467">
+              <caret line="197" column="1" lean-forward="false" selection-start-line="197" selection-start-column="1" selection-end-line="197" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="ArrayList.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/ArrayList.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="194">
               <caret line="428" column="0" lean-forward="false" selection-start-line="428" selection-start-column="0" selection-end-line="428" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TotalAvariaAno.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/projetocp/TotalAvariaAno.java">
+=======
+      <file leaf-file-name="Avaria.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/projetocp/Avaria.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="77" column="40" lean-forward="false" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
-              <folding>
-                <element signature="e#572#573#0" expanded="true" />
-                <element signature="e#616#617#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TotalAno.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/projetocp/TotalAno.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-335">
-              <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+            <state relative-caret-position="986">
+              <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -77,8 +68,225 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/projetocp/Main.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="353">
+              <caret line="951" column="4" lean-forward="false" selection-start-line="951" selection-start-column="4" selection-end-line="951" selection-end-column="4" />
+              <folding>
+                <element signature="method#menu#0;class#Main#0" expanded="false" />
+                <element signature="method#menuFuncionario#0;class#Main#0" expanded="false" />
+                <element signature="method#menuDivisão#0;class#Main#0" expanded="false" />
+                <element signature="method#menuTiposEquipamento#0;class#Main#0" expanded="false" />
+                <element signature="method#menuEquipamentos#0;class#Main#0" expanded="false" />
+                <element signature="method#menuAvarias#0;class#Main#0" expanded="false" />
+                <element signature="method#menuEstatisticas#0;class#Main#0" expanded="false" />
+                <element signature="docComment;method#criarFuncionario#0;class#Main#0" expanded="false" />
+                <element signature="method#criarFuncionario#0;class#Main#0" expanded="false" />
+                <element signature="docComment;method#criarDivisao#0;class#Main#0" expanded="false" />
+                <element signature="method#criarDivisao#0;class#Main#0" expanded="false" />
+                <element signature="docComment;method#criarTiposEquipamento#0;class#Main#0" expanded="false" />
+                <element signature="method#criarTiposEquipamento#0;class#Main#0" expanded="false" />
+                <element signature="docComment;method#criarEquipamento#0;class#Main#0" expanded="false" />
+                <element signature="method#criarEquipamento#0;class#Main#0" expanded="false" />
+                <element signature="docComment;method#criarAvaria#0;class#Main#0" expanded="false" />
+                <element signature="method#criarAvaria#0;class#Main#0" expanded="false" />
+                <element signature="docComment;method#alterarFuncionario#0;class#Main#0" expanded="false" />
+                <element signature="method#alterarFuncionario#0;class#Main#0" expanded="false" />
+                <element signature="docComment;method#alterarEstadoAvaria#0;class#Main#0" expanded="false" />
+                <element signature="method#alterarEstadoAvaria#0;class#Main#0" expanded="false" />
+                <element signature="docComment;method#consultarDivisao#0;class#Main#0" expanded="false" />
+                <element signature="method#consultarDivisao#0;class#Main#0" expanded="false" />
+                <element signature="docComment;method#consultarEquipamentosPorDivisao#0;class#Main#0" expanded="false" />
+                <element signature="method#consultarEquipamentosPorDivisao#0;class#Main#0" expanded="false" />
+                <element signature="docComment;method#consultarAvariasPorEquipamento#0;class#Main#0" expanded="false" />
+                <element signature="method#consultarAvariasPorEquipamento#0;class#Main#0" expanded="false" />
+                <element signature="docComment;method#associarDivisaoAoEquipamento#0;class#Main#0" expanded="false" />
+                <element signature="method#associarDivisaoAoEquipamento#0;class#Main#0" expanded="false" />
+                <element signature="docComment;method#eliminarFuncionario#0;class#Main#0" expanded="false" />
+                <element signature="method#eliminarFuncionario#0;class#Main#0" expanded="false" />
+                <element signature="docComment;method#mostrarPercentagemAvarias#0;class#Main#0" expanded="false" />
+                <element signature="method#mostrarPercentagemAvarias#0;class#Main#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TotalAvariaAno.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/projetocp/TotalAvariaAno.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="61" column="34" lean-forward="false" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
+              <folding>
+                <marker date="1515349160667" expanded="true" signature="2166:2173" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TipoEquipamento.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/projetocp/TipoEquipamento.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file leaf-file-name="TotalAvariaAno.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/projetocp/TotalAvariaAno.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="379">
+              <caret line="77" column="40" lean-forward="false" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
+              <folding>
+                <element signature="e#572#573#0" expanded="true" />
+                <element signature="e#616#617#0" expanded="true" />
+=======
+      <file leaf-file-name="TotalAno.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/projetocp/TotalAno.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="816">
+              <caret line="54" column="34" lean-forward="false" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+              <folding>
+                <marker date="1515349160729" expanded="true" signature="1513:1520" ph="{...}" />
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file leaf-file-name="TotalAno.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/projetocp/TotalAno.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-335">
+              <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+=======
+      <file leaf-file-name="GestaoRH.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/projetocp/GestaoRH.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="392">
+              <caret line="88" column="5" lean-forward="false" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+              <folding>
+                <element signature="e#1803#1804#0" expanded="true" />
+                <element signature="e#1841#1842#0" expanded="true" />
+                <element signature="e#1886#1887#0" expanded="true" />
+                <element signature="e#1932#1933#0" expanded="true" />
+                <element signature="e#2051#2052#0" expanded="true" />
+                <element signature="e#2088#2089#0" expanded="true" />
+                <element signature="e#2229#2230#0" expanded="true" />
+                <element signature="e#2330#2331#0" expanded="true" />
+                <element signature="e#2430#2431#0" expanded="true" />
+                <element signature="e#2516#2517#0" expanded="true" />
+                <element signature="e#2599#2600#0" expanded="true" />
+                <element signature="e#2699#2700#0" expanded="true" />
+                <element signature="docComment;method#adicionarFuncionarioMedico#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#adicionarFuncionarioMedico#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#adicionarFuncionarioOutros#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#adicionarFuncionarioOutros#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#adicionarDivisao#0;class#GestaoRH#0" expanded="false" />
+                <element signature="e#3563#3564#0" expanded="true" />
+                <element signature="e#3600#3601#0" expanded="true" />
+                <element signature="docComment;method#adicionarTipoEquipamento#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#adicionarTipoEquipamento#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#adicionarEquipamento#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#adicionarEquipamento#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#adicionarTotalAno#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#adicionarTotalAno#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#adicionarTotalAvariaAno#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#adicionarTotalAvariaAno#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#adicionarAvaria#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#adicionarAvaria#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#eliminarFuncionario#0;class#GestaoRH#0" expanded="false" />
+                <element signature="e#5670#5671#0" expanded="true" />
+                <element signature="docComment;method#alterarFuncionario#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#alterarFuncionario#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#alterarFuncionarioTelefone#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#alterarFuncionarioTelefone#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#alterarFuncionarioMorada#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#alterarFuncionarioMorada#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#pesquisarFuncionarios#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#pesquisarFuncionarios#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#pesquisarTotais#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#pesquisarTotais#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#pesquisarTotaisAvariaAno#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#pesquisarTotaisAvariaAno#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#pesquisarTipoEquipamento#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#pesquisarTipoEquipamento#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#pesquisarDivisao#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#pesquisarDivisao#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#pesquisarEquipamento#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#pesquisarEquipamento#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#pesquisarAvarias#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#pesquisarAvarias#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#mostrarFuncionarios#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#mostrarFuncionarios#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#mostrarFuncionariosMedicos#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#mostrarFuncionariosMedicos#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#mostrarFuncionariosOutros#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#mostrarFuncionariosOutros#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#mostrarTotaisAno#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#mostrarTotaisAno#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#mostrarTotaisAvariaAno#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#mostrarTotaisAvariaAno#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#mostrarTipoEquipamentos#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#mostrarTipoEquipamentos#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#mostrarEquipamentos#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#mostrarEquipamentos#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#mostrarDivisao#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#mostrarDivisao#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#mostrarDivisaoDesignacao#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#mostrarDivisaoDesignacao#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#mostrarAvarias#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#mostrarAvarias#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#addNumAvariasPorEquipamento#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#addNumAvariasPorEquipamento#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#calcularPercentagemAvariasNoHospital#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#calcularPercentagemAvariasNoHospital#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#gravarFicheiro#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#gravarFicheiro#0;class#GestaoRH#0" expanded="false" />
+                <element signature="docComment;method#lerFicheiro#0;class#GestaoRH#0" expanded="false" />
+                <element signature="method#lerFicheiro#0;class#GestaoRH#0" expanded="false" />
+                <marker date="1515351122539" expanded="true" signature="16317:16467" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FuncionarioMedico.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/projetocp/FuncionarioMedico.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Reparacao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/projetocp/Reparacao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="833">
+              <caret line="52" column="5" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/projetocp/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="273">
               <caret line="212" column="71" lean-forward="false" selection-start-line="212" selection-start-column="71" selection-end-line="212" selection-end-column="71" />
+=======
+      <file leaf-file-name="FuncionarioOutros.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/projetocp/FuncionarioOutros.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1003">
+              <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
               <folding />
             </state>
           </provider>
@@ -144,16 +352,22 @@
         <option value="$PROJECT_DIR$/src/projetocp/EstadoEquipamento.java" />
         <option value="$PROJECT_DIR$/src/projetocp/Avaria.java" />
         <option value="$PROJECT_DIR$/src/projetocp/Divisao.java" />
-        <option value="$PROJECT_DIR$/src/projetocp/Equipamento.java" />
         <option value="$PROJECT_DIR$/src/projetocp/Funcionario.java" />
         <option value="$PROJECT_DIR$/src/projetocp/FuncionarioMedico.java" />
         <option value="$PROJECT_DIR$/src/projetocp/FuncionarioOutros.java" />
         <option value="$PROJECT_DIR$/src/projetocp/Reparacao.java" />
         <option value="$PROJECT_DIR$/src/projetocp/TipoEquipamento.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/projetocp/TotalAno.java" />
         <option value="$PROJECT_DIR$/src/projetocp/Main.java" />
         <option value="$PROJECT_DIR$/src/projetocp/GestaoRH.java" />
+=======
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
         <option value="$PROJECT_DIR$/src/projetocp/TotalAvariaAno.java" />
+        <option value="$PROJECT_DIR$/src/projetocp/TotalAno.java" />
+        <option value="$PROJECT_DIR$/src/projetocp/Equipamento.java" />
+        <option value="$PROJECT_DIR$/src/projetocp/Main.java" />
+        <option value="$PROJECT_DIR$/src/projetocp/GestaoRH.java" />
       </list>
     </option>
   </component>
@@ -179,8 +393,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="Scratches" />
       <pane id="Scope" />
+=======
+      <pane id="AndroidView" />
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -203,8 +421,14 @@
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
+=======
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -278,7 +502,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+=======
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -289,12 +517,20 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980973" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980973" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39302695" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17552084" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17569546" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -343,7 +579,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/projetocp/Main.java</url>
+          <line>638</line>
+          <properties />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -440,12 +685,95 @@
         <state relative-caret-position="3740">
           <caret line="242" column="0" lean-forward="false" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
           <folding>
+<<<<<<< HEAD
             <element signature="e#1812#1813#0" expanded="true" />
             <element signature="e#1860#1861#0" expanded="true" />
             <element signature="e#1906#1907#0" expanded="true" />
             <element signature="e#1955#1956#0" expanded="true" />
             <element signature="e#2874#2875#0" expanded="true" />
             <element signature="e#2915#2916#0" expanded="true" />
+=======
+            <element signature="e#1803#1804#0" expanded="true" />
+            <element signature="e#1841#1842#0" expanded="true" />
+            <element signature="e#1886#1887#0" expanded="true" />
+            <element signature="e#1932#1933#0" expanded="true" />
+            <element signature="e#2051#2052#0" expanded="true" />
+            <element signature="e#2088#2089#0" expanded="true" />
+            <element signature="e#2229#2230#0" expanded="true" />
+            <element signature="e#2330#2331#0" expanded="true" />
+            <element signature="e#2430#2431#0" expanded="true" />
+            <element signature="e#2516#2517#0" expanded="true" />
+            <element signature="e#2599#2600#0" expanded="true" />
+            <element signature="e#2699#2700#0" expanded="true" />
+            <element signature="docComment;method#adicionarFuncionarioMedico#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarFuncionarioMedico#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarFuncionarioOutros#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarFuncionarioOutros#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarDivisao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="e#3563#3564#0" expanded="true" />
+            <element signature="e#3600#3601#0" expanded="true" />
+            <element signature="docComment;method#adicionarTipoEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarTipoEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarTotalAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarTotalAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarTotalAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarTotalAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarAvaria#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarAvaria#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#eliminarFuncionario#0;class#GestaoRH#0" expanded="false" />
+            <element signature="e#5670#5671#0" expanded="true" />
+            <element signature="docComment;method#alterarFuncionario#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#alterarFuncionario#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#alterarFuncionarioTelefone#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#alterarFuncionarioTelefone#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#alterarFuncionarioMorada#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#alterarFuncionarioMorada#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarFuncionarios#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarFuncionarios#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarTotais#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarTotais#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarTotaisAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarTotaisAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarTipoEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarTipoEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarDivisao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarDivisao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarAvarias#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarAvarias#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarFuncionarios#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarFuncionarios#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarFuncionariosMedicos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarFuncionariosMedicos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarFuncionariosOutros#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarFuncionariosOutros#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarTotaisAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarTotaisAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarTotaisAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarTotaisAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarTipoEquipamentos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarTipoEquipamentos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarEquipamentos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarEquipamentos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarDivisao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarDivisao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarDivisaoDesignacao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarDivisaoDesignacao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarAvarias#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarAvarias#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#addNumAvariasPorEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#addNumAvariasPorEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#calcularPercentagemAvariasNoHospital#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#calcularPercentagemAvariasNoHospital#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#gravarFicheiro#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#gravarFicheiro#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#lerFicheiro#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#lerFicheiro#0;class#GestaoRH#0" expanded="false" />
+            <marker date="1515351122539" expanded="true" signature="16317:16467" ph="{...}" />
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
           </folding>
         </state>
       </provider>
@@ -528,12 +856,95 @@
         <state relative-caret-position="3740">
           <caret line="242" column="0" lean-forward="false" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
           <folding>
+<<<<<<< HEAD
             <element signature="e#1812#1813#0" expanded="true" />
             <element signature="e#1860#1861#0" expanded="true" />
             <element signature="e#1906#1907#0" expanded="true" />
             <element signature="e#1955#1956#0" expanded="true" />
             <element signature="e#2874#2875#0" expanded="true" />
             <element signature="e#2915#2916#0" expanded="true" />
+=======
+            <element signature="e#1803#1804#0" expanded="true" />
+            <element signature="e#1841#1842#0" expanded="true" />
+            <element signature="e#1886#1887#0" expanded="true" />
+            <element signature="e#1932#1933#0" expanded="true" />
+            <element signature="e#2051#2052#0" expanded="true" />
+            <element signature="e#2088#2089#0" expanded="true" />
+            <element signature="e#2229#2230#0" expanded="true" />
+            <element signature="e#2330#2331#0" expanded="true" />
+            <element signature="e#2430#2431#0" expanded="true" />
+            <element signature="e#2516#2517#0" expanded="true" />
+            <element signature="e#2599#2600#0" expanded="true" />
+            <element signature="e#2699#2700#0" expanded="true" />
+            <element signature="docComment;method#adicionarFuncionarioMedico#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarFuncionarioMedico#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarFuncionarioOutros#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarFuncionarioOutros#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarDivisao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="e#3563#3564#0" expanded="true" />
+            <element signature="e#3600#3601#0" expanded="true" />
+            <element signature="docComment;method#adicionarTipoEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarTipoEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarTotalAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarTotalAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarTotalAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarTotalAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarAvaria#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarAvaria#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#eliminarFuncionario#0;class#GestaoRH#0" expanded="false" />
+            <element signature="e#5670#5671#0" expanded="true" />
+            <element signature="docComment;method#alterarFuncionario#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#alterarFuncionario#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#alterarFuncionarioTelefone#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#alterarFuncionarioTelefone#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#alterarFuncionarioMorada#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#alterarFuncionarioMorada#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarFuncionarios#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarFuncionarios#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarTotais#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarTotais#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarTotaisAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarTotaisAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarTipoEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarTipoEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarDivisao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarDivisao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarAvarias#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarAvarias#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarFuncionarios#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarFuncionarios#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarFuncionariosMedicos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarFuncionariosMedicos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarFuncionariosOutros#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarFuncionariosOutros#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarTotaisAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarTotaisAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarTotaisAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarTotaisAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarTipoEquipamentos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarTipoEquipamentos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarEquipamentos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarEquipamentos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarDivisao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarDivisao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarDivisaoDesignacao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarDivisaoDesignacao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarAvarias#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarAvarias#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#addNumAvariasPorEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#addNumAvariasPorEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#calcularPercentagemAvariasNoHospital#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#calcularPercentagemAvariasNoHospital#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#gravarFicheiro#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#gravarFicheiro#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#lerFicheiro#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#lerFicheiro#0;class#GestaoRH#0" expanded="false" />
+            <marker date="1515351122539" expanded="true" signature="16317:16467" ph="{...}" />
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
           </folding>
         </state>
       </provider>
@@ -616,12 +1027,95 @@
         <state relative-caret-position="3740">
           <caret line="242" column="0" lean-forward="false" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
           <folding>
+<<<<<<< HEAD
             <element signature="e#1812#1813#0" expanded="true" />
             <element signature="e#1860#1861#0" expanded="true" />
             <element signature="e#1906#1907#0" expanded="true" />
             <element signature="e#1955#1956#0" expanded="true" />
             <element signature="e#2874#2875#0" expanded="true" />
             <element signature="e#2915#2916#0" expanded="true" />
+=======
+            <element signature="e#1803#1804#0" expanded="true" />
+            <element signature="e#1841#1842#0" expanded="true" />
+            <element signature="e#1886#1887#0" expanded="true" />
+            <element signature="e#1932#1933#0" expanded="true" />
+            <element signature="e#2051#2052#0" expanded="true" />
+            <element signature="e#2088#2089#0" expanded="true" />
+            <element signature="e#2229#2230#0" expanded="true" />
+            <element signature="e#2330#2331#0" expanded="true" />
+            <element signature="e#2430#2431#0" expanded="true" />
+            <element signature="e#2516#2517#0" expanded="true" />
+            <element signature="e#2599#2600#0" expanded="true" />
+            <element signature="e#2699#2700#0" expanded="true" />
+            <element signature="docComment;method#adicionarFuncionarioMedico#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarFuncionarioMedico#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarFuncionarioOutros#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarFuncionarioOutros#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarDivisao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="e#3563#3564#0" expanded="true" />
+            <element signature="e#3600#3601#0" expanded="true" />
+            <element signature="docComment;method#adicionarTipoEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarTipoEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarTotalAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarTotalAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarTotalAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarTotalAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarAvaria#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarAvaria#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#eliminarFuncionario#0;class#GestaoRH#0" expanded="false" />
+            <element signature="e#5670#5671#0" expanded="true" />
+            <element signature="docComment;method#alterarFuncionario#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#alterarFuncionario#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#alterarFuncionarioTelefone#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#alterarFuncionarioTelefone#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#alterarFuncionarioMorada#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#alterarFuncionarioMorada#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarFuncionarios#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarFuncionarios#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarTotais#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarTotais#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarTotaisAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarTotaisAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarTipoEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarTipoEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarDivisao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarDivisao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarAvarias#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarAvarias#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarFuncionarios#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarFuncionarios#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarFuncionariosMedicos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarFuncionariosMedicos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarFuncionariosOutros#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarFuncionariosOutros#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarTotaisAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarTotaisAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarTotaisAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarTotaisAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarTipoEquipamentos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarTipoEquipamentos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarEquipamentos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarEquipamentos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarDivisao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarDivisao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarDivisaoDesignacao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarDivisaoDesignacao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarAvarias#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarAvarias#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#addNumAvariasPorEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#addNumAvariasPorEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#calcularPercentagemAvariasNoHospital#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#calcularPercentagemAvariasNoHospital#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#gravarFicheiro#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#gravarFicheiro#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#lerFicheiro#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#lerFicheiro#0;class#GestaoRH#0" expanded="false" />
+            <marker date="1515351122539" expanded="true" signature="16317:16467" ph="{...}" />
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
           </folding>
         </state>
       </provider>
@@ -646,6 +1140,7 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/StringBuilder.java" />
     <entry file="file://$PROJECT_DIR$/src/projetocp/util/TotalAno.java" />
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/projetocp/TipoEquipamento.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -662,6 +1157,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
     <entry file="file://$PROJECT_DIR$/src/projetocp/Divisao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1224">
@@ -670,6 +1167,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/projetocp/Equipamento.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="935">
@@ -680,6 +1178,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
     <entry file="file://$PROJECT_DIR$/src/projetocp/EstadoAvaria.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -698,12 +1198,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/projetocp/FuncionarioOutros.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="470">
           <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding>
             <element signature="e#2309#2310#0" expanded="true" />
             <element signature="e#2338#2339#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="1360">
+          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding />
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
         </state>
       </provider>
     </entry>
@@ -717,36 +1223,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/projetocp/Funcionario.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1241">
           <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding>
             <element signature="e#2271#2272#0" expanded="true" />
             <element signature="e#2307#2308#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="1003">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/projetocp/Reparacao.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="368">
           <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
           <folding>
             <element signature="e#1315#1316#0" expanded="true" />
             <element signature="e#1344#1345#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="833">
+          <caret line="52" column="5" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+          <folding />
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="194">
           <caret line="428" column="0" lean-forward="false" selection-start-line="428" selection-start-column="0" selection-end-line="428" selection-end-column="0" />
+=======
+        <state relative-caret-position="629">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/projetocp/TotalAno.java">
+    <entry file="file://$PROJECT_DIR$/src/projetocp/TotalAvariaAno.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-335">
           <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
           <folding />
@@ -768,10 +1292,17 @@
           <folding>
             <element signature="e#572#573#0" expanded="true" />
             <element signature="e#616#617#0" expanded="true" />
+=======
+        <state relative-caret-position="224">
+          <caret line="61" column="34" lean-forward="false" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
+          <folding>
+            <marker date="1515349160667" expanded="true" signature="2166:2173" ph="{...}" />
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/projetocp/GestaoRH.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
@@ -783,6 +1314,163 @@
             <element signature="e#1955#1956#0" expanded="true" />
             <element signature="e#2874#2875#0" expanded="true" />
             <element signature="e#2915#2916#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/projetocp/Equipamento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="197" column="1" lean-forward="false" selection-start-line="197" selection-start-column="1" selection-end-line="197" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/projetocp/Avaria.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/projetocp/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="951" column="4" lean-forward="false" selection-start-line="951" selection-start-column="4" selection-end-line="951" selection-end-column="4" />
+          <folding>
+            <element signature="method#menu#0;class#Main#0" expanded="false" />
+            <element signature="method#menuFuncionario#0;class#Main#0" expanded="false" />
+            <element signature="method#menuDivisão#0;class#Main#0" expanded="false" />
+            <element signature="method#menuTiposEquipamento#0;class#Main#0" expanded="false" />
+            <element signature="method#menuEquipamentos#0;class#Main#0" expanded="false" />
+            <element signature="method#menuAvarias#0;class#Main#0" expanded="false" />
+            <element signature="method#menuEstatisticas#0;class#Main#0" expanded="false" />
+            <element signature="docComment;method#criarFuncionario#0;class#Main#0" expanded="false" />
+            <element signature="method#criarFuncionario#0;class#Main#0" expanded="false" />
+            <element signature="docComment;method#criarDivisao#0;class#Main#0" expanded="false" />
+            <element signature="method#criarDivisao#0;class#Main#0" expanded="false" />
+            <element signature="docComment;method#criarTiposEquipamento#0;class#Main#0" expanded="false" />
+            <element signature="method#criarTiposEquipamento#0;class#Main#0" expanded="false" />
+            <element signature="docComment;method#criarEquipamento#0;class#Main#0" expanded="false" />
+            <element signature="method#criarEquipamento#0;class#Main#0" expanded="false" />
+            <element signature="docComment;method#criarAvaria#0;class#Main#0" expanded="false" />
+            <element signature="method#criarAvaria#0;class#Main#0" expanded="false" />
+            <element signature="docComment;method#alterarFuncionario#0;class#Main#0" expanded="false" />
+            <element signature="method#alterarFuncionario#0;class#Main#0" expanded="false" />
+            <element signature="docComment;method#alterarEstadoAvaria#0;class#Main#0" expanded="false" />
+            <element signature="method#alterarEstadoAvaria#0;class#Main#0" expanded="false" />
+            <element signature="docComment;method#consultarDivisao#0;class#Main#0" expanded="false" />
+            <element signature="method#consultarDivisao#0;class#Main#0" expanded="false" />
+            <element signature="docComment;method#consultarEquipamentosPorDivisao#0;class#Main#0" expanded="false" />
+            <element signature="method#consultarEquipamentosPorDivisao#0;class#Main#0" expanded="false" />
+            <element signature="docComment;method#consultarAvariasPorEquipamento#0;class#Main#0" expanded="false" />
+            <element signature="method#consultarAvariasPorEquipamento#0;class#Main#0" expanded="false" />
+            <element signature="docComment;method#associarDivisaoAoEquipamento#0;class#Main#0" expanded="false" />
+            <element signature="method#associarDivisaoAoEquipamento#0;class#Main#0" expanded="false" />
+            <element signature="docComment;method#eliminarFuncionario#0;class#Main#0" expanded="false" />
+            <element signature="method#eliminarFuncionario#0;class#Main#0" expanded="false" />
+            <element signature="docComment;method#mostrarPercentagemAvarias#0;class#Main#0" expanded="false" />
+            <element signature="method#mostrarPercentagemAvarias#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/projetocp/GestaoRH.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="88" column="5" lean-forward="false" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+          <folding>
+            <element signature="e#1803#1804#0" expanded="true" />
+            <element signature="e#1841#1842#0" expanded="true" />
+            <element signature="e#1886#1887#0" expanded="true" />
+            <element signature="e#1932#1933#0" expanded="true" />
+            <element signature="e#2051#2052#0" expanded="true" />
+            <element signature="e#2088#2089#0" expanded="true" />
+            <element signature="e#2229#2230#0" expanded="true" />
+            <element signature="e#2330#2331#0" expanded="true" />
+            <element signature="e#2430#2431#0" expanded="true" />
+            <element signature="e#2516#2517#0" expanded="true" />
+            <element signature="e#2599#2600#0" expanded="true" />
+            <element signature="e#2699#2700#0" expanded="true" />
+            <element signature="docComment;method#adicionarFuncionarioMedico#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarFuncionarioMedico#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarFuncionarioOutros#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarFuncionarioOutros#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarDivisao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="e#3563#3564#0" expanded="true" />
+            <element signature="e#3600#3601#0" expanded="true" />
+            <element signature="docComment;method#adicionarTipoEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarTipoEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarTotalAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarTotalAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarTotalAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarTotalAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#adicionarAvaria#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#adicionarAvaria#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#eliminarFuncionario#0;class#GestaoRH#0" expanded="false" />
+            <element signature="e#5670#5671#0" expanded="true" />
+            <element signature="docComment;method#alterarFuncionario#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#alterarFuncionario#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#alterarFuncionarioTelefone#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#alterarFuncionarioTelefone#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#alterarFuncionarioMorada#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#alterarFuncionarioMorada#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarFuncionarios#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarFuncionarios#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarTotais#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarTotais#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarTotaisAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarTotaisAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarTipoEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarTipoEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarDivisao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarDivisao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#pesquisarAvarias#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#pesquisarAvarias#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarFuncionarios#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarFuncionarios#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarFuncionariosMedicos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarFuncionariosMedicos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarFuncionariosOutros#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarFuncionariosOutros#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarTotaisAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarTotaisAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarTotaisAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarTotaisAvariaAno#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarTipoEquipamentos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarTipoEquipamentos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarEquipamentos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarEquipamentos#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarDivisao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarDivisao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarDivisaoDesignacao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarDivisaoDesignacao#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#mostrarAvarias#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#mostrarAvarias#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#addNumAvariasPorEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#addNumAvariasPorEquipamento#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#calcularPercentagemAvariasNoHospital#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#calcularPercentagemAvariasNoHospital#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#gravarFicheiro#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#gravarFicheiro#0;class#GestaoRH#0" expanded="false" />
+            <element signature="docComment;method#lerFicheiro#0;class#GestaoRH#0" expanded="false" />
+            <element signature="method#lerFicheiro#0;class#GestaoRH#0" expanded="false" />
+            <marker date="1515351122539" expanded="true" signature="16317:16467" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/projetocp/TotalAno.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="54" column="34" lean-forward="false" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+          <folding>
+            <marker date="1515349160729" expanded="true" signature="1513:1520" ph="{...}" />
+>>>>>>> 022346548f0727dc17ac1bb1571790cde4afbda9
           </folding>
         </state>
       </provider>

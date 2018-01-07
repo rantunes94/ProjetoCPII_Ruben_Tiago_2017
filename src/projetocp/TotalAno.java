@@ -54,7 +54,7 @@ public class TotalAno implements Comparable<TotalAno>,Serializable {
     /**
      * método que permite ordenar o TotalAno por ano
      * @param o novo TotalAno a inserir
-     * @return
+     * @return devolve a ordenação
      */
     @Override
     public int compareTo(TotalAno o) {
